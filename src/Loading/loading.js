@@ -1,11 +1,19 @@
 import './loading.css';
 
-const loading = ()=>{
-    return (
+const Loading = () => {
 
+    return (
+        <div>
+            <div className='main-loading'>
+                <div className="col d-flex align-items-center justify-content-center">
+                    <img className='gif' src='../logo-black.gif' />
+                </div>
+            </div>
+
+        </div >
 
     );
 
 
 }
-export default loading;
+export default Loading;

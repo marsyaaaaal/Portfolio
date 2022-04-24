@@ -1,0 +1,18 @@
+.main-loading{
+    background-color: black;
+    height: 100vh;
+    position: relative;
+}
+
+.col {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gif{
+    width:40%;
+    height: auto;
+}
