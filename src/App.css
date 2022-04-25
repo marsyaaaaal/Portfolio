@@ -5,15 +5,50 @@
   }
 }
 
+.main-home{
+  height: 100vh;
+}
+
 .big-text{
-  margin:20px
+  font-family: 'Raleway', sans-serif;
+}
+
+.left-home{
+  text-align: center;
+}
+
+.my-pic{
+  width: 25vw;
+  height: auto;
+}
+
+.right-home{
+  margin:30px;
 }
 
 .contact-icon{
-  width: 100%;
+  width: 20px;
   height: auto;
 }
 
 .div-icons{
-  margin-right: 2vh;
+  /* width: 100%; */
+  height: auto;
+  margin-right: 2vw;
+  margin-top: 1vw;
+}
+
+.my-btn{
+  background-color: black;
+  color:white;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 10px;
+  border-radius: 5px;
+  -webkit-filter: drop-shadow(3px 3px 3px rgb(86, 86, 86));
+  filter: drop-shadow(3px 3px 3px rgb(86, 86, 86));
+  width: 90%;
+  height: auto;
+  text-align: center;
+  font-weight: 700;
+  padding: 5px;
 }
