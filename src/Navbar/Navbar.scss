@@ -1,0 +1,49 @@
+.nav-container {
+    background-color: #343A40;
+
+    a {
+        color: #CED4DA;
+        text-decoration: none;
+    }
+
+    .social-header {
+        background-color: #F8F9FA;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+
+    .logo {
+        display: flex;
+        // padding-right: 1em;
+    }
+
+    // nav{
+    //     align-self: center;
+    //     font-weight: 400;
+    //     ul {
+    //         display: flex;
+    //         a {
+    //             display: block;
+    //             padding: 0 1em;
+    //         }
+    //     }
+    // }
+    .settings {
+        align-self: center;
+
+        img {
+            height: auto;
+        }
+    }
+
+
+}
+
+.social-header,
+nav {
+    display: none;
+}

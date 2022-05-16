@@ -1,0 +1,45 @@
+.hero {
+    display: grid;
+    color: #F8F9FA;
+
+    .hero-left {
+        padding: 4em 2em;
+        background-color: #343A40;
+        height: 100vh;
+
+        .content {
+            text-align: center;
+
+            .meet {
+                font-size: clamp(1rem, 2vw, 4rem);
+
+                .name {
+                    font-weight: 600;
+                    color: #BE55FF;
+                }
+            }
+
+            .call-to-action {
+                margin-top: 2em;
+                width: 75%;
+            }
+        }
+
+    }
+
+
+
+    h1 {
+        font-weight: 600;
+        font-size: clamp(1rem, 18vw, 10rem);
+    }
+
+
+
+    .hero-design {
+        margin-top: 3em;
+        display: none;
+    }
+
+
+}

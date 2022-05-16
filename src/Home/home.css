@@ -1,0 +1,40 @@
+.hero {
+  display: -ms-grid;
+  display: grid;
+  color: #F8F9FA;
+}
+
+.hero .hero-left {
+  padding: 4em 2em;
+  background-color: #343A40;
+  height: 100vh;
+}
+
+.hero .hero-left .content {
+  text-align: center;
+}
+
+.hero .hero-left .content .meet {
+  font-size: clamp(1rem, 2vw, 4rem);
+}
+
+.hero .hero-left .content .meet .name {
+  font-weight: 600;
+  color: #BE55FF;
+}
+
+.hero .hero-left .content .call-to-action {
+  margin-top: 2em;
+  width: 75%;
+}
+
+.hero h1 {
+  font-weight: 600;
+  font-size: clamp(1rem, 18vw, 10rem);
+}
+
+.hero .hero-design {
+  margin-top: 3em;
+  display: none;
+}
+/*# sourceMappingURL=home.css.map */

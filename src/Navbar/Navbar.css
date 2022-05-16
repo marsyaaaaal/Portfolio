@@ -1,0 +1,44 @@
+.nav-container {
+  background-color: #343A40;
+}
+
+.nav-container a {
+  color: #CED4DA;
+  text-decoration: none;
+}
+
+.nav-container .social-header {
+  background-color: #F8F9FA;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em 2em;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .settings {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .settings img {
+  height: auto;
+}
+
+.social-header,
+nav {
+  display: none;
+}
+/*# sourceMappingURL=Navbar.css.map */

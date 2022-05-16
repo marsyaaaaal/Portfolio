@@ -1,9 +1,9 @@
 import $ from 'jquery';
-import Popper from 'popper.js';
-import { useEffect } from 'react';
-// import '../App.css';
+// import Popper from 'popper.js';
+// import { useEffect } from 'react';
+import './home.css';
 import { motion } from 'framer-motion';
-import WebFont from 'webfontloader';
+// import WebFont from 'webfontloader';
 import Section from '../Sections/section.js';
 import About from '../About/about.js';
 import Footer from '../Footer/footer.js';
@@ -47,35 +47,35 @@ const Home = () => {
       $(this).fadeTo(1000, 1, change)
     });
   }
-  useEffect(() => {
-    change();
-    WebFont.load({
-      google: {
-        families: ['Raleway']
-      }
-    });
-  }, []);
+
   return (
-    <div className='main-home'>
-
+    <div>
       <div className="hero">
-        <div className="content">
-          <h1> Hello World!</h1>
-          <div className="meet">
-            <span>I am Marcial, an aspiring Back End Developer</span>
+        <div className="hero-design" style={{
+          position: "absolute",
+          marginLeft: "52%",
+        }}>
+          <img className="hero-image" src="home-image.svg" alt="me" />
+        </div>
+        <div className="hero-left">
+          <div className="content">
+            <h1> Hello <br />World!</h1>
+            <div className="meet">
+              <span>I am <span className="name"> Marcial </span>, an aspiring <br /> Back End Developer</span>
+            </div>
+            <div type="button">
+              <img  class="call-to-action" src="call-to-action.svg" alt="know me" />
+            </div>
           </div>
-          <img src="call-to-action.svg" alt="know me" />
+
         </div>
 
-        <div className="hero-design">
-          <img src="home-image.svg" alt="me" />
-        </div>
       </div>
 
       <Section />
       <About />
       <Footer />
-      
+
     </div>
 
   );

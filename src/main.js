@@ -1,5 +1,5 @@
 
-import './App.css';
+import './main.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Home/home.js';
@@ -8,7 +8,7 @@ import Navbar from './Navbar/navbar.js';
 
 const Main = () => {
     return (
-        <div>
+        <div class="main">
             <Navbar />
             <Home />
         </div>);
