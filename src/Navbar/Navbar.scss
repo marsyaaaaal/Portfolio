@@ -1,5 +1,64 @@
+@media only screen and (max-width: 992px) {
+
+    //for mobile
+    .social-header {
+        display: none;
+    }
+
+    .left-side {
+        width: 100%;
+    }
+
+    .right-side {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    //for desktop and up
+    .social-header {
+        display: inline-block;
+    }
+    .navbar-brand{
+        padding-left:3.5em;
+    }
+
+    .left-side {
+        width: 75%;
+    }
+
+    .right-side {
+        width: 25%;
+
+    }
+}
+
 .nav-container {
     background-color: #343A40;
+    display: flex;
+
+    .right-side {
+        background-color: #F8F9FA;
+        text-align: center;
+
+    }
+
+    .navbar-nav .nav-item.active .nav-link,
+    .navbar-nav .nav-item:hover .nav-link {
+        color: #9E00FF;
+    }
+
+    
+    .navbar-nav {
+        margin-right: 4em;
+        .nav-item {
+            margin-right: 1em;
+            color: #F8F9FA;
+            font-size: clamp(1rem, 1vw, 4rem);
+
+        }
+    }
 
     a {
         color: #CED4DA;
@@ -8,42 +67,16 @@
 
     .social-header {
         background-color: #F8F9FA;
-    }
-}
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 2em;
-
-    .logo {
-        display: flex;
-        // padding-right: 1em;
-    }
-
-    // nav{
-    //     align-self: center;
-    //     font-weight: 400;
-    //     ul {
-    //         display: flex;
-    //         a {
-    //             display: block;
-    //             padding: 0 1em;
-    //         }
-    //     }
-    // }
-    .settings {
-        align-self: center;
-
-        img {
-            height: auto;
+        .social-logo {
+            width: 40px;
+            margin: 2em 1em;
         }
     }
 
+    .navbar {
+        padding: 1em 1em;
+    }
 
-}
 
-.social-header,
-nav {
-    display: none;
 }

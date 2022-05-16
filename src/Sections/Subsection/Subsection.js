@@ -9,22 +9,55 @@ class SubSection extends React.Component {
             header: this.props.header,
             sub_header: this.props.subHeader,
             titles: this.props.titles,
-            type: this.props.type
+            type: this.props.type,
+            width: 0,
+            height: 0
         };
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 
     }
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
 
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
     render() {
         let project_images = [];
         this.state.titles.map((item, i) => {
 
-            project_images.push(
-                <div className="each-projects">
-                    <span className="project-title">{item}</span>
-                    <img src={(this.props.type).concat("/"+(parseInt(i)+1)+".svg")} />
-                </div>
+            if (this.state.width >= 991) {
+                project_images.push(
+                    <div className="each-projects-desktop">
+                        <span className="project-title">{item}</span>
+                        <div class="card" style={{ width: "18rem", borderRadius: '30px', border: '0', boxShadow: " 4px 4px 4px #7E7E7E" }}>
+                            <img src={(this.props.type).concat("/" + (parseInt(i) + 1) + ".svg")} alt={item} />
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                );
+            }
+            else {
+                project_images.push(
+                    <div className="each-projects-mobile">
+                        <span className="project-title">{item}</span>
+                        <div class="card" style={{ width: "18rem", borderRadius: '30px', border: '0', boxShadow: " 4px 4px 4px #7E7E7E" }}>
+                            <img src={(this.props.type).concat("/" + (parseInt(i) + 1) + ".svg")} alt={item} />
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>);
+            }
 
-            );
         });
         return (
             <div>
@@ -33,9 +66,12 @@ class SubSection extends React.Component {
                     <p>{this.state.sub_header}</p>
                 </div>
                 <div className="content">
-                    <div className="content-projects">
+                    {(this.state.width >= 991) ? (<div className="content-projects-desktop">
                         {project_images}
-                    </div>
+                    </div>) : (<div className="content-projects-mobile">
+                        {project_images}
+                    </div>)}
+
                 </div>
             </div>
         );

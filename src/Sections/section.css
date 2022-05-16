@@ -1,1 +1,61 @@
-/* No CSS *//*# sourceMappingURL=section.css.map */
+.section-container {
+  padding: 3em 2.5em;
+  background-image: url(../../public/bg1.svg);
+  background-repeat: no-repeat;
+  background-position-y: -5em;
+  background-size: 300px;
+}
+
+.section-container .my-works .text-works {
+  margin-bottom: 2em;
+  font-weight: 600;
+  color: #9E00FF;
+}
+
+.section-container .my-works .upper-section .header-my-works h1 {
+  font-weight: 600;
+}
+
+.section-container .card {
+  background-color: white;
+}
+
+@media only screen and (max-width: 992px) {
+  .upper-section .header-my-works h1 {
+    font-size: 20px;
+  }
+  .upper-section .header-my-works p {
+    font-size: 12px;
+    margin-top: -0.5em;
+  }
+  .upper-section .content .each-projects-desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .section-container {
+    padding: 5em 6em;
+  }
+  .upper-section .header-my-works h1 {
+    font-size: 32px;
+  }
+  .upper-section .header-my-works p {
+    font-size: 14px;
+    margin-top: -0.5em;
+  }
+  .upper-section .content .content-projects-desktop {
+    display: inline-block;
+    text-align: center;
+  }
+  .upper-section .content .content-projects-desktop .each-projects-desktop {
+    display: unset;
+  }
+  .upper-section .content .content-projects-desktop .each-projects-desktop .card-body {
+    display: none;
+  }
+  .upper-section .content .content-projects-desktop .each-projects-mobile {
+    display: none;
+  }
+}
+/*# sourceMappingURL=section.css.map */

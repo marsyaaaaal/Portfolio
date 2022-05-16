@@ -1,45 +1,91 @@
-.hero {
-    display: grid;
-    color: #F8F9FA;
+@media only screen and (max-width: 992px) {
 
-    .hero-left {
-        padding: 4em 2em;
-        background-color: #343A40;
-        height: 100vh;
+    //for mobile
+    .hero {
+        width: 100%;
 
         .content {
             text-align: center;
-
-            .meet {
-                font-size: clamp(1rem, 2vw, 4rem);
-
-                .name {
-                    font-weight: 600;
-                    color: #BE55FF;
-                }
-            }
+            padding: 0em 5em;
+            padding-top: 25%;
 
             .call-to-action {
                 margin-top: 2em;
-                width: 75%;
+                width: 300px;
+            }
+
+        }
+    }
+
+    .hero-design {
+        display: none;
+    }
+
+    h1{
+        font-size: 80px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    //for desktop
+    .hero {
+        display: grid;
+        grid-template-columns: 75% auto;
+        background: unset;
+        padding: 0;
+
+        .content {
+            text-align: left;
+            padding: 5em 6em;
+
+            .meet{
+                font-size: 24px;
+            }
+            .call-to-action {
+                margin-top: 2em;
+                width: 250px;
+            }
+        }
+    }
+
+    .hero-design {
+        margin-top: 3em;
+        height: auto;
+        display: unset;
+        margin-left: -48%;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 100px;
+    }
+
+}
+
+
+
+// default
+.hero {
+    display: grid;
+    margin-top: -1em;
+    color: #F8F9FA;
+
+    .content {
+        background-color: #343A40;
+        height: 100vh;
+
+        .meet {
+            .name {
+                font-weight: 600;
+                color: #BE55FF;
             }
         }
 
     }
 
-
-
     h1 {
         font-weight: 600;
-        font-size: clamp(1rem, 18vw, 10rem);
     }
-
-
-
-    .hero-design {
-        margin-top: 3em;
-        display: none;
-    }
-
 
 }

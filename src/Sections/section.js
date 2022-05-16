@@ -99,8 +99,8 @@ class Section extends React.Component {
 
         return (
             <div className="section-container">
-                <div className="My-works">
-                    <span> My works </span>
+                <div className="my-works">
+                    <span className="text-works"> My works </span>
                     <div className="upper-section">
                         <SubSection
                             header="FreeCodeCamp.org Front End Development and Libraries Projects"

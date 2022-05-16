@@ -1,5 +1,55 @@
+@media only screen and (max-width: 992px) {
+  .social-header {
+    display: none;
+  }
+  .left-side {
+    width: 100%;
+  }
+  .right-side {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .social-header {
+    display: inline-block;
+  }
+  .navbar-brand {
+    padding-left: 3.5em;
+  }
+  .left-side {
+    width: 75%;
+  }
+  .right-side {
+    width: 25%;
+  }
+}
+
 .nav-container {
   background-color: #343A40;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-container .right-side {
+  background-color: #F8F9FA;
+  text-align: center;
+}
+
+.nav-container .navbar-nav .nav-item.active .nav-link,
+.nav-container .navbar-nav .nav-item:hover .nav-link {
+  color: #9E00FF;
+}
+
+.nav-container .navbar-nav {
+  margin-right: 4em;
+}
+
+.nav-container .navbar-nav .nav-item {
+  margin-right: 1em;
+  color: #F8F9FA;
+  font-size: clamp(1rem, 1vw, 4rem);
 }
 
 .nav-container a {
@@ -11,34 +61,12 @@
   background-color: #F8F9FA;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 1em 2em;
+.nav-container .social-header .social-logo {
+  width: 40px;
+  margin: 2em 1em;
 }
 
-header .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .settings {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-header .settings img {
-  height: auto;
-}
-
-.social-header,
-nav {
-  display: none;
+.nav-container .navbar {
+  padding: 1em 1em;
 }
 /*# sourceMappingURL=Navbar.css.map */
