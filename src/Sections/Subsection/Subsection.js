@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Carousel} from '3d-react-carousal';
 
 class SubSection extends React.Component {
 
@@ -48,10 +48,10 @@ class SubSection extends React.Component {
             else {
                 project_images.push(
                     <div className="each-projects-mobile">
-                        <span className="project-title">{item}</span>
                         <div class="card" style={{ width: "18rem", borderRadius: '30px', border: '0', boxShadow: " 4px 4px 4px #7E7E7E" }}>
                             <img src={(this.props.type).concat("/" + (parseInt(i) + 1) + ".svg")} alt={item} />
                             <div class="card-body">
+                                <h5 className="card-title"><span className="project-title">{item}</span> </h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
@@ -68,9 +68,7 @@ class SubSection extends React.Component {
                 <div className="content">
                     {(this.state.width >= 991) ? (<div className="content-projects-desktop">
                         {project_images}
-                    </div>) : (<div className="content-projects-mobile">
-                        {project_images}
-                    </div>)}
+                    </div>) : (<Carousel className="content-projects-mobile" slides={project_images} autoplay={false} interval={5000} arrows={false}/> )}
 
                 </div>
             </div>

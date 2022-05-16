@@ -4,8 +4,6 @@ import Loading from './Loading/loading';
 import Main from './main.js';
 import { AnimatePresence, motion } from 'framer-motion';
 import $ from 'jquery';
-
-
 const App = () => {
 
   const height = $(window).innerHeight();

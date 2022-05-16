@@ -67,7 +67,7 @@ class Section extends React.Component {
                             {
                                 // console.log("right")
 
-                                item.images.map((im) =>  <img src={im} alt={item.title} /> )
+                                item.images.map((im) => <img src={im} alt={item.title} />)
                             }
 
                         </div>
@@ -87,7 +87,7 @@ class Section extends React.Component {
                         <div className="left">
                             {
                                 // console.log("left")
-                                item.images.map((im) =>  <img src={im} alt={item.title} /> )
+                                item.images.map((im) => <img src={im} alt={item.title} />)
                             }
 
                         </div>
@@ -98,8 +98,8 @@ class Section extends React.Component {
         });
 
         return (
-            <div className="section-container">
-                <div className="my-works">
+            <div>
+                <div className="section-container">
                     <span className="text-works"> My works </span>
                     <div className="upper-section">
                         <SubSection
@@ -115,14 +115,12 @@ class Section extends React.Component {
                             titles={this.back_end_titles}
                             type="Back-end" />
                     </div>
-                </div>
-
+                </div >
                 <div className="Team-projects">
                     <span>Team Projects</span>
                     {team_projects}
                 </div>
-
-            </div >
+            </div>
         );
     }
 

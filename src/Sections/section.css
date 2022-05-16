@@ -1,18 +1,21 @@
 .section-container {
   padding: 3em 2.5em;
-  background-image: url(../../public/bg1.svg);
-  background-repeat: no-repeat;
-  background-position-y: -5em;
-  background-size: 300px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #F8F9FA), color-stop(50%, #343A40));
+  background: linear-gradient(180deg, #F8F9FA 50%, #343A40 50%);
 }
 
-.section-container .my-works .text-works {
+.section-container .text-works {
   margin-bottom: 2em;
   font-weight: 600;
   color: #9E00FF;
+  letter-spacing: 0.15em;
 }
 
-.section-container .my-works .upper-section .header-my-works h1 {
+.section-container .upper-section .header-my-works h1 {
+  font-weight: 600;
+}
+
+.section-container .lower-section .header-my-works h1 {
   font-weight: 600;
 }
 
@@ -21,6 +24,9 @@
 }
 
 @media only screen and (max-width: 992px) {
+  .upper-section {
+    margin-bottom: 10em;
+  }
   .upper-section .header-my-works h1 {
     font-size: 20px;
   }
@@ -28,8 +34,52 @@
     font-size: 12px;
     margin-top: -0.5em;
   }
+  .upper-section .content {
+    margin-top: 3em;
+  }
   .upper-section .content .each-projects-desktop {
     display: none;
+  }
+  .upper-section .content .each-projects-mobile {
+    text-align: center;
+  }
+  .upper-section .content .each-projects-mobile .card {
+    padding-bottom: 3em;
+  }
+  .upper-section .content .each-projects-mobile .card .card-title {
+    font-weight: 400;
+    padding-top: 1em;
+  }
+  .upper-section .content .each-projects-mobile .card .card-text {
+    font-weight: 300;
+  }
+  .lower-section {
+    margin-bottom: 10em;
+    color: #F8F9FA;
+  }
+  .lower-section .header-my-works h1 {
+    font-size: 20px;
+  }
+  .lower-section .header-my-works p {
+    font-size: 12px;
+    margin-top: -0.5em;
+  }
+  .lower-section .content .each-projects-desktop {
+    display: none;
+  }
+  .lower-section .content .each-projects-mobile {
+    text-align: center;
+  }
+  .lower-section .content .each-projects-mobile .card {
+    padding-bottom: 3em;
+    color: #343A40;
+  }
+  .lower-section .content .each-projects-mobile .card .card-title {
+    font-weight: 400;
+    padding-top: 1em;
+  }
+  .lower-section .content .each-projects-mobile .card .card-text {
+    font-weight: 300;
   }
 }
 
@@ -55,6 +105,26 @@
     display: none;
   }
   .upper-section .content .content-projects-desktop .each-projects-mobile {
+    display: none;
+  }
+  .lower-section .header-my-works h1 {
+    font-size: 32px;
+  }
+  .lower-section .header-my-works p {
+    font-size: 14px;
+    margin-top: -0.5em;
+  }
+  .lower-section .content .content-projects-desktop {
+    display: inline-block;
+    text-align: center;
+  }
+  .lower-section .content .content-projects-desktop .each-projects-desktop {
+    display: unset;
+  }
+  .lower-section .content .content-projects-desktop .each-projects-desktop .card-body {
+    display: none;
+  }
+  .lower-section .content .content-projects-desktop .each-projects-mobile {
     display: none;
   }
 }
