@@ -11,7 +11,8 @@
 
             .call-to-action {
                 margin-top: 2em;
-                width: 300px;
+                width: 15rem;
+                padding: 1em;
             }
 
         }
@@ -21,7 +22,7 @@
         display: none;
     }
 
-    h1{
+    h1 {
         font-size: 80px;
     }
 }
@@ -34,14 +35,16 @@
         grid-template-columns: 75% auto;
         background: unset;
         padding: 0;
+        background-color: #F8F9FA;
 
         .content {
             text-align: left;
             padding: 5em 6em;
 
-            .meet{
+            .meet {
                 font-size: 24px;
             }
+
             .call-to-action {
                 margin-top: 2em;
                 width: 250px;
@@ -57,7 +60,7 @@
         width: 100%;
     }
 
-    h1{
+    h1 {
         font-size: 100px;
     }
 
@@ -67,7 +70,7 @@
 
 // default
 .hero {
-    display: grid;
+    // display: grid;
     margin-top: -1em;
     color: #F8F9FA;
 

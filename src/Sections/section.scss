@@ -1,5 +1,6 @@
 .section-container {
     padding: 3em 2.5em;
+    position: relative;
     background: linear-gradient(180deg, #F8F9FA 50%, #343A40 50%);
     // background-image: url(../../public/bg1.svg);
     // background-repeat: no-repeat;
@@ -43,6 +44,54 @@
 @media only screen and (max-width: 992px) {
 
     //mobile
+    .team-projects-bg-1 {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        margin-top: 0;
+        background: linear-gradient(to bottom right, #F8F9FA 50%, #DEE2E6 50%);
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .team-projects-bg-2 {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        margin-top: 100vh;
+        background: linear-gradient(to bottom right, #DEE2E6 50%, #F8F9FA 50%);
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .team-projects-bg-3 {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        margin-top: 200vh;
+        background: linear-gradient(to top right, #DEE2E6 50%, #F8F9FA 50%);
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .team-projects-bg-4 {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        margin-top: 300vh;
+        background: linear-gradient(to top right, #F8F9FA 50%, #DEE2E6 50%);
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
     .upper-section {
         margin-bottom: 10em;
 
@@ -127,17 +176,111 @@
             }
         }
     }
+
+    .team-projects {
+        padding: 3em 2.5em;
+        position: relative;
+        .text-team {
+            margin-bottom: 2em;
+            font-weight: 600;
+            color: #9E00FF;
+            letter-spacing: 0.15em;
+
+        }
+
+        .content-portfolio {
+            margin-bottom: 4em;
+
+            h1 {
+                font-weight: 600;
+                font-size: 24px;
+                margin-bottom: 0em;
+            }
+
+            .role {
+                font-weight: 300;
+                font-size: 1em;
+            }
+
+            .line {
+                font-weight: 600;
+                font-size: 1em;
+
+            }
+
+            .stack {
+                font-weight: 600;
+                font-size: 0.80em;
+                color: #9E00FF;
+
+            }
+
+            .portfolio-image {
+                margin-top: 1em;
+            }
+        }
+
+    }
 }
 
 @media only screen and (min-width: 992px) {
 
     //destkop
+    .team-projects-bg-1 {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        margin-top: 0;
+        background: linear-gradient(to bottom right, #F8F9FA 50%, #DEE2E6 50%);
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .team-projects-bg-2 {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        margin-top: 100vh;
+        background: linear-gradient(to bottom right, #DEE2E6 50%, #F8F9FA 50%);
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .team-projects-bg-3 {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        margin-top: 200vh;
+        background: linear-gradient(to top right, #DEE2E6 50%, #F8F9FA 50%);
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .team-projects-bg-4 {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        margin-top: 300vh;
+        background: linear-gradient(to top right, #F8F9FA 50%, #DEE2E6 50%);
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
 
     .section-container {
-        padding: 5em 6em;
+        padding: 6em 6em;
     }
 
     .upper-section {
+        margin-bottom: 10em;
+
         .header-my-works {
             h1 {
                 font-size: 32px;
@@ -150,12 +293,26 @@
         }
 
         .content {
+
             .content-projects-desktop {
-                display: inline-block;
                 text-align: center;
+                clear: both;
+                display: flex;
 
                 .each-projects-desktop {
                     display: unset;
+                    float: left;
+                    width: 20%;
+                    padding: 1em;
+
+                    .image-project {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .card {
+                        margin-top: 1em;
+                    }
 
                     .card-body {
                         display: none;
@@ -171,6 +328,8 @@
     }
 
     .lower-section {
+        color: #F8F9FA;
+
         .header-my-works {
             h1 {
                 font-size: 32px;
@@ -184,11 +343,24 @@
 
         .content {
             .content-projects-desktop {
-                display: inline-block;
                 text-align: center;
+                display: flex;
+                clear: both;
 
                 .each-projects-desktop {
                     display: unset;
+                    float: left;
+                    width: 20%;
+                    padding: 1em;
+
+                    .card {
+                        margin-top: 1em;
+                    }
+
+                    .image-project {
+                        width: 100%;
+                        height: auto;
+                    }
 
                     .card-body {
                         display: none;
@@ -201,6 +373,85 @@
             }
 
         }
+    }
+
+    .team-projects {
+        padding: 3em 6em;
+        position: relative;
+
+
+
+        .text-team {
+            margin-bottom: 2em;
+            font-weight: 600;
+            color: #9E00FF;
+            letter-spacing: 0.15em;
+            font-size: 1.5em;
+
+        }
+
+        .content-portfolio {
+            margin-bottom: 4em;
+            overflow: hidden;
+
+            p {
+                margin-top: 3em;
+            }
+
+            .right {
+                float: right;
+                width: 50%;
+
+                .text {
+                    padding-top: 5em;
+                    padding-left: 1em;
+
+                }
+
+
+            }
+
+            .left {
+                float: left;
+                width: 50%;
+
+                .text {
+                    padding-top: 5em;
+                }
+            }
+
+
+
+            h1 {
+                font-weight: 600;
+                font-size: 3em;
+                margin-bottom: 0em;
+            }
+
+            .role {
+                font-weight: 300;
+                font-size: 1.3em;
+            }
+
+            .line {
+                font-weight: 600;
+                font-size: 1.3em;
+
+            }
+
+            .stack {
+                font-weight: 600;
+                font-size: 1.1em;
+                color: #9E00FF;
+
+            }
+
+            .portfolio-image {
+                margin-top: 1em;
+                width: 100%;
+            }
+        }
+
     }
 
 

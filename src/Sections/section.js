@@ -2,7 +2,6 @@
 import React from 'react';
 import './section.css';
 import SubSection from './Subsection/Subsection.js';
-import Portfolio from './Portfolio/portfolio.js';
 
 class Section extends React.Component {
 
@@ -28,7 +27,8 @@ class Section extends React.Component {
         {
             title: 'pasaBUY',
             role: 'Full Stack Developer',
-            images: ['Team-projects/pasabuy1.png', 'Team-projects/pasabuy2.png', 'Team-projects/pasabuy3.png'],
+            // images: ['Team-projects/pasabuy1.png', 'Team-projects/pasabuy2.png', 'Team-projects/pasabuy3.png'],
+            images: ['Team-projects/pasabuy1.png'],
             stack: 'Laravel, Vue.js, Vuex and MySql'
         },
         {
@@ -59,15 +59,20 @@ class Section extends React.Component {
                 team_projects.push(
                     <div className="content-portfolio">
                         <div className="left">
-                            <h1>{item.title} </h1>
-                            <span>{item.role} |</span>
-                            <span> {item.stack}</span>
+                            <div className="text">
+                                <h1>{item.title} </h1>
+                                <span className='role'>{item.role} </span><span className='line'>|</span>
+                                <span className='stack'> {item.stack}</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget mattis semper suspendisse est.
+                                    Lacus mi nunc ac lectus.</p>
+                            </div>
+
                         </div>
                         <div className="right">
                             {
                                 // console.log("right")
 
-                                item.images.map((im) => <img src={im} alt={item.title} />)
+                                item.images.map((im) => <img className='portfolio-image' src={im} alt={item.title} />)
                             }
 
                         </div>
@@ -80,14 +85,19 @@ class Section extends React.Component {
                 team_projects.push(
                     <div className="content-portfolio">
                         <div className="right">
-                            <h1>{item.title} </h1>
-                            <span>{item.role} |</span>
-                            <span> {item.stack}</span>
+                            <div className="text">
+
+                                <h1>{item.title} </h1>
+                                <span className='role'>{item.role} </span><span className='line'>|</span>
+                                <span className='stack'> {item.stack}</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget mattis semper suspendisse est.
+                                    Lacus mi nunc ac lectus.</p>
+                            </div>
                         </div>
                         <div className="left">
                             {
                                 // console.log("left")
-                                item.images.map((im) => <img src={im} alt={item.title} />)
+                                item.images.map((im) => <img className='portfolio-image' src={im} alt={item.title} />)
                             }
 
                         </div>
@@ -116,8 +126,12 @@ class Section extends React.Component {
                             type="Back-end" />
                     </div>
                 </div >
-                <div className="Team-projects">
-                    <span>Team Projects</span>
+                <div className="team-projects">
+                    <div className='team-projects-bg-1'></div>
+                    <div className='team-projects-bg-2'></div>
+                    <div className='team-projects-bg-3'></div>
+                    <div className='team-projects-bg-4'></div>
+                    <span className='text-team'>Team Projects</span>
                     {team_projects}
                 </div>
             </div>
