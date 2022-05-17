@@ -62,11 +62,19 @@
 }
 
 .nav-container .social-header .social-logo {
-  width: 40px;
+  width: 2em;
   margin: 2em 1em;
 }
 
 .nav-container .navbar {
   padding: 1em 1em;
+}
+
+.logo {
+  width: 2.5em;
+}
+
+.burger {
+  width: 2em;
 }
 /*# sourceMappingURL=Navbar.css.map */

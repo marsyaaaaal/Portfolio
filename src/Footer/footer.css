@@ -1,1 +1,19 @@
-/* No CSS *//*# sourceMappingURL=footer.css.map */
+.footer {
+  background-color: #343A40;
+  color: #F8F9FA;
+}
+
+.footer img {
+  width: 100px;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer {
+    padding: 5em 6em;
+  }
+  .footer h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

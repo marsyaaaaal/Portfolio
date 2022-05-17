@@ -11,7 +11,7 @@ const Navbar = () => {
                         <a class="navbar-brand" href="#"><img className="logo" src="logo.svg" /></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style={{ border: "0" }}>
                             <div className="settings" type="button">
-                                <img src="white-burger.svg" alt="burger" />
+                                <img className='burger' src="white-burger.svg" alt="burger" />
                             </div>
                         </button>
                         <div className="collapse navbar-collapse " id="navbarSupportedContent">

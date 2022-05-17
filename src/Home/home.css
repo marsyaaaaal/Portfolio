@@ -32,7 +32,8 @@
   }
   .hero .content {
     text-align: left;
-    padding: 5em 6em;
+    padding: 0em 6em;
+    padding-top: 20vh;
   }
   .hero .content .meet {
     font-size: 24px;

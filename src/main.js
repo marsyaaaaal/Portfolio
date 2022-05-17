@@ -8,7 +8,7 @@ import Navbar from './Navbar/navbar.js';
 
 const Main = () => {
     return (
-        <div class="main">
+        <div className="main">
             <Navbar />
             <Home />
         </div>);

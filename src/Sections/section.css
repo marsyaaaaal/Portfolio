@@ -245,8 +245,9 @@
     width: 100%;
     height: auto;
   }
-  .upper-section .content .content-projects-desktop .each-projects-desktop .card {
-    margin-top: 1em;
+  .upper-section .content .content-projects-desktop .each-projects-desktop .project-title {
+    margin-bottom: 1em;
+    display: block;
   }
   .upper-section .content .content-projects-desktop .each-projects-desktop .card-body {
     display: none;
@@ -277,8 +278,9 @@
     width: 20%;
     padding: 1em;
   }
-  .lower-section .content .content-projects-desktop .each-projects-desktop .card {
-    margin-top: 1em;
+  .lower-section .content .content-projects-desktop .each-projects-desktop .project-title {
+    margin-bottom: 1em;
+    display: block;
   }
   .lower-section .content .content-projects-desktop .each-projects-desktop .image-project {
     width: 100%;
@@ -305,16 +307,16 @@
     margin-bottom: 4em;
     overflow: hidden;
   }
-  .team-projects .content-portfolio p {
-    margin-top: 3em;
-  }
   .team-projects .content-portfolio .right {
     float: right;
     width: 50%;
   }
   .team-projects .content-portfolio .right .text {
-    padding-top: 5em;
-    padding-left: 1em;
+    padding: 5em;
+    padding-top: 3.5em;
+  }
+  .team-projects .content-portfolio .right p {
+    margin-top: 2em;
   }
   .team-projects .content-portfolio .left {
     float: left;
@@ -322,6 +324,7 @@
   }
   .team-projects .content-portfolio .left .text {
     padding-top: 5em;
+    padding-right: 5em;
   }
   .team-projects .content-portfolio h1 {
     font-weight: 600;

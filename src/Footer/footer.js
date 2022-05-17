@@ -1,10 +1,10 @@
 import React from "react";
-
+import "./footer.css";
 class Footer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="footer">
                 <div className="contacts">
                     <h1>MARCIAL ABASOLA</h1>
                     <img src="email.svg" alt="email" />

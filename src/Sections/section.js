@@ -2,6 +2,8 @@
 import React from 'react';
 import './section.css';
 import SubSection from './Subsection/Subsection.js';
+import Slider from '@farbenmeer/react-spring-slider';
+
 
 class Section extends React.Component {
 
@@ -94,6 +96,7 @@ class Section extends React.Component {
                                     Lacus mi nunc ac lectus.</p>
                             </div>
                         </div>
+                      
                         <div className="left">
                             {
                                 // console.log("left")
@@ -132,6 +135,7 @@ class Section extends React.Component {
                     <div className='team-projects-bg-3'></div>
                     <div className='team-projects-bg-4'></div>
                     <span className='text-team'>Team Projects</span>
+                    
                     {team_projects}
                 </div>
             </div>
