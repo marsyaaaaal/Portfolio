@@ -70,6 +70,8 @@
         width: 25%;
 
     }
+
+ 
 }
 
 .nav-container {
@@ -85,6 +87,7 @@
     .navbar-nav .nav-item.active .nav-link,
     .navbar-nav .nav-item:hover .nav-link {
         color: #9E00FF;
+        
     }
 
 
@@ -95,6 +98,9 @@
             margin-right: 1em;
             color: #F8F9FA;
             font-size: clamp(1rem, 1vw, 4rem);
+            &:hover{
+                border-bottom: 4px solid #9E00FF;
+            }
 
         }
     }

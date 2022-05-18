@@ -4,10 +4,6 @@ import $ from 'jquery';
 import './home.css';
 import { motion } from 'framer-motion';
 // import WebFont from 'webfontloader';
-import Section from '../Sections/section.js';
-import About from '../About/about.js';
-import Footer from '../Footer/footer.js';
-
 
 
 
@@ -58,23 +54,19 @@ const Home = () => {
             <div className="meet">
               <span>I am <span className="name"> Marcial </span>, an aspiring Back End Developer</span>
             </div>
-            <div type="button">
-              <img class="call-to-action" src="call-to-action.svg" alt="know me" />
+            <div className='go-to' type="button">
+              <button>Go to Portfolio</button>
             </div>
           </div>
 
         </div>
         <div className="hero-design">
           <img className="hero-image" src="home-image.svg" alt="me" />
+         
         </div>
 
 
       </div>
-
-      <Section />
-      <About />
-      <Footer />
-
     </div>
 
   );

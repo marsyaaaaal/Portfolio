@@ -237,7 +237,7 @@
 
     //destkop
     .team-projects-bg-1 {
-        content: "";
+        // content: "";
         position: absolute;
         width: 100%;
         height: 100vh;
@@ -246,10 +246,12 @@
         top: 0;
         left: 0;
         z-index: -1;
+        margin-top: 230vh;
+
     }
 
     .team-projects-bg-2 {
-        content: "";
+        // content: "";
         position: absolute;
         width: 100%;
         height: 100vh;
@@ -258,10 +260,12 @@
         top: 0;
         left: 0;
         z-index: -1;
+        margin-top: 330vh;
+
     }
 
     .team-projects-bg-3 {
-        content: "";
+        // content: "";
         position: absolute;
         width: 100%;
         height: 100vh;
@@ -270,10 +274,12 @@
         top: 0;
         left: 0;
         z-index: -1;
+        margin-top: 430vh;
+
     }
 
     .team-projects-bg-4 {
-        content: "";
+        // content: "";
         position: absolute;
         width: 100%;
         height: 100vh;
@@ -282,6 +288,8 @@
         top: 0;
         left: 0;
         z-index: -1;
+        margin-top: 530vh;
+
     }
 
     .section-container {
@@ -391,7 +399,7 @@
 
     .team-projects {
         padding: 3em 6em;
-        position: relative;
+        // position: relative;
 
         .text-team {
             margin-bottom: 2em;

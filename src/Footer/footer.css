@@ -121,6 +121,7 @@
     display: -ms-flexbox;
     display: flex;
     position: relative;
+    width: 100%;
   }
   .footer .footer-bg {
     display: unset;

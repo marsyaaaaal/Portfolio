@@ -35,7 +35,7 @@
         grid-template-columns: 75% auto;
         background: unset;
         padding: 0;
-        background-color: #F8F9FA;
+        background: #F8F9FA;
 
         .content-text {
             text-align: left;
@@ -95,5 +95,20 @@
     h1 {
         font-weight: 600;
     }
+
+    .go-to {
+        margin-top: 2em;
+
+        button {
+            border-radius: 10px;
+            padding: 0.5em 2em;
+            background-color: #9E00FF;
+            color: #F8F9FA;
+            border: 0;
+            box-shadow: 2px 2px #000000;
+            font-weight: 600;
+        }
+    }
+
 
 }

@@ -28,7 +28,7 @@
         grid-template-columns: 75% auto;
     background: unset;
     padding: 0;
-    background-color: #F8F9FA;
+    background: #F8F9FA;
   }
   .hero .content-text {
     text-align: left;
@@ -72,6 +72,21 @@
 }
 
 .hero h1 {
+  font-weight: 600;
+}
+
+.hero .go-to {
+  margin-top: 2em;
+}
+
+.hero .go-to button {
+  border-radius: 10px;
+  padding: 0.5em 2em;
+  background-color: #9E00FF;
+  color: #F8F9FA;
+  border: 0;
+  -webkit-box-shadow: 2px 2px #000000;
+          box-shadow: 2px 2px #000000;
   font-weight: 600;
 }
 /*# sourceMappingURL=home.css.map */

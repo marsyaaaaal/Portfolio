@@ -81,6 +81,10 @@
   font-size: clamp(1rem, 1vw, 4rem);
 }
 
+.nav-container .navbar-nav .nav-item:hover {
+  border-bottom: 4px solid #9E00FF;
+}
+
 .nav-container a {
   color: #CED4DA;
   text-decoration: none;
