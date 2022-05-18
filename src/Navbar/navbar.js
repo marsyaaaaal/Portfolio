@@ -1,11 +1,33 @@
 
 import './Navbar.css';
+import { motion } from 'framer-motion';
+import React from 'react';
 
 const Navbar = () => {
-    
+
+    let [shouldShowActions, setShouldShowActions] = React.useState(0);
+    const [lastYpos, setLastYpos] = React.useState(0);
+
+    React.useEffect(() => {
+        function handleScroll() {
+            const yPos = window.scrollY;
+            const isScrollingUp = yPos < lastYpos;
+            console.log(lastYpos + 'sadfdasfa')
+            setShouldShowActions(isScrollingUp);
+            setLastYpos(yPos);
+        }
+
+        window.addEventListener('scroll', handleScroll, false);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll, false)
+        }
+
+
+    }, [lastYpos])
 
     return (
-        <div className="nav-container">
+        <motion.div initial={{ y: "-100%" }} animate={{ y: (shouldShowActions || window.scrollY == 0) ? "0%" : "-100%" }} transition={{ duration: 0.5 }} className="nav-container fixed-top">
             <div className='left-side'>
                 <nav class="navbar navbar-expand-lg " style={{ backgroundColor: "#343A40" }} >
                     <div class="container-fluid">
@@ -40,16 +62,19 @@ const Navbar = () => {
 
             <div className='right-side'>
                 <div className="social-header">
-                    <img type="button" className='social-logo' src="linkedin.png" alt="linkedin" />
-                    <img type="button" className='social-logo' src="facebook.png" alt="facebook" />
-                    <img type="button" className='social-logo' src="github.png" alt="github" />
+                    <motion.img whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.8 }} type="button" className='social-logo' src="linkedin.png" alt="linkedin" />
+                    <motion.img whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.8 }} type="button" className='social-logo' src="facebook.png" alt="facebook" />
+                    <motion.img whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.8 }} type="button" className='social-logo' src="github.png" alt="github" />
                 </div>
             </div>
 
 
 
 
-        </div >
+        </motion.div >
 
     );
 

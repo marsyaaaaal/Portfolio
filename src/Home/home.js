@@ -1,6 +1,6 @@
 import $ from 'jquery';
 // import Popper from 'popper.js';
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import './home.css';
 import { motion } from 'framer-motion';
 // import WebFont from 'webfontloader';
@@ -41,29 +41,34 @@ const Home = () => {
       this.innerHTML = titles[counter];
       counter = ++counter % titles.length;
       $(this).fadeTo(1000, 1, change)
+      console.log(titles[counter])
     });
   }
 
+  useEffect(() => {
+    // Update the document title using the browser API
+    change();
+  });
   return (
     <div>
 
       <div className="hero">
-        <div className="content">
-          <div className='content-text'>
+        <motion.div  initial={{ x: "-100%" }} animate={{ x: "0%" }} transition={{ duration: 1}} className="content">
+          <motion.div className='content-text'>
             <h1> Hello <br />World!</h1>
             <div className="meet">
-              <span>I am <span className="name"> Marcial </span>, an aspiring Back End Developer</span>
+              <span>I am <span className="name"> Marcial </span>, an aspiring <span id="name">Back End Developer </span></span>
             </div>
-            <div className='go-to' type="button">
-              <button>Go to Portfolio</button>
+            <div className='go-to' >
+              <motion.button whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.8 }}>Go to Portfolio</motion.button>
             </div>
-          </div>
+          </motion.div>
 
-        </div>
-        <div className="hero-design">
+        </motion.div>
+        <motion.div  initial={{ x: "100%" }} animate={{ x: "0%" }} transition={{ duration: 1}} className="hero-design">
           <img className="hero-image" src="home-image.svg" alt="me" />
-         
-        </div>
+        </motion.div>
 
 
       </div>
