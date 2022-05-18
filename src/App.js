@@ -1,12 +1,12 @@
 
-import { useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import Loading from './Loading/loading';
 import Main from './main.js';
 import { AnimatePresence, motion } from 'framer-motion';
 import $ from 'jquery';
 const App = () => {
 
-  const height = $(window).innerHeight();
+  // const height = $(window).innerHeight();
   const [nowLoading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -17,7 +17,8 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+
+    <div >
       <AnimatePresence exitBeforeEnter>
         {nowLoading ? (
           <motion.div key="box" exit={{ opacity: 0, transition: { duration: 0.5 } }} >

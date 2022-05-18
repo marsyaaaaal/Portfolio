@@ -36,6 +36,7 @@
     .card {
         background-color: white;
     }
+ 
 
 }
 
@@ -190,7 +191,7 @@
         }
 
         .content-portfolio {
-            margin-bottom: 4em;
+            margin-bottom: 6em;
 
             h1 {
                 font-weight: 600;
@@ -216,8 +217,16 @@
 
             }
 
+            p {
+                margin-top: 1em;
+            }
+
             .portfolio-image {
                 margin-top: 1em;
+                width: 100%;
+                max-width: 600px;
+                filter: drop-shadow(2px 2px 2px #343A40);
+
             }
         }
 
@@ -285,11 +294,11 @@
         .header-my-works {
             h1 {
                 font-size: 32px;
+                line-height: 1em;
             }
 
             p {
                 font-size: 14px;
-                margin-top: -0.5em;
             }
         }
 
@@ -312,8 +321,9 @@
                     }
 
                     .project-title {
-                        margin-bottom: 1em;
+                        margin-bottom: 0.4em;
                         display: block;
+                        font-size: 0.80em;
                     }
 
                     .card-body {
@@ -335,11 +345,11 @@
         .header-my-works {
             h1 {
                 font-size: 32px;
+                line-height: 1em;
             }
 
             p {
                 font-size: 14px;
-                margin-top: -0.5em;
             }
         }
 
@@ -356,8 +366,9 @@
                     padding: 1em;
 
                     .project-title {
-                        margin-bottom: 1em;
+                        margin-bottom: 0.4em;
                         display: block;
+                        font-size: 0.80em;
                     }
 
                     .image-project {
@@ -395,20 +406,27 @@
             margin-bottom: 4em;
             overflow: hidden;
 
-
-
             .right {
                 float: right;
                 width: 50%;
 
                 .text {
                     padding: 5em;
-                    padding-top: 3.5em;
+                    padding-top: 2em;
+                    line-height: 1.5em;
+
+                    h1 {
+                        line-height: 1.5em;
+                    }
+
+                    p {
+                        margin-top: 2em;
+                    }
+
+
                 }
 
-                p {
-                    margin-top: 2em;
-                }
+
 
             }
 
@@ -417,8 +435,18 @@
                 width: 50%;
 
                 .text {
-                    padding-top: 5em;
+                    h1 {
+                        line-height: 1.5em;
+                    }
+
+                    p {
+                        margin-top: 2em;
+                    }
+
+                    padding-top: 2em;
                     padding-right: 5em;
+                    line-height: 1.5em;
+
                 }
             }
 
@@ -426,13 +454,13 @@
 
             h1 {
                 font-weight: 600;
-                font-size: 3em;
-                margin-bottom: 0em;
+                font-size: 2.5em;
+                margin-bottom: 0em
             }
 
             .role {
-                font-weight: 300;
-                font-size: 1.3em;
+                font-weight: 200;
+                font-size: 1.2em;
             }
 
             .line {
@@ -443,7 +471,7 @@
 
             .stack {
                 font-weight: 600;
-                font-size: 1.1em;
+                font-size: 0.75em;
                 color: #9E00FF;
 
             }
@@ -451,6 +479,8 @@
             .portfolio-image {
                 margin-top: 1em;
                 width: 100%;
+                filter: drop-shadow(2px 2px 2px #343A40);
+                padding: 0.3em;
             }
         }
 

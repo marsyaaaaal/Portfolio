@@ -141,7 +141,7 @@
     letter-spacing: 0.15em;
   }
   .team-projects .content-portfolio {
-    margin-bottom: 4em;
+    margin-bottom: 6em;
   }
   .team-projects .content-portfolio h1 {
     font-weight: 600;
@@ -161,8 +161,15 @@
     font-size: 0.80em;
     color: #9E00FF;
   }
+  .team-projects .content-portfolio p {
+    margin-top: 1em;
+  }
   .team-projects .content-portfolio .portfolio-image {
     margin-top: 1em;
+    width: 100%;
+    max-width: 600px;
+    -webkit-filter: drop-shadow(2px 2px 2px #343A40);
+            filter: drop-shadow(2px 2px 2px #343A40);
   }
 }
 
@@ -223,10 +230,10 @@
   }
   .upper-section .header-my-works h1 {
     font-size: 32px;
+    line-height: 1em;
   }
   .upper-section .header-my-works p {
     font-size: 14px;
-    margin-top: -0.5em;
   }
   .upper-section .content .content-projects-desktop {
     text-align: center;
@@ -246,8 +253,9 @@
     height: auto;
   }
   .upper-section .content .content-projects-desktop .each-projects-desktop .project-title {
-    margin-bottom: 1em;
+    margin-bottom: 0.4em;
     display: block;
+    font-size: 0.80em;
   }
   .upper-section .content .content-projects-desktop .each-projects-desktop .card-body {
     display: none;
@@ -260,10 +268,10 @@
   }
   .lower-section .header-my-works h1 {
     font-size: 32px;
+    line-height: 1em;
   }
   .lower-section .header-my-works p {
     font-size: 14px;
-    margin-top: -0.5em;
   }
   .lower-section .content .content-projects-desktop {
     text-align: center;
@@ -279,8 +287,9 @@
     padding: 1em;
   }
   .lower-section .content .content-projects-desktop .each-projects-desktop .project-title {
-    margin-bottom: 1em;
+    margin-bottom: 0.4em;
     display: block;
+    font-size: 0.80em;
   }
   .lower-section .content .content-projects-desktop .each-projects-desktop .image-project {
     width: 100%;
@@ -313,9 +322,13 @@
   }
   .team-projects .content-portfolio .right .text {
     padding: 5em;
-    padding-top: 3.5em;
+    padding-top: 2em;
+    line-height: 1.5em;
   }
-  .team-projects .content-portfolio .right p {
+  .team-projects .content-portfolio .right .text h1 {
+    line-height: 1.5em;
+  }
+  .team-projects .content-portfolio .right .text p {
     margin-top: 2em;
   }
   .team-projects .content-portfolio .left {
@@ -323,17 +336,24 @@
     width: 50%;
   }
   .team-projects .content-portfolio .left .text {
-    padding-top: 5em;
+    padding-top: 2em;
     padding-right: 5em;
+    line-height: 1.5em;
+  }
+  .team-projects .content-portfolio .left .text h1 {
+    line-height: 1.5em;
+  }
+  .team-projects .content-portfolio .left .text p {
+    margin-top: 2em;
   }
   .team-projects .content-portfolio h1 {
     font-weight: 600;
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 0em;
   }
   .team-projects .content-portfolio .role {
-    font-weight: 300;
-    font-size: 1.3em;
+    font-weight: 200;
+    font-size: 1.2em;
   }
   .team-projects .content-portfolio .line {
     font-weight: 600;
@@ -341,12 +361,15 @@
   }
   .team-projects .content-portfolio .stack {
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 0.75em;
     color: #9E00FF;
   }
   .team-projects .content-portfolio .portfolio-image {
     margin-top: 1em;
     width: 100%;
+    -webkit-filter: drop-shadow(2px 2px 2px #343A40);
+            filter: drop-shadow(2px 2px 2px #343A40);
+    padding: 0.3em;
   }
 }
 /*# sourceMappingURL=section.css.map */

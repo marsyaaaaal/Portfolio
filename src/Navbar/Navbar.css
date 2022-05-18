@@ -37,6 +37,9 @@
 }
 
 @media only screen and (min-width: 992px) {
+  .settings-close {
+    display: none;
+  }
   .social-header {
     display: inline-block;
   }

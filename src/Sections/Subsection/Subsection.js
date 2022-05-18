@@ -36,7 +36,7 @@ class SubSection extends React.Component {
                 project_images.push(
                     <div className="each-projects-desktop">
                         <span className="project-title">{item}</span>
-                        <div className="card" style={{ width: "100%", borderRadius: '30px', border: '0', boxShadow: " 4px 4px 4px #7E7E7E" }}>
+                        <div className="card" style={{ width: "100%", borderRadius: '20px', border: '0', boxShadow: '4px -2px 4px 0px #DCDCDC' }}>
                             <img className="image-project" src={(this.props.type).concat("/" + (parseInt(i) + 1) + ".svg")} alt={item} />
                             <div class="card-body">
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -48,7 +48,7 @@ class SubSection extends React.Component {
             else {
                 project_images.push(
                     <div className="each-projects-mobile">
-                        <div class="card" style={{ width: "18rem", borderRadius: '30px', border: '0', boxShadow: " 4px 4px 4px #7E7E7E" }}>
+                        <div class="card" style={{ width: "18rem", borderRadius: '20px', border: '0', boxShadow: '4px -2px 4px 0px #DCDCDC' }}>
                             <img className="image-project" src={(this.props.type).concat("/" + (parseInt(i) + 1) + ".svg")} alt={item} />
                             <div class="card-body">
                                 <h5 className="card-title"><span className="project-title">{item}</span> </h5>
