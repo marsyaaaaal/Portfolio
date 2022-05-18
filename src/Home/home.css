@@ -30,27 +30,29 @@
     padding: 0;
     background-color: #F8F9FA;
   }
-  .hero .content {
+  .hero .content-text {
     text-align: left;
     padding: 0em 6em;
-    padding-top: 20vh;
+    margin: 15vh 0;
   }
-  .hero .content .meet {
+  .hero .content-text .meet {
     font-size: 24px;
+    margin-top: -1em;
   }
-  .hero .content .call-to-action {
+  .hero .content-text .call-to-action {
     margin-top: 2em;
     width: 250px;
   }
   .hero-design {
-    margin-top: 3em;
     height: auto;
     display: unset;
-    margin-left: -48%;
     width: 100%;
+    margin: auto 0;
+    margin-left: -48%;
   }
   h1 {
     font-size: 100px;
+    line-height: 10rem;
   }
 }
 

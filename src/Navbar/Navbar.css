@@ -8,6 +8,32 @@
   .right-side {
     display: none;
   }
+  .collapse {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #F8F9FA;
+    height: 100vh;
+    width: 50%;
+    z-index: 2;
+    text-transform: uppercase;
+  }
+  .collapse .settings-close {
+    float: right;
+    margin: 2.2em;
+    width: 2.5em;
+  }
+  .collapse .navbar-nav {
+    margin-top: 4.5em;
+  }
+  .collapse .navbar-nav a {
+    color: #343A40;
+    font-weight: 600;
+    float: right;
+    display: block;
+    padding: 0.75em 2em;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 992px) {

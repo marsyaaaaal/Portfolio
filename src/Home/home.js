@@ -53,13 +53,16 @@ const Home = () => {
 
       <div className="hero">
         <div className="content">
-          <h1> Hello <br />World!</h1>
-          <div className="meet">
-            <span>I am <span className="name"> Marcial </span>, an aspiring Back End Developer</span>
+          <div className='content-text'>
+            <h1> Hello <br />World!</h1>
+            <div className="meet">
+              <span>I am <span className="name"> Marcial </span>, an aspiring Back End Developer</span>
+            </div>
+            <div type="button">
+              <img class="call-to-action" src="call-to-action.svg" alt="know me" />
+            </div>
           </div>
-          <div type="button">
-            <img class="call-to-action" src="call-to-action.svg" alt="know me" />
-          </div>
+
         </div>
         <div className="hero-design">
           <img className="hero-image" src="home-image.svg" alt="me" />

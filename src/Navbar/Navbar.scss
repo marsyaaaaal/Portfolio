@@ -12,6 +12,39 @@
     .right-side {
         display: none;
     }
+    
+ 
+    .collapse {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: #F8F9FA;
+        height: 100vh;
+        width: 50%;
+        z-index: 2;
+        text-transform: uppercase;
+        // transform: translateX(100%);
+        // transition: transform .5s ease-in-out;
+
+        .settings-close {
+            float: right;
+            margin: 2.2em;
+            width: 2.5em;
+        }
+
+        .navbar-nav {
+            margin-top: 4.5em;
+
+            a {
+                color: #343A40;
+                font-weight: 600;
+                float: right;
+                display: block;
+                padding: 0.75em 2em;
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -20,8 +53,9 @@
     .social-header {
         display: inline-block;
     }
-    .navbar-brand{
-        padding-left:3.5em;
+
+    .navbar-brand {
+        padding-left: 3.5em;
     }
 
     .left-side {
@@ -49,9 +83,10 @@
         color: #9E00FF;
     }
 
-    
+
     .navbar-nav {
         margin-right: 4em;
+
         .nav-item {
             margin-right: 1em;
             color: #F8F9FA;
@@ -81,11 +116,10 @@
 
 }
 
-.logo{
+.logo {
     width: 2.5em;
 }
-.burger{
+
+.burger {
     width: 2em;
 }
-
-
