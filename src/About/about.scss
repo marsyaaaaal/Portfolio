@@ -47,8 +47,7 @@
         text-align: left;
         position: relative;
         padding-left: 5em;
-        display: flex;
-        background-color: #DEE2E6;
+        display: flex; 
         padding-bottom: 5em;
         padding-top: 5em;
 
@@ -87,7 +86,7 @@
             }
 
             border-radius: 20px;
-            box-shadow: 2px 2px 2px 2px;
+            box-shadow: 2px 2px 5px 1px #8f8f8f;
             margin: 2.5em;
             padding: 4em;
         }
@@ -95,4 +94,11 @@
 
     }
  
+}
+@media screen and (min-width: 1200px) {
+    .about-me {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
 }

@@ -8,6 +8,10 @@
   .right-side {
     display: none;
   }
+  .container-fluid,
+  .settings {
+    background-color: #343A40;
+  }
   .collapse {
     position: fixed;
     right: 0;
@@ -52,6 +56,12 @@
   .right-side {
     width: 25%;
   }
+  .container-fluid {
+    background-color: #343A40;
+  }
+  .container-fluid .collapse {
+    background-color: #343A40;
+  }
 }
 
 .nav-container {
@@ -66,6 +76,10 @@
   text-align: center;
 }
 
+.nav-container .right-side .social-header {
+  background-color: #F8F9FA;
+}
+
 .nav-container .navbar-nav .nav-item.active .nav-link,
 .nav-container .navbar-nav .nav-item:hover .nav-link {
   color: #9E00FF;
@@ -78,7 +92,7 @@
 .nav-container .navbar-nav .nav-item {
   margin-right: 1em;
   color: #F8F9FA;
-  font-size: clamp(1rem, 1vw, 4rem);
+  font-size: clamp(1rem, 1vw, 1rem);
 }
 
 .nav-container .navbar-nav .nav-item:hover {
@@ -110,5 +124,16 @@
 
 .burger {
   width: 2em;
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-container-bg {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #343A40), color-stop(50%, #F8F9FA));
+    background: linear-gradient(90deg, #343A40 50%, #F8F9FA 50%);
+  }
+  .nav-container-bg .nav-container {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=Navbar.css.map */

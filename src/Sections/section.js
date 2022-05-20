@@ -96,7 +96,7 @@ class Section extends React.Component {
                                     Lacus mi nunc ac lectus.</p>
                             </div>
                         </div>
-                      
+
                         <div className="left">
                             {
                                 // console.log("left")
@@ -111,33 +111,35 @@ class Section extends React.Component {
         });
 
         return (
-            <div>
-                <div className="section-container">
-                    <span className="text-works"> My works </span>
-                    <div className="upper-section">
-                        <SubSection
-                            header="FreeCodeCamp.org Front End Development and Libraries Projects"
-                            subHeader="Javascript, SCSS, Bootstrap, React.js and Redux"
-                            titles={this.front_end_titles}
-                            type="Front-end" />
-                    </div>
-                    <div className="lower-section">
-                        <SubSection
-                            header="FreeCodeCamp.org Back End Development and APIs Projects"
-                            subHeader="Node.js, Express, MongoDB and Mongoose"
-                            titles={this.back_end_titles}
-                            type="Back-end" />
-                    </div>
-                </div >
-                <div className="team-projects">
-                    <div className='team-projects-bg-1'></div>
-                    <div className='team-projects-bg-2'></div>
-                    <div className='team-projects-bg-3'></div>
-                    <div className='team-projects-bg-4'></div>
-                    <span className='text-team'>Team Projects</span>
-                    
-                    {team_projects}
+            <div className='whole-section'>
+                <div className='whole-section-container'>
+                    <div className="section-container">
+                        <span className="text-works"> My works </span>
+                        <div className="upper-section">
+                            <SubSection
+                                header="FreeCodeCamp.org Front End Development and Libraries Projects"
+                                subHeader="Javascript, SCSS, Bootstrap, React.js and Redux"
+                                titles={this.front_end_titles}
+                                type="Front-end" />
+                        </div>
+                        <div className="lower-section">
+                            <SubSection
+                                header="FreeCodeCamp.org Back End Development and APIs Projects"
+                                subHeader="Node.js, Express, MongoDB and Mongoose"
+                                titles={this.back_end_titles}
+                                type="Back-end" />
+                        </div>
+                    </div >
                 </div>
+                <div className='team-projects-bg'>
+
+                    <div className="team-projects">
+                        <span className='text-team'>Team Projects</span>
+
+                        {team_projects}
+                    </div>
+                </div>
+
             </div>
         );
     }

@@ -50,29 +50,25 @@ const Home = () => {
     change();
   });
   return (
-    <div>
-
+    <div className='hero-bg'>
       <div className="hero">
-        <motion.div  initial={{ x: "-100%" }} animate={{ x: "0%" }} transition={{ duration: 1}} className="content">
+        <motion.div initial={{ x: "-100%" }} animate={{ x: "0%" }} transition={{ duration: 1 }} className="content">
           <motion.div className='content-text'>
             <h1> Hello <br />World!</h1>
             <div className="meet">
               <span>I am <span className="name"> Marcial </span>, an aspiring <span id="name">Back End Developer </span></span>
             </div>
-            <div className='go-to' >
+            <div className='go-to'  >
               <motion.button whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.8 }}>Go to Portfolio</motion.button>
             </div>
           </motion.div>
 
         </motion.div>
-        <motion.div  initial={{ x: "100%" }} animate={{ x: "0%" }} transition={{ duration: 1}} className="hero-design">
-          <img className="hero-image" src="home-image.svg" alt="me" />
-        </motion.div>
-
-
+        <motion.img initial={{ x: "100%" }} animate={{ x: "0%" }} transition={{ duration: 1 }} className="hero-design" src="home-image.svg" alt="me" />
       </div>
     </div>
+
 
   );
 }

@@ -6,6 +6,18 @@
         width: 100px;
     }
 
+    .contacts,
+    .contact-me,
+    .name-email,
+    .navs,
+    .navs-list,
+    .my-email, 
+    .socials,
+    .email-type{
+        background-color: #343A40;
+
+    }
+
     h1 {
         .last {
             color: #6C757D
@@ -252,5 +264,15 @@
 
     }
 
+
+}
+@media screen and (min-width: 1200px) {
+    .footer-bg{
+        background-color: #343A40;
+    }
+    .footer {
+        width: 1200px;
+        margin: 0 auto;
+    }
 
 }

@@ -25,9 +25,17 @@
     }
 
     .lower-section {
-        .header-my-works {
-            h1 {
-                font-weight: 600;
+        .each-projects-desktop {
+            background-color: #343A40;
+
+            .header-my-works {
+                background-color: #343A40;
+
+                h1 {
+                    background-color: #343A40;
+
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -36,7 +44,7 @@
     .card {
         background-color: white;
     }
- 
+
 
 }
 
@@ -45,53 +53,6 @@
 @media only screen and (max-width: 992px) {
 
     //mobile
-    .team-projects-bg-1 {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        margin-top: 0;
-        background: linear-gradient(to bottom right, #F8F9FA 50%, #DEE2E6 50%);
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-
-    .team-projects-bg-2 {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        margin-top: 100vh;
-        background: linear-gradient(to bottom right, #DEE2E6 50%, #F8F9FA 50%);
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-
-    .team-projects-bg-3 {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        margin-top: 200vh;
-        background: linear-gradient(to top right, #DEE2E6 50%, #F8F9FA 50%);
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-
-    .team-projects-bg-4 {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        margin-top: 300vh;
-        background: linear-gradient(to top right, #F8F9FA 50%, #DEE2E6 50%);
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
 
     .upper-section {
         margin-bottom: 10em;
@@ -114,11 +75,26 @@
                 display: none;
             }
 
+            .react-3d-carousel {
+
+                .slider-single,
+                .slider-single-content,
+                .each-projects-mobile {
+                    background: rgba(0, 0, 0, 0);
+
+                }
+            }
+
             .each-projects-mobile {
                 text-align: center;
 
                 .card {
                     padding-bottom: 3em;
+
+
+                    .card-body {
+                        background-color: white;
+                    }
 
                     .card-title {
                         font-weight: 400;
@@ -141,6 +117,9 @@
         color: #F8F9FA;
 
         .header-my-works {
+            background-color: #343A40;
+            padding-bottom: 1em;
+
             h1 {
                 font-size: 20px;
             }
@@ -152,16 +131,34 @@
         }
 
         .content {
+            margin-top: -1em;
+
             .each-projects-desktop {
                 display: none;
             }
 
+            .react-3d-carousel {
+                background-color: #343A40;
+
+                .slider-single,
+                .slider-single-content,
+                .each-projects-mobile {
+                    background: rgba(0, 0, 0, 0);
+
+                }
+            }
+
             .each-projects-mobile {
                 text-align: center;
+                padding: 0em;
 
                 .card {
                     padding-bottom: 3em;
                     color: #343A40;
+
+                    .card-body {
+                        background-color: white;
+                    }
 
                     .card-title {
                         font-weight: 400;
@@ -236,61 +233,7 @@
 @media only screen and (min-width: 992px) {
 
     //destkop
-    .team-projects-bg-1 {
-        // content: "";
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        margin-top: 0;
-        background: linear-gradient(to bottom right, #F8F9FA 50%, #DEE2E6 50%);
-        top: 0;
-        left: 0;
-        z-index: -1;
-        margin-top: 230vh;
-
-    }
-
-    .team-projects-bg-2 {
-        // content: "";
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        margin-top: 100vh;
-        background: linear-gradient(to bottom right, #DEE2E6 50%, #F8F9FA 50%);
-        top: 0;
-        left: 0;
-        z-index: -1;
-        margin-top: 330vh;
-
-    }
-
-    .team-projects-bg-3 {
-        // content: "";
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        margin-top: 200vh;
-        background: linear-gradient(to top right, #DEE2E6 50%, #F8F9FA 50%);
-        top: 0;
-        left: 0;
-        z-index: -1;
-        margin-top: 430vh;
-
-    }
-
-    .team-projects-bg-4 {
-        // content: "";
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        margin-top: 300vh;
-        background: linear-gradient(to top right, #F8F9FA 50%, #DEE2E6 50%);
-        top: 0;
-        left: 0;
-        z-index: -1;
-        margin-top: 530vh;
-
-    }
+    
 
     .section-container {
         padding: 6em 6em;
@@ -349,19 +292,30 @@
 
     .lower-section {
         color: #F8F9FA;
+        background-color: #343A40;
+
 
         .header-my-works {
+            background-color: #343A40;
+            padding-bottom: 1em;
+
+
             h1 {
+
                 font-size: 32px;
                 line-height: 1em;
             }
 
             p {
+
                 font-size: 14px;
+
             }
         }
 
         .content {
+            margin-top: -1em;
+
             .content-projects-desktop {
                 text-align: center;
                 display: flex;
@@ -382,6 +336,11 @@
                     .image-project {
                         width: 100%;
                         height: auto;
+                    }
+
+                    .card {
+                        background-color: #343A40;
+
                     }
 
                     .card-body {
@@ -430,6 +389,7 @@
                     p {
                         margin-top: 2em;
                     }
+
                     margin-top: 3em;
 
                 }
@@ -495,6 +455,27 @@
         }
 
     }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .whole-section-container {
+        background: linear-gradient(180deg, #F8F9FA 50%, #343A40 50%);
+
+        .section-container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+    .team-projects-bg{
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+
 
 
 }

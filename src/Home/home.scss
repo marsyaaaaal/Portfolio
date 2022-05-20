@@ -9,6 +9,11 @@
             padding: 0em 5em;
             padding-top: 25%;
 
+            .content-text {
+                background-color: #343A40;
+
+            }
+
             .call-to-action {
                 margin-top: 2em;
                 width: 15rem;
@@ -35,23 +40,29 @@
         grid-template-columns: 75% auto;
         background: unset;
         padding: 0;
-        background: #F8F9FA;
 
-        .content-text {
-            text-align: left;
-            padding: 0em 6em;
-            margin: 15vh 0;
 
-            .meet {
-                font-size: 24px;
-                margin-top: -1em;
-            }
+        // background: #F8F9FA;
+        .content {
+            .content-text {
+                text-align: left;
+                padding: 0em 6em;
+                margin: 15vh 0;
+                background-color: #343A40;
 
-            .call-to-action {
-                margin-top: 2em;
-                width: 250px;
+
+                .meet {
+                    font-size: 24px;
+                    margin-top: -1em;
+                }
+
+                .call-to-action {
+                    margin-top: 2em;
+                    width: 250px;
+                }
             }
         }
+
     }
 
     .hero-design {
@@ -60,7 +71,7 @@
         width: 100%;
         margin: auto 0;
         margin-left: -48%;
-
+        // background-color: #343A40;
 
     }
 
@@ -75,7 +86,7 @@
 
 // default
 .hero {
-    // display: grid;
+    display: grid;
     margin-top: -1em;
     color: #F8F9FA;
 
@@ -84,6 +95,8 @@
         height: 100vh;
 
         .meet {
+            background-color: #343A40;
+
             .name {
                 font-weight: 600;
                 color: #BE55FF;
@@ -98,6 +111,7 @@
 
     .go-to {
         margin-top: 2em;
+        background-color: #343A40;
 
         button {
             border-radius: 10px;
@@ -110,5 +124,17 @@
         }
     }
 
+
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hero-bg {
+        background: linear-gradient(90deg, #343A40 50%, #F8F9FA 50%);
+    }
 
 }

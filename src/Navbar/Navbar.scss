@@ -12,8 +12,15 @@
     .right-side {
         display: none;
     }
-    
- 
+
+    .container-fluid,
+    .settings {
+        background-color: #343A40;
+    }
+
+
+
+
     .collapse {
         position: fixed;
         right: 0;
@@ -50,10 +57,11 @@
 @media only screen and (min-width: 992px) {
 
     //for desktop and up
-    
+
     .settings-close {
         display: none;
     }
+
     .social-header {
         display: inline-block;
     }
@@ -71,7 +79,14 @@
 
     }
 
- 
+    .container-fluid {
+        background-color: #343A40;
+
+        .collapse {
+            background-color: #343A40;
+        }
+    }
+
 }
 
 .nav-container {
@@ -82,12 +97,16 @@
         background-color: #F8F9FA;
         text-align: center;
 
+        .social-header {
+            background-color: #F8F9FA;
+        }
+
     }
 
     .navbar-nav .nav-item.active .nav-link,
     .navbar-nav .nav-item:hover .nav-link {
         color: #9E00FF;
-        
+
     }
 
 
@@ -97,8 +116,9 @@
         .nav-item {
             margin-right: 1em;
             color: #F8F9FA;
-            font-size: clamp(1rem, 1vw, 4rem);
-            &:hover{
+            font-size: clamp(1rem, 1vw, 1rem);
+
+            &:hover {
                 border-bottom: 4px solid #9E00FF;
                 margin-bottom: -10px;
             }
@@ -133,4 +153,16 @@
 
 .burger {
     width: 2em;
+}
+
+@media screen and (min-width: 1200px) {
+    .nav-container-bg {
+        background: linear-gradient(90deg, #343A40 50%, #F8F9FA 50%);
+
+        .nav-container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
 }

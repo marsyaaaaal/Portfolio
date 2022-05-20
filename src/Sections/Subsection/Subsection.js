@@ -1,5 +1,5 @@
 import React from "react";
-import {Carousel} from '3d-react-carousal';
+import { Carousel } from '3d-react-carousal';
 
 class SubSection extends React.Component {
 
@@ -65,10 +65,11 @@ class SubSection extends React.Component {
                     <h1>{this.state.header}</h1>
                     <p>{this.state.sub_header}</p>
                 </div>
-                <div className="content">
+                <div className="content" style={{ backgroundColor: "#343A40" }}>
                     {(this.state.width >= 991) ? (<div className="content-projects-desktop">
                         {project_images}
-                    </div>) : (<Carousel className="content-projects-mobile" slides={project_images} autoplay={true} interval={5000} arrows={false}/> )}
+                    </div>) : (<Carousel style={{backgroundColor:"#343A40"}} className="content-projects-mobile" slides={project_images} autoplay={true} interval={5000} arrows={false}
+                    />)}
 
                 </div>
             </div>

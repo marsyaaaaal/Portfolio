@@ -7,6 +7,17 @@
   width: 100px;
 }
 
+.footer .contacts,
+.footer .contact-me,
+.footer .name-email,
+.footer .navs,
+.footer .navs-list,
+.footer .my-email,
+.footer .socials,
+.footer .email-type {
+  background-color: #343A40;
+}
+
 .footer h1 .last {
   color: #6C757D;
 }
@@ -192,6 +203,16 @@
   .footer .contact-me .email-type textarea {
     padding: 1em;
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-bg {
+    background-color: #343A40;
+  }
+  .footer {
+    width: 1200px;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=footer.css.map */
