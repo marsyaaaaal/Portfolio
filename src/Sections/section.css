@@ -50,6 +50,9 @@
   .upper-section .content .each-projects-desktop {
     display: none;
   }
+  .upper-section .content .react-3d-carousel {
+    background-color: #F8F9FA;
+  }
   .upper-section .content .react-3d-carousel .slider-single,
   .upper-section .content .react-3d-carousel .slider-single-content,
   .upper-section .content .react-3d-carousel .each-projects-mobile {
@@ -122,6 +125,27 @@
     padding: 3em 2.5em;
     position: relative;
   }
+  .team-projects .team-projects-scroll-bg {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em;
+    width: 100%;
+  }
+  .team-projects .team-projects-scroll-bg .team-projects-bg1 {
+    position: absolute;
+    float: left;
+    left: 0;
+    width: 20em;
+    z-index: -1;
+  }
+  .team-projects .team-projects-scroll-bg .team-projects-bg2 {
+    position: absolute;
+    float: right;
+    right: 0;
+    width: 20em;
+    margin-top: 63vh;
+    z-index: -1;
+  }
   .team-projects .text-team {
     margin-bottom: 2em;
     font-weight: 600;
@@ -130,6 +154,14 @@
   }
   .team-projects .content-portfolio {
     margin-bottom: 6em;
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .team-projects .content-portfolio .right,
+  .team-projects .content-portfolio .text,
+  .team-projects .content-portfolio .left {
+    background-color: rgba(0, 0, 0, 0);
   }
   .team-projects .content-portfolio h1 {
     font-weight: 600;
@@ -181,6 +213,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    background-color: #F8F9FA;
   }
   .upper-section .content .content-projects-desktop .each-projects-desktop {
     display: unset;
@@ -254,6 +287,29 @@
   }
   .team-projects {
     padding: 3em 6em;
+    position: relative;
+  }
+  .team-projects .team-projects-scroll-bg {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em;
+    width: 100%;
+  }
+  .team-projects .team-projects-scroll-bg .team-projects-bg1 {
+    position: absolute;
+    float: left;
+    left: 0;
+    width: 30em;
+    z-index: -1;
+  }
+  .team-projects .team-projects-scroll-bg .team-projects-bg2 {
+    position: absolute;
+    float: right;
+    right: 0;
+    width: 30em;
+    margin-top: 50vh;
+    z-index: -1;
+    margin-right: -6em;
   }
   .team-projects .text-team {
     margin-bottom: 2em;
@@ -263,17 +319,24 @@
     font-size: 1.5em;
   }
   .team-projects .content-portfolio {
+    width: 100%;
     margin-bottom: 4em;
     overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0);
   }
   .team-projects .content-portfolio .right {
+    background-color: rgba(0, 0, 0, 0);
     float: right;
     width: 50%;
   }
   .team-projects .content-portfolio .right .text {
+    background-color: rgba(0, 0, 0, 0);
     padding: 5em;
-    padding-top: 2em;
+    padding-top: 1em;
     line-height: 1.5em;
+    padding-right: 1em;
     margin-top: 3em;
   }
   .team-projects .content-portfolio .right .text h1 {
@@ -283,11 +346,13 @@
     margin-top: 2em;
   }
   .team-projects .content-portfolio .left {
+    background-color: rgba(0, 0, 0, 0);
     float: left;
     width: 50%;
   }
   .team-projects .content-portfolio .left .text {
-    padding-top: 2em;
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 0em;
     padding-right: 5em;
     line-height: 1.5em;
     margin-top: 3em;

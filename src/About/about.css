@@ -13,8 +13,8 @@
   .about-me .about-content {
     background-color: #F8F9FA;
     border-radius: 20px;
-    -webkit-box-shadow: 2px 2px 2px 2px;
-            box-shadow: 2px 2px 2px 2px;
+    -webkit-box-shadow: 2px 2px 5px 1px #8f8f8f;
+            box-shadow: 2px 2px 5px 1px #8f8f8f;
     margin: 2.5em;
     padding: 4em;
   }

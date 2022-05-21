@@ -1,6 +1,83 @@
-@media only screen and (max-width: 992px) {
+.nav-container {
+    // background-color: #171717;
+    background: unset;
+    display: flex;
+    margin: 0;
 
-    //for mobile
+    .right-side {
+        // background-color: #F8F9FA;
+        background: unset;
+        text-align: center;
+
+        .social-header {
+            // background-color: #F8F9FA;
+            background: unset;
+        }
+
+    }
+
+    .navbar-nav .nav-item.active .nav-link,
+    .navbar-nav .nav-item:hover .nav-link {
+        color: #9E00FF;
+
+    }
+
+
+    .navbar-nav {
+        margin: 0 auto;
+
+        .nav-item {
+            margin-right: 1em;
+            color: #6C757D;
+            font-size: clamp(1rem, 1vw, 1rem);
+
+            &:hover {
+                border-bottom: 4px solid #9E00FF;
+                margin-bottom: -10px;
+            }
+
+        }
+    }
+
+    a {
+        color: #6C757D;
+        text-decoration: none;
+    }
+
+    .social-header {
+        background-color: #F8F9FA;
+
+        .social-logo {
+            width: 2em;
+            margin: 2em 1em;
+        }
+    }
+
+    .navbar {
+        padding: 1em 1em;
+    }
+
+
+}
+
+.logo {
+    width: 6em;
+    height: auto;
+
+}
+
+.burger {
+    width: 2em;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    //for tab
+    .nav-container {
+        display: flex;
+    }
+
     .social-header {
         display: none;
     }
@@ -12,14 +89,6 @@
     .right-side {
         display: none;
     }
-
-    .container-fluid,
-    .settings {
-        background-color: #343A40;
-    }
-
-
-
 
     .collapse {
         position: fixed;
@@ -43,7 +112,7 @@
             margin-top: 4.5em;
 
             a {
-                color: #343A40;
+                color: #171717;
                 font-weight: 600;
                 float: right;
                 display: block;
@@ -54,7 +123,26 @@
     }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
+    .settings-close {
+        display: none;
+    }
+    .social-header{
+        display: none;
+    }
+    .navbar-nav{
+        float: inline-start;
+    }
+    .right-side{
+        display: none;
+    }
+    .left-side{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 980px) {
 
     //for desktop and up
 
@@ -62,12 +150,14 @@
         display: none;
     }
 
-    .social-header {
-        display: inline-block;
-    }
 
     .navbar-brand {
         padding-left: 3.5em;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+        margin-right: 6em;
+        // padding-right: 0;
+        // margin: 0;
     }
 
     .left-side {
@@ -75,89 +165,37 @@
     }
 
     .right-side {
+        display: unset;
         width: 25%;
+        // background-color: red;
 
+        .social-header {
+            display: inline-block;
+            background: unset;
+            // background-color: blue;
+            // margin: 0;
+
+        }
     }
 
     .container-fluid {
-        background-color: #343A40;
+        // background-color: #171717;
+        background: unset;
+        // background-color: beige;
+
 
         .collapse {
-            background-color: #343A40;
-        }
-    }
-
-}
-
-.nav-container {
-    background-color: #343A40;
-    display: flex;
-
-    .right-side {
-        background-color: #F8F9FA;
-        text-align: center;
-
-        .social-header {
-            background-color: #F8F9FA;
-        }
-
-    }
-
-    .navbar-nav .nav-item.active .nav-link,
-    .navbar-nav .nav-item:hover .nav-link {
-        color: #9E00FF;
-
-    }
-
-
-    .navbar-nav {
-        margin-right: 4em;
-
-        .nav-item {
-            margin-right: 1em;
-            color: #F8F9FA;
-            font-size: clamp(1rem, 1vw, 1rem);
-
-            &:hover {
-                border-bottom: 4px solid #9E00FF;
-                margin-bottom: -10px;
-            }
+            // background-color: #171717;
+            background: unset;
+            // background-color: red;
 
         }
     }
-
-    a {
-        color: #CED4DA;
-        text-decoration: none;
-    }
-
-    .social-header {
-        background-color: #F8F9FA;
-
-        .social-logo {
-            width: 2em;
-            margin: 2em 1em;
-        }
-    }
-
-    .navbar {
-        padding: 1em 1em;
-    }
-
-
-}
-
-.logo {
-    width: 2.5em;
-}
-
-.burger {
-    width: 2em;
 }
 
 @media screen and (min-width: 1200px) {
     .nav-container-bg {
-        background: linear-gradient(90deg, #343A40 50%, #F8F9FA 50%);
+        background: unset;
 
         .nav-container {
             width: 1200px;

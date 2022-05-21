@@ -45,7 +45,6 @@
         background-color: white;
     }
 
-
 }
 
 
@@ -76,6 +75,7 @@
             }
 
             .react-3d-carousel {
+                background-color: #F8F9FA;
 
                 .slider-single,
                 .slider-single-content,
@@ -179,6 +179,37 @@
         padding: 3em 2.5em;
         position: relative;
 
+        .team-projects-scroll-bg {
+            position: sticky;
+            top: 2em;
+            // height: 100%;
+            // background-attachment: fixed;
+            // background-color: #9E00FF;
+            width: 100%;
+
+            .team-projects-bg1 {
+                position: absolute;
+                float: left;
+                left: 0;
+                width: 20em;
+                z-index: -1;
+                // background-color: red;
+            }
+
+            .team-projects-bg2 {
+                position: absolute;
+                float: right;
+                right: 0;
+                width: 20em;
+                margin-top: 63vh;
+                z-index: -1;
+                // background-color: yellow;
+                // margin-right: 12em;
+
+            }
+
+        }
+
         .text-team {
             margin-bottom: 2em;
             font-weight: 600;
@@ -189,6 +220,15 @@
 
         .content-portfolio {
             margin-bottom: 6em;
+            position: sticky;
+            background-color: rgba(0, 0, 0, 0);
+
+            .right,
+            .text,
+            .left {
+                background-color: rgba(0, 0, 0, 0);
+
+            }
 
             h1 {
                 font-weight: 600;
@@ -233,7 +273,7 @@
 @media only screen and (min-width: 992px) {
 
     //destkop
-    
+
 
     .section-container {
         padding: 6em 6em;
@@ -259,6 +299,7 @@
                 text-align: center;
                 clear: both;
                 display: flex;
+                background-color: #F8F9FA;
 
                 .each-projects-desktop {
                     display: unset;
@@ -358,7 +399,34 @@
 
     .team-projects {
         padding: 3em 6em;
-        // position: relative;
+        position: relative;
+    
+
+        .team-projects-scroll-bg {
+            position: sticky;
+            top: 2em;
+            width: 100%;
+
+            .team-projects-bg1 {
+                position: absolute;
+                float: left;
+                left: 0;
+                width: 30em;
+                z-index: -1;
+            }
+
+            .team-projects-bg2 {
+                position: absolute;
+                float: right;
+                right: 0;
+                width: 30em;
+                margin-top: 50vh;
+                z-index: -1;
+                margin-right: -6em;
+
+            }
+
+        }
 
         .text-team {
             margin-bottom: 2em;
@@ -370,17 +438,25 @@
         }
 
         .content-portfolio {
+            width: 100%;
             margin-bottom: 4em;
             overflow: hidden;
+            position: sticky;
+            background-color: rgba(0, 0, 0, 0);
 
             .right {
+                background-color: rgba(0, 0, 0, 0);
+
                 float: right;
                 width: 50%;
 
                 .text {
+                    background-color: rgba(0, 0, 0, 0);
+
                     padding: 5em;
-                    padding-top: 2em;
+                    padding-top: 1em;
                     line-height: 1.5em;
+                    padding-right: 1em;
 
                     h1 {
                         line-height: 1.5em;
@@ -399,10 +475,14 @@
             }
 
             .left {
+                background-color: rgba(0, 0, 0, 0);
+
                 float: left;
                 width: 50%;
 
                 .text {
+                    background-color: rgba(0, 0, 0, 0);
+
                     h1 {
                         line-height: 1.5em;
                     }
@@ -411,7 +491,7 @@
                         margin-top: 2em;
                     }
 
-                    padding-top: 2em;
+                    padding-top: 0em;
                     padding-right: 5em;
                     line-height: 1.5em;
                     margin-top: 3em;
@@ -459,6 +539,8 @@
 
 }
 
+
+
 @media screen and (min-width: 1200px) {
 
     .whole-section-container {
@@ -470,7 +552,7 @@
         }
     }
 
-    .team-projects-bg{
+    .team-projects-bg {
         width: 1200px;
         margin: 0 auto;
     }

@@ -3,14 +3,16 @@
     //for mobile
     .hero {
         width: 100%;
+        background: unset;
 
         .content {
             text-align: center;
-            padding: 0em 5em;
-            padding-top: 25%;
-
+            display: flex;
+            background: unset;
             .content-text {
-                background-color: #343A40;
+                // background-color: #171717;
+                background: unset;
+                margin: auto auto;
 
             }
 
@@ -35,35 +37,50 @@
 @media only screen and (min-width: 992px) {
 
     //for desktop
-    .hero {
-        display: grid;
-        grid-template-columns: 75% auto;
-        background: unset;
-        padding: 0;
+    .hero-bg {
+        // position: relative;
+
+        // display: grid;
+        // grid-template-columns: 75% auto;
 
 
-        // background: #F8F9FA;
-        .content {
-            .content-text {
-                text-align: left;
-                padding: 0em 6em;
-                margin: 15vh 0;
-                background-color: #343A40;
+        .hero {
+            display: grid;
+            grid-template-columns: 75% auto;
+            background: unset;
+            padding: 0;
 
 
-                .meet {
-                    font-size: 24px;
-                    margin-top: -1em;
-                }
+            // background: #F8F9FA;
+            .content {
+                display: flex;
+                // background: url('../../public/new-bg-hero.svg');
+                // background-size: cover;
+                // position: relative;
 
-                .call-to-action {
-                    margin-top: 2em;
-                    width: 250px;
+
+                .content-text {
+                    text-align: left;
+                    padding: 0em 6em;
+                    margin: auto 0;
+                    background: unset;
+
+
+                    .meet {
+                        font-size: 24px;
+                        margin-top: -1em;
+                    }
+
+                    .call-to-action {
+                        margin-top: 2em;
+                        width: 250px;
+                    }
                 }
             }
-        }
 
+        }
     }
+
 
     .hero-design {
         height: auto;
@@ -91,11 +108,19 @@
     color: #F8F9FA;
 
     .content {
-        background-color: #343A40;
+        // background-color: #171717;
+        // background-color: rgba(0, 0, 0, 0);
+        background: unset;
+
+
         height: 100vh;
 
         .meet {
-            background-color: #343A40;
+            // background-color: #171717;
+            // background-color: rgba(0, 0, 0, 0);
+            background: unset;
+
+
 
             .name {
                 font-weight: 600;
@@ -107,11 +132,14 @@
 
     h1 {
         font-weight: 600;
+        line-height: 1.5em;
     }
 
     .go-to {
         margin-top: 2em;
-        background-color: #343A40;
+        // background-color: #171717;
+        background-color: rgba(0, 0, 0, 0);
+
 
         button {
             border-radius: 10px;
@@ -132,9 +160,4 @@
         width: 1200px;
         margin: 0 auto;
     }
-
-    .hero-bg {
-        background: linear-gradient(90deg, #343A40 50%, #F8F9FA 50%);
-    }
-
 }

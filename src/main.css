@@ -17,4 +17,30 @@ a {
 img {
   width: 100%;
 }
+
+@media screen and (max-width: 992px) {
+  .new-bg-hero {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: url("../public/new-bg-hero.svg");
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .new-bg-hero {
+    position: absolute;
+    z-index: -1;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: url("../public/new-bg-hero.svg");
+    background-size: cover;
+  }
+}
 /*# sourceMappingURL=main.css.map */
