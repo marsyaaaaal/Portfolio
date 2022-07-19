@@ -8,11 +8,11 @@ const Navbar = () => {
     let [shouldShowActions, setShouldShowActions] = React.useState(0);
     const [lastYpos, setLastYpos] = React.useState(0);
 
+
     React.useEffect(() => {
         function handleScroll() {
             const yPos = window.scrollY;
             const isScrollingUp = yPos < lastYpos;
-            console.log(lastYpos + 'sadfdasfa')
             setShouldShowActions(isScrollingUp);
             setLastYpos(yPos);
         }
@@ -27,7 +27,7 @@ const Navbar = () => {
     }, [lastYpos])
 
     return (
-        <motion.div className='nav-container-bg fixed-top' style={{background: window.screen.width <=979 ? "#171717" : window.scrollY == 0 ? "unset" : "linear-gradient(90deg, #171717 50%, #ffffff 50%)"  }} initial={{ y: "-100%" }} animate={{ y: (shouldShowActions || window.scrollY == 0) ? "0%" : "-100%" }} transition={{ duration: 0.5 }} >
+        <motion.div className='nav-container-bg fixed-top' style={{ background: window.screen.width <= 979 ? "#171717" : window.scrollY == 0 ? "unset" : "linear-gradient(90deg, #171717 50%, #ffffff 50%)" }} initial={{ y: "-100%" }} animate={{ y: (shouldShowActions || window.scrollY == 0) ? "0%" : "-100%" }} transition={{ duration: 0.5 }} >
             <div className="nav-container ">
                 <div className='left-side'>
                     <nav class="navbar navbar-expand-md " style={{ background: "unset" }} >
@@ -44,16 +44,16 @@ const Navbar = () => {
                                 </div>
                                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" >
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        <a class="nav-link" aria-current="page" href="#">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Portfolio</a>
+                                        <a class="nav-link" href="#whole-section">Portfolio</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">About</a>
+                                        <a class="nav-link" href="#about">About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Contact</a>
+                                        <a class="nav-link" href="#footer">Contact</a>
                                     </li>
                                 </ul>
                             </div>

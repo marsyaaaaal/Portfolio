@@ -217,6 +217,7 @@
   }
   .upper-section .content .content-projects-desktop .each-projects-desktop {
     display: unset;
+    position: relative;
     float: left;
     width: 20%;
     padding: 1em;
@@ -231,7 +232,13 @@
     font-size: 0.80em;
   }
   .upper-section .content .content-projects-desktop .each-projects-desktop .card-body {
-    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  .upper-section .content .content-projects-desktop .each-projects-desktop .card-body .card-text {
+    text-align: left;
+    font-size: 0.80em;
   }
   .upper-section .content .content-projects-desktop .each-projects-mobile {
     display: none;
@@ -263,6 +270,7 @@
   }
   .lower-section .content .content-projects-desktop .each-projects-desktop {
     display: unset;
+    position: relative;
     float: left;
     width: 20%;
     padding: 1em;
@@ -280,7 +288,13 @@
     background-color: #121212;
   }
   .lower-section .content .content-projects-desktop .each-projects-desktop .card-body {
-    display: none;
+    position: absolute;
+    background-color: #121212;
+    border-radius: 10px;
+  }
+  .lower-section .content .content-projects-desktop .each-projects-desktop .card-body .card-text {
+    text-align: left;
+    font-size: 0.80em;
   }
   .lower-section .content .content-projects-desktop .each-projects-mobile {
     display: none;

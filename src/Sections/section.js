@@ -3,7 +3,7 @@ import { React, useState, useEffect } from 'react';
 import './section.css';
 import SubSection from './Subsection/Subsection.js';
 import Slider from '@farbenmeer/react-spring-slider';
-
+import { AnimatePresence, motion } from 'framer-motion';
 
 // class Section extends React.Component {
 
@@ -208,6 +208,7 @@ const Section = (props) => {
 
     const [offsetY, setOffsetY] = useState(0);
     const handleScroll = () => { setOffsetY(window.pageYOffset) }
+    const [selectedId, setSelectedId] = useState(null)
 
     useEffect(() => {
         // Update the document title using the browser API
@@ -216,6 +217,8 @@ const Section = (props) => {
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+
 
     let team_projects = [];
 
@@ -274,7 +277,7 @@ const Section = (props) => {
     });
 
     return (
-        <div className='whole-section'>
+        <div className='whole-section' id="whole-section">
             <div className='whole-section-container'>
                 <div className="section-container">
                     <span className="text-works"> My works </span>
@@ -300,7 +303,7 @@ const Section = (props) => {
                 <div className="team-projects">
                     <span className='text-team'>Team Projects</span>
                     <div className='team-projects-scroll-bg'>
-                    
+
                         <img style={{ transform: `translate3d(0px, ${Math.min(offsetY * 0.1, 0)}px, 0px)` }} className='team-projects-bg1' src="team-projects-bg1.svg" about=".." />
                         <img style={{ transform: `translate3d(0px, ${Math.min(offsetY * 0.1, 0)}px, 0px)` }} className='team-projects-bg2' src="team-projects-bg2.svg" about=".." />
                     </div>
@@ -312,7 +315,6 @@ const Section = (props) => {
                     <img style={{ transform: `translateY(${offsetY * -0.1}px)` }}className='team-projects-bg6' src="team-projects-bg2.svg" about=".." /> */}
                 </div>
             </div>
-
         </div>
     );
 }

@@ -303,6 +303,7 @@
 
                 .each-projects-desktop {
                     display: unset;
+                    position: relative;
                     float: left;
                     width: 20%;
                     padding: 1em;
@@ -319,8 +320,18 @@
                     }
 
                     .card-body {
-                        display: none;
+                        position: absolute;
+                        background-color: #ffffff;
+                        border-radius: 10px;
+
+                        .card-text {
+                            text-align: left;
+
+                            font-size: 0.80em;
+                        }
                     }
+
+
                 }
 
                 .each-projects-mobile {
@@ -364,6 +375,7 @@
 
                 .each-projects-desktop {
                     display: unset;
+                    position: relative;
                     float: left;
                     width: 20%;
                     padding: 1em;
@@ -385,7 +397,14 @@
                     }
 
                     .card-body {
-                        display: none;
+                        position: absolute;
+                        background-color: #121212;
+                        border-radius: 10px;
+
+                        .card-text {
+                            text-align: left;
+                            font-size: 0.80em;
+                        }
                     }
                 }
 
@@ -400,7 +419,7 @@
     .team-projects {
         padding: 3em 6em;
         position: relative;
-    
+
 
         .team-projects-scroll-bg {
             position: sticky;

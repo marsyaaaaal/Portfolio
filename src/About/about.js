@@ -7,7 +7,7 @@ class About extends React.Component {
 
     render() {
         return (
-            <div className="about-me">
+            <div className="about-me" id="about">
                 <img className="my-picture" src="aboutme.svg" alt="about-me" />
                 <div className="about-content">
                     <img className="about-bg" src="about-bg.svg" alt="about-bg" />
