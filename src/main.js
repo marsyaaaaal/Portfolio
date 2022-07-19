@@ -8,19 +8,29 @@ import Section from './Sections/section.js';
 import About from './About/about.js';
 import Footer from './Footer/footer.js';
 import SmoothScroll from './smoothScroll.jsx';
-
+import { useState, useEffect } from 'react';
+import './style.css';
 
 const Main = () => {
+    const [offsetY, setOffsetY] = useState(0);
+    const handleScroll = () => { setOffsetY(window.pageYOffset) }
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
     return (
         <div className="main">
-            <div className="new-bg-hero" ></div>
+
             <Navbar />
             {/* <SmoothScroll> */}
-            <Home />
-            <Section />
-            <About />
-            {/* </SmoothScroll> */}
+                <div className="new-bg-hero" style={{ transform: `translateY(${offsetY * 0.5}px)` }}></div>
+                <Home />
+                <Section />
+                <About />
             <Footer />
+            {/* </SmoothScroll> */}
 
         </div>);
 }

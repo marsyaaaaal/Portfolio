@@ -9,6 +9,7 @@
             text-align: center;
             display: flex;
             background: unset;
+
             .content-text {
                 // background-color: #171717;
                 background: unset;
@@ -46,7 +47,7 @@
 
         .hero {
             display: grid;
-            grid-template-columns: 75% auto;
+            grid-template-columns: 50% auto;
             background: unset;
             padding: 0;
 
@@ -83,12 +84,17 @@
 
 
     .hero-design {
-        height: auto;
+        // position: absolute;
+        display: flex;
         display: unset;
-        width: 100%;
-        margin: auto 0;
-        margin-left: -48%;
-        // background-color: #343A40;
+        width: 90%;
+        height: auto;
+        margin: auto auto;
+        margin-right: 0em;
+
+        .hero-design-svg {
+            width: 100%;
+        }
 
     }
 

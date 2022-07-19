@@ -31,8 +31,8 @@
   .hero-bg .hero {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 75% auto;
-        grid-template-columns: 75% auto;
+    -ms-grid-columns: 50% auto;
+        grid-template-columns: 50% auto;
     background: unset;
     padding: 0;
   }
@@ -56,11 +56,17 @@
     width: 250px;
   }
   .hero-design {
-    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     display: unset;
+    width: 90%;
+    height: auto;
+    margin: auto auto;
+    margin-right: 0em;
+  }
+  .hero-design .hero-design-svg {
     width: 100%;
-    margin: auto 0;
-    margin-left: -48%;
   }
   h1 {
     font-size: 100px;

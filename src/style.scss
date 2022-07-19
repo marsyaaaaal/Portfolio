@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+.scroll-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  will-change: transform;
+  height: fit-content;
+}
+
+ 

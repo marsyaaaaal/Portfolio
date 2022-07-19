@@ -23,6 +23,7 @@
     "react-slick": "^0.29.0",
     "react-slideshow-image": "^3.7.5",
     "react-spinners": "^0.11.0",
+    "resize-observer-polyfill": "^1.5.1",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4",
     "webfontloader": "^1.6.28"

@@ -27,7 +27,7 @@ const Navbar = () => {
     }, [lastYpos])
 
     return (
-        <motion.div initial={{ y: "-100%" }} animate={{ y: (shouldShowActions || window.scrollY == 0) ? "0%" : "-100%" }} transition={{ duration: 0.5 }} className='nav-container-bg fixed-top '>
+        <motion.div className='nav-container-bg fixed-top' style={{background: window.screen.width <=979 ? "#171717" : window.scrollY == 0 ? "unset" : "linear-gradient(90deg, #171717 50%, #ffffff 50%)"  }} initial={{ y: "-100%" }} animate={{ y: (shouldShowActions || window.scrollY == 0) ? "0%" : "-100%" }} transition={{ duration: 0.5 }} >
             <div className="nav-container ">
                 <div className='left-side'>
                     <nav class="navbar navbar-expand-md " style={{ background: "unset" }} >

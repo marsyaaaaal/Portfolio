@@ -50,7 +50,6 @@
         display: flex; 
         padding-bottom: 5em;
         padding-top: 5em;
-
         .my-picture {
             justify-content: center;
             width: 100%;
@@ -61,6 +60,7 @@
         .about-content {
             background-color: #F8F9FA;
             position: relative;
+            max-height: fit-content;
 
             .about-bg {
                 position: absolute;

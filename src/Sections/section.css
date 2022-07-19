@@ -1,8 +1,8 @@
 .section-container {
   padding: 3em 2.5em;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #F8F9FA), color-stop(50%, #343A40));
-  background: linear-gradient(180deg, #F8F9FA 50%, #343A40 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(50%, #121212));
+  background: linear-gradient(180deg, #ffffff 50%, #121212 50%);
 }
 
 .section-container .text-works {
@@ -17,15 +17,15 @@
 }
 
 .section-container .lower-section .each-projects-desktop {
-  background-color: #343A40;
+  background-color: #121212;
 }
 
 .section-container .lower-section .each-projects-desktop .header-my-works {
-  background-color: #343A40;
+  background-color: #121212;
 }
 
 .section-container .lower-section .each-projects-desktop .header-my-works h1 {
-  background-color: #343A40;
+  background-color: #121212;
   font-weight: 600;
 }
 
@@ -51,7 +51,7 @@
     display: none;
   }
   .upper-section .content .react-3d-carousel {
-    background-color: #F8F9FA;
+    background-color: #ffffff;
   }
   .upper-section .content .react-3d-carousel .slider-single,
   .upper-section .content .react-3d-carousel .slider-single-content,
@@ -76,10 +76,10 @@
   }
   .lower-section {
     margin-bottom: 10em;
-    color: #F8F9FA;
+    color: #ffffff;
   }
   .lower-section .header-my-works {
-    background-color: #343A40;
+    background-color: #121212;
     padding-bottom: 1em;
   }
   .lower-section .header-my-works h1 {
@@ -96,7 +96,7 @@
     display: none;
   }
   .lower-section .content .react-3d-carousel {
-    background-color: #343A40;
+    background-color: #121212;
   }
   .lower-section .content .react-3d-carousel .slider-single,
   .lower-section .content .react-3d-carousel .slider-single-content,
@@ -109,7 +109,7 @@
   }
   .lower-section .content .each-projects-mobile .card {
     padding-bottom: 3em;
-    color: #343A40;
+    color: #121212;
   }
   .lower-section .content .each-projects-mobile .card .card-body {
     background-color: white;
@@ -188,8 +188,8 @@
     margin-top: 1em;
     width: 100%;
     max-width: 600px;
-    -webkit-filter: drop-shadow(2px 2px 2px #343A40);
-            filter: drop-shadow(2px 2px 2px #343A40);
+    -webkit-filter: drop-shadow(2px 2px 2px #121212);
+            filter: drop-shadow(2px 2px 2px #121212);
   }
 }
 
@@ -213,7 +213,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #F8F9FA;
+    background-color: #ffffff;
   }
   .upper-section .content .content-projects-desktop .each-projects-desktop {
     display: unset;
@@ -238,10 +238,10 @@
   }
   .lower-section {
     color: #F8F9FA;
-    background-color: #343A40;
+    background-color: #121212;
   }
   .lower-section .header-my-works {
-    background-color: #343A40;
+    background-color: #121212;
     padding-bottom: 1em;
   }
   .lower-section .header-my-works h1 {
@@ -277,7 +277,7 @@
     height: auto;
   }
   .lower-section .content .content-projects-desktop .each-projects-desktop .card {
-    background-color: #343A40;
+    background-color: #121212;
   }
   .lower-section .content .content-projects-desktop .each-projects-desktop .card-body {
     display: none;
@@ -324,7 +324,7 @@
     overflow: hidden;
     position: -webkit-sticky;
     position: sticky;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(248, 249, 250, 0.5);
   }
   .team-projects .content-portfolio .right {
     background-color: rgba(0, 0, 0, 0);
@@ -384,16 +384,16 @@
   .team-projects .content-portfolio .portfolio-image {
     margin-top: 1em;
     width: 100%;
-    -webkit-filter: drop-shadow(2px 2px 2px #343A40);
-            filter: drop-shadow(2px 2px 2px #343A40);
+    -webkit-filter: drop-shadow(2px 2px 2px #121212);
+            filter: drop-shadow(2px 2px 2px #121212);
     padding: 0.3em;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .whole-section-container {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #F8F9FA), color-stop(50%, #343A40));
-    background: linear-gradient(180deg, #F8F9FA 50%, #343A40 50%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(50%, #121212));
+    background: linear-gradient(180deg, #ffffff 50%, #121212 50%);
   }
   .whole-section-container .section-container {
     width: 1200px;
