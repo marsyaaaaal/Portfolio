@@ -20,15 +20,16 @@ const Main = () => {
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
     return (
         <div className="main">
 
             <Navbar />
             {/* <SmoothScroll> */}
-                <div className="new-bg-hero" style={{ transform: `translateY(${offsetY * 0.5}px)` }}></div>
-                <Home />
-                <Section />
-                <About />
+            <div className="new-bg-hero" style={{ transform: `translateY(${offsetY * 0.2}px)` }}></div>
+            <Home />
+            <Section />
+            <About />
             <Footer />
             {/* </SmoothScroll> */}
 

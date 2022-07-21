@@ -1,5 +1,5 @@
 .footer {
-  background-color: #343A40;
+  background-color: #282828;
   color: #F8F9FA;
 }
 
@@ -15,7 +15,7 @@
 .footer .my-email,
 .footer .socials,
 .footer .email-type {
-  background-color: #343A40;
+  background-color: #282828;
 }
 
 .footer h1 .last {
@@ -208,7 +208,7 @@
 
 @media screen and (min-width: 1200px) {
   .footer-bg {
-    background-color: #343A40;
+    background-color: #282828;
   }
   .footer {
     width: 1200px;

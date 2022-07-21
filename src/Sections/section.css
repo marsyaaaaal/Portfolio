@@ -1,8 +1,6 @@
 .section-container {
   padding: 3em 2.5em;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(50%, #121212));
-  background: linear-gradient(180deg, #ffffff 50%, #121212 50%);
 }
 
 .section-container .text-works {
@@ -14,6 +12,13 @@
 
 .section-container .upper-section .header-my-works h1 {
   font-weight: 600;
+}
+
+.section-container .upper-section .header-my-works h1:hover::after {
+  content: "View Certificate";
+  font-weight: 500;
+  margin-left: 1em;
+  color: #9E00FF;
 }
 
 .section-container .lower-section .each-projects-desktop {
@@ -34,6 +39,21 @@
 }
 
 @media only screen and (max-width: 992px) {
+  .whole-section-container {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(50%, rgba(0, 0, 0, 0)));
+    background: linear-gradient(180deg, #ffffff 50%, rgba(0, 0, 0, 0) 50%);
+    position: relative;
+  }
+  .whole-section-container .new-bg-hero {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../../public/new-bg-hero.svg");
+    background-size: fill;
+  }
   .upper-section {
     margin-bottom: 10em;
   }
@@ -79,7 +99,6 @@
     color: #ffffff;
   }
   .lower-section .header-my-works {
-    background-color: #121212;
     padding-bottom: 1em;
   }
   .lower-section .header-my-works h1 {
@@ -94,9 +113,6 @@
   }
   .lower-section .content .each-projects-desktop {
     display: none;
-  }
-  .lower-section .content .react-3d-carousel {
-    background-color: #121212;
   }
   .lower-section .content .react-3d-carousel .slider-single,
   .lower-section .content .react-3d-carousel .slider-single-content,
@@ -120,6 +136,9 @@
   }
   .lower-section .content .each-projects-mobile .card .card-text {
     font-weight: 300;
+  }
+  .team-projects-bg-0 {
+    background-color: #ffffff;
   }
   .team-projects {
     padding: 3em 2.5em;
@@ -213,7 +232,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #ffffff;
   }
   .upper-section .content .content-projects-desktop .each-projects-desktop {
     display: unset;
@@ -245,10 +263,8 @@
   }
   .lower-section {
     color: #F8F9FA;
-    background-color: #121212;
   }
   .lower-section .header-my-works {
-    background-color: #121212;
     padding-bottom: 1em;
   }
   .lower-section .header-my-works h1 {
@@ -269,6 +285,7 @@
     clear: both;
   }
   .lower-section .content .content-projects-desktop .each-projects-desktop {
+    background-color: rgba(0, 0, 0, 0);
     display: unset;
     position: relative;
     float: left;
@@ -283,9 +300,6 @@
   .lower-section .content .content-projects-desktop .each-projects-desktop .image-project {
     width: 100%;
     height: auto;
-  }
-  .lower-section .content .content-projects-desktop .each-projects-desktop .card {
-    background-color: #121212;
   }
   .lower-section .content .content-projects-desktop .each-projects-desktop .card-body {
     position: absolute;
@@ -406,14 +420,29 @@
 
 @media screen and (min-width: 1200px) {
   .whole-section-container {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(50%, #121212));
-    background: linear-gradient(180deg, #ffffff 50%, #121212 50%);
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(50%, rgba(0, 0, 0, 0)));
+    background: linear-gradient(180deg, #ffffff 50%, rgba(0, 0, 0, 0) 50%);
+    position: relative;
+  }
+  .whole-section-container .new-bg-hero {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../../public/new-bg-hero.svg");
+    background-size: fill;
   }
   .whole-section-container .section-container {
     width: 1200px;
     margin: 0 auto;
   }
-  .team-projects-bg {
+  .team-projects-bg-0 {
+    background-color: #ffffff;
+  }
+  .team-projects-bg-0 .team-projects-bg {
     width: 1200px;
     margin: 0 auto;
   }

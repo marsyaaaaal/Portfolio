@@ -1,12 +1,6 @@
 .section-container {
     padding: 3em 2.5em;
     position: relative;
-    background: linear-gradient(180deg, #ffffff 50%, #121212 50%);
-    // background-image: url(../../public/bg1.svg);
-    // background-repeat: no-repeat;
-    // background-position-y: -5em;
-    // background-size: 300px;
-
 
     .text-works {
         margin-bottom: 2em;
@@ -20,7 +14,16 @@
         .header-my-works {
             h1 {
                 font-weight: 600;
+
+                &:hover::after {
+                    content: "View Certificate";
+                    font-weight: 500;
+                    margin-left: 1em;
+                    color: #9E00FF;
+                }
             }
+
+
         }
     }
 
@@ -52,10 +55,28 @@
 @media only screen and (max-width: 992px) {
 
     //mobile
+    .whole-section-container{
+        // background: linear-gradient(180deg, #ffffff 50%, #121212 50%);
+        background: linear-gradient(180deg, #ffffff 50%, rgba(0, 0, 0, 0)50%);
+        position: relative;
+        .new-bg-hero {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            // object-fit: 75%;
+            // overflow: hidden;
+            background-image: url("../../public/new-bg-hero.svg");
+            background-size: fill;
 
+        }
+
+
+    }
     .upper-section {
         margin-bottom: 10em;
-
         .header-my-works {
             h1 {
                 font-size: 20px;
@@ -115,9 +136,11 @@
     .lower-section {
         margin-bottom: 10em;
         color: #ffffff;
+        // background-color: #121212;
+
 
         .header-my-works {
-            background-color: #121212;
+            // background-color: #121212;
             padding-bottom: 1em;
 
             h1 {
@@ -138,7 +161,7 @@
             }
 
             .react-3d-carousel {
-                background-color: #121212;
+                // background-color: #121212;
 
                 .slider-single,
                 .slider-single-content,
@@ -174,7 +197,9 @@
             }
         }
     }
-
+    .team-projects-bg-0{
+        background-color: #ffffff;
+    }
     .team-projects {
         padding: 3em 2.5em;
         position: relative;
@@ -186,6 +211,7 @@
             // background-attachment: fixed;
             // background-color: #9E00FF;
             width: 100%;
+
 
             .team-projects-bg1 {
                 position: absolute;
@@ -273,8 +299,6 @@
 @media only screen and (min-width: 992px) {
 
     //destkop
-
-
     .section-container {
         padding: 6em 6em;
     }
@@ -299,7 +323,6 @@
                 text-align: center;
                 clear: both;
                 display: flex;
-                background-color: #ffffff;
 
                 .each-projects-desktop {
                     display: unset;
@@ -344,11 +367,11 @@
 
     .lower-section {
         color: #F8F9FA;
-        background-color: #121212;
+        // background-color: #121212;
 
 
         .header-my-works {
-            background-color: #121212;
+            // background-color: #121212;
             padding-bottom: 1em;
 
 
@@ -369,11 +392,14 @@
             margin-top: -1em;
 
             .content-projects-desktop {
+
                 text-align: center;
                 display: flex;
                 clear: both;
 
                 .each-projects-desktop {
+                background-color: rgba(0, 0, 0, 0);
+
                     display: unset;
                     position: relative;
                     float: left;
@@ -391,10 +417,6 @@
                         height: auto;
                     }
 
-                    .card {
-                        background-color: #121212;
-
-                    }
 
                     .card-body {
                         position: absolute;
@@ -564,7 +586,23 @@
 @media screen and (min-width: 1200px) {
 
     .whole-section-container {
-        background: linear-gradient(180deg, #ffffff 50%, #121212 50%);
+        height: 100%;
+        background: linear-gradient(180deg, #ffffff 50%, rgba(0, 0, 0, 0)50%);
+        position: relative;
+
+        .new-bg-hero {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            // object-fit: 75%;
+            // overflow: hidden;
+            background-image: url("../../public/new-bg-hero.svg");
+            background-size: fill;
+
+        }
 
         .section-container {
             width: 1200px;
@@ -572,9 +610,14 @@
         }
     }
 
-    .team-projects-bg {
-        width: 1200px;
-        margin: 0 auto;
+    .team-projects-bg-0 {
+        background-color: #ffffff;
+
+        .team-projects-bg {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
     }
 
 

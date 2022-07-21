@@ -166,8 +166,60 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 
 const Section = (props) => {
-    const front_end_titles = ['Random Quote Generator', 'Javascript Calculator', 'Markdown Previewer', 'Drum Machine', 'Pomodoro Timer'];
-    const back_end_titles = ['TimeStamp', 'Header Parser', 'URL Shortener', 'Exercise Tracker', 'File Metadata'];
+    const front_end = [
+        {
+            title: 'Random Quote Generator',
+            link: 'https://codepen.io/marsyaaaaal/full/wvpjZNO',
+            description: 'Random Quote Generator'
+        },
+        {
+            title: 'Javascript Calculator',
+            link: 'https://codepen.io/marsyaaaaal/full/wvpYOqV',
+            description: 'Javascript Calculator'
+        },
+        {
+            title: 'Markdown Previewer',
+            link: 'https://codepen.io/marsyaaaaal/full/MWrXYYx',
+            description: 'Markdown Previewer'
+        },
+        {
+            title: 'Drum Machine',
+            link: 'https://codepen.io/marsyaaaaal/full/NWXzvrB',
+            description: 'Drum Machine'
+        },
+        {
+            title: 'Pomodoro Timer',
+            link: 'https://codepen.io/marsyaaaaal/full/gOoQroX',
+            description: 'Pomodoro Timer'
+        },
+    ]
+    const back_end = [
+        {
+            title: 'TimeStamp',
+            link: 'https://codepen.io/marsyaaaaal/full/wvpjZNO',
+            description: 'TimeStamp'
+        },
+        {
+            title: 'Header Parser',
+            link: 'https://codepen.io/marsyaaaaal/full/wvpYOqV',
+            description: 'Header Parser'
+        },
+        {
+            title: 'URL Shortener',
+            link: 'https://codepen.io/marsyaaaaal/full/MWrXYYx',
+            description: 'URL Shortener'
+        },
+        {
+            title: 'Exercise Tracker',
+            link: 'https://codepen.io/marsyaaaaal/full/NWXzvrB',
+            description: 'Exercise Tracker'
+        },
+        {
+            title: 'File Metadata',
+            link: 'https://codepen.io/marsyaaaaal/full/gOoQroX',
+            description: 'File Metadata'
+        },
+    ]
     const team_works = [{
         title: 'DetectCore',
         role: 'Full Stack Developer',
@@ -279,40 +331,45 @@ const Section = (props) => {
     return (
         <div className='whole-section' id="whole-section">
             <div className='whole-section-container'>
+                <div className="new-bg-hero" style={{ transform: `translateY(${offsetY * 0.2}px)` }}></div>
                 <div className="section-container">
                     <span className="text-works"> My works </span>
                     <div className="upper-section">
                         <SubSection
                             header="FreeCodeCamp.org Front End Development and Libraries Projects"
                             subHeader="Javascript, SCSS, Bootstrap, React.js and Redux"
-                            titles={front_end_titles}
-                            type="Front-end" />
+                            type="Front-end"
+                            data={front_end}
+                            link="https://www.freecodecamp.org/certification/fcc36581fa7-10ee-4a6e-b693-1787fd043aa9/front-end-development-libraries" />
                     </div>
                     <div className="lower-section">
+
                         <SubSection
                             header="FreeCodeCamp.org Back End Development and APIs Projects"
                             subHeader="Node.js, Express, MongoDB and Mongoose"
-                            titles={back_end_titles}
-                            type="Back-end" />
+                            type="Back-end"
+                            data={back_end}
+                            link="https://www.freecodecamp.org/certification/fcc36581fa7-10ee-4a6e-b693-1787fd043aa9/back-end-development-and-apis" />
+
                     </div>
                 </div >
             </div>
-            <div className='team-projects-bg'>
+            <div className='team-projects-bg-0'>
+                <div className='team-projects-bg'>
+                    <div className="team-projects">
+                        <span className='text-team'>Team Projects</span>
+                        <div className='team-projects-scroll-bg'>
 
+                            <img style={{ transform: `translate3d(0px, ${Math.min(offsetY * 0.1, 0)}px, 0px)` }} className='team-projects-bg1' src="team-projects-bg1.svg" about=".." />
+                            <img style={{ transform: `translate3d(0px, ${Math.min(offsetY * 0.1, 0)}px, 0px)` }} className='team-projects-bg2' src="team-projects-bg2.svg" about=".." />
+                        </div>
+                        {team_projects}
 
-                <div className="team-projects">
-                    <span className='text-team'>Team Projects</span>
-                    <div className='team-projects-scroll-bg'>
-
-                        <img style={{ transform: `translate3d(0px, ${Math.min(offsetY * 0.1, 0)}px, 0px)` }} className='team-projects-bg1' src="team-projects-bg1.svg" about=".." />
-                        <img style={{ transform: `translate3d(0px, ${Math.min(offsetY * 0.1, 0)}px, 0px)` }} className='team-projects-bg2' src="team-projects-bg2.svg" about=".." />
-                    </div>
-                    {team_projects}
-
-                    {/* <img style={{ transform: `translateY(${offsetY * -0.1}px)` }}className='team-projects-bg3' src="team-projects-bg1.svg" about=".." />
+                        {/* <img style={{ transform: `translateY(${offsetY * -0.1}px)` }}className='team-projects-bg3' src="team-projects-bg1.svg" about=".." />
                     <img style={{ transform: `translateY(${offsetY * -0.1}px)` }}className='team-projects-bg4' src="team-projects-bg2.svg" about=".." />
                     <img style={{ transform: `translateY(${offsetY * -0.1}px)` }}className='team-projects-bg5' src="team-projects-bg1.svg" about=".." />
                     <img style={{ transform: `translateY(${offsetY * -0.1}px)` }}className='team-projects-bg6' src="team-projects-bg2.svg" about=".." /> */}
+                    </div>
                 </div>
             </div>
         </div>

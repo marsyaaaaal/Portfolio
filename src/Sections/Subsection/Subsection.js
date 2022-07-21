@@ -11,15 +11,19 @@ const Item = (props) => {
 
     const toggleOpen = () => setIsOpen(!isOpen);
 
+    const actionToOpen = () => {
+        window.open(props.data.link, '_blank').focus();
+    }
+
     return (
-        <motion.div layout onHoverStart={toggleOpen} onHoverEnd={toggleOpen} initial={{ borderRadius: 10 }}>
+        <motion.div layout onClick={actionToOpen} onHoverStart={toggleOpen} onHoverEnd={toggleOpen} initial={{ borderRadius: 10 }}>
             <div className="card" style={{ width: "100%", borderRadius: '20px', border: '0', boxShadow: '4px -2px 4px 0px #DCDCDC' }}>
-                <img className="image-project" src={(props.data.type).concat("/" + (parseInt(props.ctr) + 1) + ".svg")} alt={props.item} />
+                <img className="image-project" src={(props.type).concat("/" + (parseInt(props.ctr) + 1) + ".svg")} alt={props.data.title} />
             </div>
             <div class="card-body">
-                <AnimatePresence>{isOpen && <Content description="Some quick example text to build on the card title and make up the bulk of the card's content." />}</AnimatePresence>
+                <AnimatePresence>{isOpen && <Content description={props.data.description} />}</AnimatePresence>
             </div>
-            
+
         </motion.div>
     );
 }
@@ -32,9 +36,8 @@ const Content = (props) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className = "card-text"
-        >   
-            <a href="#">Go to</a><br/>
+            className="card-text"
+        >
             {props.description}
         </motion.div>
     );
@@ -47,11 +50,13 @@ class SubSection extends React.Component {
         this.state = {
             header: this.props.header,
             sub_header: this.props.subHeader,
-            titles: this.props.titles,
             type: this.props.type,
             width: 0,
-            height: 0
+            height: 0,
+            data: props.data
         };
+        console.log("state")
+        console.log(this.state)
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 
     }
@@ -70,13 +75,12 @@ class SubSection extends React.Component {
 
     render() {
         let project_images = [];
-        this.state.titles.map((item, i) => {
-
+        this.state.data.map((item, i) => {
             if (this.state.width >= 991) {
                 project_images.push(
                     <div className="each-projects-desktop" >
-                        <span className="project-title">{item}</span>
-                        <Item data={this.props} item={item} ctr={i} />
+                        <span className="project-title">{item.title}</span>
+                        <Item data={item} ctr={i} type={this.props.type} />
                     </div>
                 );
             }
@@ -84,10 +88,10 @@ class SubSection extends React.Component {
                 project_images.push(
                     <div className="each-projects-mobile">
                         <div class="card" style={{ width: "18rem", borderRadius: '20px', border: '0', boxShadow: '4px -2px 4px 0px #DCDCDC' }}>
-                            <img className="image-project" src={(this.props.type).concat("/" + (parseInt(i) + 1) + ".svg")} alt={item} />
+                            <img className="image-project" src={(this.props.type).concat("/" + (parseInt(i) + 1) + ".svg")} alt={item.title} />
                             <div class="card-body">
-                                <h5 className="card-title"><span className="project-title">{item}</span> </h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h5 className="card-title"><span className="project-title">{item.title}</span> </h5>
+                                <p class="card-text">{item.description}</p>
                             </div>
                         </div>
                     </div>);
@@ -97,10 +101,10 @@ class SubSection extends React.Component {
         return (
             <div>
                 <div className="header-my-works">
-                    <h1>{this.state.header}</h1>
+                    <h1 type="button" onClick={()=>{window.open(this.props.link, "_blank").focus()}}>{this.state.header}</h1>
                     <p>{this.state.sub_header}</p>
                 </div>
-                <div className="content" style={{ backgroundColor: "#343A40" }}>
+                <div className="content">
                     {(this.state.width >= 991) ? (
                         <AnimateSharedLayout>
                             <div className="content-projects-desktop">
@@ -108,7 +112,7 @@ class SubSection extends React.Component {
                             </div>
                         </AnimateSharedLayout>
 
-                    ) : (<Carousel style={{ backgroundColor: "#343A40" }} className="content-projects-mobile" slides={project_images} autoplay={true} interval={5000} arrows={false}
+                    ) : (<Carousel className="content-projects-mobile" slides={project_images} autoplay={true} interval={5000} arrows={false}
                     />)}
 
                 </div>

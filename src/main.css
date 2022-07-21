@@ -23,7 +23,7 @@ img {
     position: absolute;
     z-index: -1;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
     background-image: url("../public/new-bg-hero.svg");
@@ -36,7 +36,7 @@ img {
     position: absolute;
     z-index: -1;
     width: 50%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
     background-image: url("../public/new-bg-hero.svg");
