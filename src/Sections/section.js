@@ -170,54 +170,54 @@ const Section = (props) => {
         {
             title: 'Random Quote Generator',
             link: 'https://codepen.io/marsyaaaaal/full/wvpjZNO',
-            description: 'Random Quote Generator'
+            description: 'Built a random quote generator that can be shared through twitter using Bootstrap, Javascript and CSS.'
         },
         {
             title: 'Javascript Calculator',
             link: 'https://codepen.io/marsyaaaaal/full/wvpYOqV',
-            description: 'Javascript Calculator'
+            description: 'Built a Javascript Calculator that follow PEMDAS rule using SASS, Bootstrap and Redux. '
         },
         {
             title: 'Markdown Previewer',
             link: 'https://codepen.io/marsyaaaaal/full/MWrXYYx',
-            description: 'Markdown Previewer'
+            description: 'Developed a Markdown Previewer, converts HTML tags to a web preview in real-time.'
         },
         {
             title: 'Drum Machine',
             link: 'https://codepen.io/marsyaaaaal/full/NWXzvrB',
-            description: 'Drum Machine'
+            description: 'Developed a drum pad machine that can be triggered using keys.'
         },
         {
             title: 'Pomodoro Timer',
             link: 'https://codepen.io/marsyaaaaal/full/gOoQroX',
-            description: 'Pomodoro Timer'
+            description: 'Developed a pomodoro timer with alarm sound. All using the above principles and/or frameworks and languages.'
         },
     ]
     const back_end = [
         {
             title: 'TimeStamp',
-            link: 'https://codepen.io/marsyaaaaal/full/wvpjZNO',
-            description: 'TimeStamp'
+            link: 'https://boilerplate-project-timestamp.marsyaaaaal.repl.co/',
+            description: 'Created a timestamp microservice that returns the timestamp of the current and/or inputted date.'
         },
         {
             title: 'Header Parser',
-            link: 'https://codepen.io/marsyaaaaal/full/wvpYOqV',
-            description: 'Header Parser'
+            link: 'https://boilerplate-project-headerparser.marsyaaaaal.repl.co',
+            description: 'Created an endpoint that returns the data of the machine/browser used.'
         },
         {
             title: 'URL Shortener',
-            link: 'https://codepen.io/marsyaaaaal/full/MWrXYYx',
-            description: 'URL Shortener'
+            link: 'https://boilerplate-project-urlshortener-1.marsyaaaaal.repl.co/',
+            description: 'Created a URL shortener microservice, converts inputted URL into [project_link]/[api]\n/shorturl/'
         },
         {
             title: 'Exercise Tracker',
-            link: 'https://codepen.io/marsyaaaaal/full/NWXzvrB',
-            description: 'Exercise Tracker'
+            link: 'https://replit.com/@marsyaaaaal/boilerplate-project-exercisetracker#server.js',
+            description: 'Used MongoDB to store inputted data, and node.js to create the API endpoints.'
         },
         {
             title: 'File Metadata',
-            link: 'https://codepen.io/marsyaaaaal/full/gOoQroX',
-            description: 'File Metadata'
+            link: 'https://boilerplate-project-filemetadata.marsyaaaaal.repl.co/',
+            description: 'File upload microservice, using the mentioned framworks/languuages above.'
         },
     ]
     const team_works = [{

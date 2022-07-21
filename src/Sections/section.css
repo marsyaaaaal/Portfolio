@@ -10,15 +10,23 @@
   letter-spacing: 0.15em;
 }
 
+.section-container .upper-section .header-my-works {
+  position: relative;
+}
+
 .section-container .upper-section .header-my-works h1 {
   font-weight: 600;
 }
 
-.section-container .upper-section .header-my-works h1:hover::after {
+.section-container .upper-section .header-my-works h1:hover:after {
   content: "View Certificate";
   font-weight: 500;
+  font-size: small;
+  position: absolute;
+  margin-top: 0.5em;
   margin-left: 1em;
   color: #9E00FF;
+  background-color: white;
 }
 
 .section-container .lower-section .each-projects-desktop {
@@ -27,11 +35,22 @@
 
 .section-container .lower-section .each-projects-desktop .header-my-works {
   background-color: #121212;
+  position: relative;
 }
 
 .section-container .lower-section .each-projects-desktop .header-my-works h1 {
   background-color: #121212;
   font-weight: 600;
+}
+
+.section-container .lower-section .each-projects-desktop .header-my-works h1:hover:after {
+  content: "View Certificate";
+  font-weight: 500;
+  font-size: small;
+  position: absolute;
+  margin-top: 0.5em;
+  margin-left: 1em;
+  color: #9E00FF;
 }
 
 .section-container .card {
@@ -240,19 +259,22 @@
     width: 20%;
     padding: 1em;
   }
-  .upper-section .content .content-projects-desktop .each-projects-desktop .image-project {
-    width: 100%;
-    height: auto;
-  }
   .upper-section .content .content-projects-desktop .each-projects-desktop .project-title {
     margin-bottom: 0.4em;
     display: block;
     font-size: 0.80em;
   }
+  .upper-section .content .content-projects-desktop .each-projects-desktop .image-project {
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 10px 10px 0 0;
+  }
   .upper-section .content .content-projects-desktop .each-projects-desktop .card-body {
     position: absolute;
     background-color: #ffffff;
-    border-radius: 10px;
+    width: 90%;
+    color: #121212;
   }
   .upper-section .content .content-projects-desktop .each-projects-desktop .card-body .card-text {
     text-align: left;
@@ -270,6 +292,15 @@
   .lower-section .header-my-works h1 {
     font-size: 32px;
     line-height: 1em;
+  }
+  .lower-section .header-my-works h1:hover:after {
+    content: "View Certificate";
+    font-weight: 500;
+    font-size: small;
+    position: absolute;
+    color: #9E00FF;
+    margin-left: 1em;
+    padding: 0.2em;
   }
   .lower-section .header-my-works p {
     font-size: 14px;
@@ -300,11 +331,16 @@
   .lower-section .content .content-projects-desktop .each-projects-desktop .image-project {
     width: 100%;
     height: auto;
+    background-color: #ffffff;
+    border-radius: 10px 10px 0 0;
+    -webkit-box-shadow: 1px -1px 2px 0px #DCDCDC;
+            box-shadow: 1px -1px 2px 0px #DCDCDC;
   }
   .lower-section .content .content-projects-desktop .each-projects-desktop .card-body {
     position: absolute;
-    background-color: #121212;
-    border-radius: 10px;
+    background-color: #ffffff;
+    width: 84%;
+    color: #121212;
   }
   .lower-section .content .content-projects-desktop .each-projects-desktop .card-body .card-text {
     text-align: left;

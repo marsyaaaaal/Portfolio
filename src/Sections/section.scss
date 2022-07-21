@@ -12,14 +12,20 @@
 
     .upper-section {
         .header-my-works {
+            position: relative;
+
             h1 {
                 font-weight: 600;
 
-                &:hover::after {
+                &:hover:after {
                     content: "View Certificate";
                     font-weight: 500;
+                    font-size: small;
+                    position: absolute;
+                    margin-top: 0.5em;
                     margin-left: 1em;
                     color: #9E00FF;
+                    background-color: white;
                 }
             }
 
@@ -33,11 +39,19 @@
 
             .header-my-works {
                 background-color: #121212;
-
+                position: relative;
                 h1 {
                     background-color: #121212;
-
                     font-weight: 600;
+                    &:hover:after {
+                        content: "View Certificate";
+                        font-weight: 500;
+                        font-size: small;
+                        position: absolute;
+                        margin-top: 0.5em;
+                        margin-left: 1em;
+                        color: #9E00FF;
+                    }
                 }
             }
         }
@@ -55,10 +69,11 @@
 @media only screen and (max-width: 992px) {
 
     //mobile
-    .whole-section-container{
+    .whole-section-container {
         // background: linear-gradient(180deg, #ffffff 50%, #121212 50%);
         background: linear-gradient(180deg, #ffffff 50%, rgba(0, 0, 0, 0)50%);
         position: relative;
+
         .new-bg-hero {
             position: absolute;
             z-index: -1;
@@ -75,8 +90,10 @@
 
 
     }
+
     .upper-section {
         margin-bottom: 10em;
+
         .header-my-works {
             h1 {
                 font-size: 20px;
@@ -115,6 +132,7 @@
 
                     .card-body {
                         background-color: white;
+
                     }
 
                     .card-title {
@@ -197,9 +215,11 @@
             }
         }
     }
-    .team-projects-bg-0{
+
+    .team-projects-bg-0 {
         background-color: #ffffff;
     }
+
     .team-projects {
         padding: 3em 2.5em;
         position: relative;
@@ -331,10 +351,7 @@
                     width: 20%;
                     padding: 1em;
 
-                    .image-project {
-                        width: 100%;
-                        height: auto;
-                    }
+                    
 
                     .project-title {
                         margin-bottom: 0.4em;
@@ -342,10 +359,18 @@
                         font-size: 0.80em;
                     }
 
+                    .image-project {
+                        width: 100%;
+                        height: auto;
+                        background-color: #ffffff;
+                        border-radius: 10px 10px 0 0 ;
+                    }
+
                     .card-body {
                         position: absolute;
                         background-color: #ffffff;
-                        border-radius: 10px;
+                        width: 90%;
+                        color: #121212;
 
                         .card-text {
                             text-align: left;
@@ -379,6 +404,15 @@
 
                 font-size: 32px;
                 line-height: 1em;
+                &:hover:after {
+                    content: "View Certificate";
+                    font-weight: 500;
+                    font-size: small;
+                    position: absolute;
+                    color: #9E00FF;
+                    margin-left: 1em;
+                    padding: 0.2em;
+                }
             }
 
             p {
@@ -398,7 +432,7 @@
                 clear: both;
 
                 .each-projects-desktop {
-                background-color: rgba(0, 0, 0, 0);
+                    background-color: rgba(0, 0, 0, 0);
 
                     display: unset;
                     position: relative;
@@ -415,13 +449,16 @@
                     .image-project {
                         width: 100%;
                         height: auto;
+                        background-color: #ffffff;
+                        border-radius: 10px 10px 0 0;
+                        box-shadow: 1px -1px 2px 0px #DCDCDC;
                     }
-
 
                     .card-body {
                         position: absolute;
-                        background-color: #121212;
-                        border-radius: 10px;
+                        background-color: #ffffff;
+                        width: 84%;
+                        color: #121212;
 
                         .card-text {
                             text-align: left;

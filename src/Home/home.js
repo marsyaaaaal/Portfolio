@@ -69,8 +69,11 @@ const Home = () => {
               <span>I am <span className="name"> Marcial </span>, an aspiring <br /><span id="name">Back End Developer </span></span>
             </div>
             <div className='go-to'  >
-              <motion.button whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.8 }}>Go to Portfolio</motion.button>
+              <a href="#whole-section" style={{textDecoration:"none"}} >
+                <motion.button whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.8 }}
+                >Go to Portfolio</motion.button>
+              </a>
             </div>
           </motion.div>
 

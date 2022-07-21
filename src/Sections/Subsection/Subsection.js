@@ -9,20 +9,22 @@ import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 const Item = (props) => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleOpen = () => setIsOpen(!isOpen);
+    const toggleOpen = () => setIsOpen(true);
+    const toggleClose = () => setIsOpen(false);
+
 
     const actionToOpen = () => {
         window.open(props.data.link, '_blank').focus();
     }
 
     return (
-        <motion.div layout onClick={actionToOpen} onHoverStart={toggleOpen} onHoverEnd={toggleOpen} initial={{ borderRadius: 10 }}>
-            <div className="card" style={{ width: "100%", borderRadius: '20px', border: '0', boxShadow: '4px -2px 4px 0px #DCDCDC' }}>
+        <motion.div type="button" layout onClick={actionToOpen} whileHover={toggleOpen} onHoverEnd={toggleClose} initial={{ borderRadius: 10 }}>
+            <div className="card" style={{ width: "100%", borderRadius: '10px', border: '0'}}>
                 <img className="image-project" src={(props.type).concat("/" + (parseInt(props.ctr) + 1) + ".svg")} alt={props.data.title} />
             </div>
-            <div class="card-body">
-                <AnimatePresence>{isOpen && <Content description={props.data.description} />}</AnimatePresence>
-            </div>
+
+            <AnimatePresence>{isOpen && <Content description={props.data.description} />}</AnimatePresence>
+
 
         </motion.div>
     );
@@ -31,15 +33,15 @@ const Item = (props) => {
 const Content = (props) => {
     //card body of projects (descriptions)
     return (
-        <motion.div
+        <motion.div class="card-body"
             layout
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="card-text"
-        >
-            {props.description}
-        </motion.div>
+            exit={{ opacity: 0 }}>
+            <div className="card-text">
+                {props.description}
+            </div>
+        </motion.div >
     );
 }
 
@@ -55,8 +57,6 @@ class SubSection extends React.Component {
             height: 0,
             data: props.data
         };
-        console.log("state")
-        console.log(this.state)
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 
     }
@@ -72,7 +72,7 @@ class SubSection extends React.Component {
     updateWindowDimensions() {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
-
+ 
     render() {
         let project_images = [];
         this.state.data.map((item, i) => {
@@ -100,10 +100,10 @@ class SubSection extends React.Component {
         });
         return (
             <div>
-                <div className="header-my-works">
-                    <h1 type="button" onClick={()=>{window.open(this.props.link, "_blank").focus()}}>{this.state.header}</h1>
+                <motion.div className="header-my-works">
+                    <h1 type="button" onClick={() => { window.open(this.props.link, "_blank").focus() }}>{this.state.header}</h1>
                     <p>{this.state.sub_header}</p>
-                </div>
+                </motion.div>
                 <div className="content">
                     {(this.state.width >= 991) ? (
                         <AnimateSharedLayout>
