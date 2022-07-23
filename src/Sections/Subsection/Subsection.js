@@ -1,7 +1,7 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Carousel } from '3d-react-carousal';
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import { motion, AnimateSharedLayout, AnimatePresence, useViewportScroll, useTransform, useSpring } from "framer-motion";
 
 
 
@@ -11,22 +11,53 @@ const Item = (props) => {
 
     const toggleOpen = () => setIsOpen(true);
     const toggleClose = () => setIsOpen(false);
+    const [isShown, setIsShown] = useState(false);
+
+    const [offsetY, setOffsetY] = useState(0);
+    const handleScroll = () => {
+        setOffsetY(window.pageYOffset);
+        if (window.pageYOffset >= 500 && window.pageYOffset <= 1500) {
+            setIsShown(true)
+        } else {
+            setIsShown(false)
+        }
+    }
+
+    const { scrollYProgress } = useViewportScroll()
+    const scale = useTransform(scrollYProgress, [0, 1], [0.5, 2.5]);
+
+    const offsetHeight = 50;
+    const yRange = useTransform(scrollYProgress, [offsetHeight, 0], [0, 1]);
+    const opacity_effect = useSpring(yRange, { stiffness: 400, damping: 40 });
+
+    useEffect(() => {
+        // Update the document title using the browser API
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
 
     const actionToOpen = () => {
         window.open(props.data.link, '_blank').focus();
     }
 
+
+
     return (
-        <motion.div type="button" layout onClick={actionToOpen} whileHover={toggleOpen} onHoverEnd={toggleClose} initial={{ borderRadius: 10 }}>
-            <div className="card" style={{ width: "100%", borderRadius: '10px', border: '0'}}>
-                <img className="image-project" src={(props.type).concat("/" + (parseInt(props.ctr) + 1) + ".svg")} alt={props.data.title} />
-            </div>
+        <AnimatePresence>
+            {isShown &&
+                <motion.div type="button" layout onClick={actionToOpen} whileHover={toggleOpen} onHoverEnd={toggleClose} initial={{ borderRadius: 10 }}  >
+                    <motion.div className="card" style={{ width: "100%", borderRadius: '10px', border: '0' }} initial={ { y:200}} transition={{ duration: 1.5 }} animate={{  translateY: -200 }}   exit={{ opacity: 0 }}>
+                        <motion.img className="image-project" src={(props.type).concat("/" + (parseInt(props.ctr) + 1) + ".svg")} alt={props.data.title} />
+                    </motion.div>
 
-            <AnimatePresence>{isOpen && <Content description={props.data.description} />}</AnimatePresence>
+                    <AnimatePresence>{isOpen && <Content description={props.data.description} />}</AnimatePresence>
 
 
-        </motion.div>
+                </motion.div>}
+        </AnimatePresence>
     );
 }
 
@@ -72,7 +103,7 @@ class SubSection extends React.Component {
     updateWindowDimensions() {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
- 
+
     render() {
         let project_images = [];
         this.state.data.map((item, i) => {

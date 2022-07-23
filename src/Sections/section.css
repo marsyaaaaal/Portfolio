@@ -20,13 +20,16 @@
 
 .section-container .upper-section .header-my-works h1:hover:after {
   content: "View Certificate";
-  font-weight: 500;
+  font-weight: 700;
   font-size: small;
   position: absolute;
+  display: block;
+  color: #121212;
+  padding: 0.5em;
   margin-top: 0.5em;
-  margin-left: 1em;
-  color: #9E00FF;
-  background-color: white;
+  background-color: #DEE2E6;
+  border-radius: 0 0 8px 8px;
+  line-height: 1.5em;
 }
 
 .section-container .lower-section .each-projects-desktop {
@@ -45,12 +48,16 @@
 
 .section-container .lower-section .each-projects-desktop .header-my-works h1:hover:after {
   content: "View Certificate";
-  font-weight: 500;
+  font-weight: 700;
   font-size: small;
   position: absolute;
+  display: block;
+  color: #121212;
+  padding: 0.5em;
   margin-top: 0.5em;
-  margin-left: 1em;
-  color: #9E00FF;
+  background-color: #DEE2E6;
+  border-radius: 0 0 8px 8px;
+  line-height: 1.5em;
 }
 
 .section-container .card {
@@ -288,6 +295,7 @@
   }
   .lower-section .header-my-works {
     padding-bottom: 1em;
+    position: relative;
   }
   .lower-section .header-my-works h1 {
     font-size: 32px;
@@ -295,12 +303,16 @@
   }
   .lower-section .header-my-works h1:hover:after {
     content: "View Certificate";
-    font-weight: 500;
+    font-weight: 700;
     font-size: small;
     position: absolute;
-    color: #9E00FF;
-    margin-left: 1em;
-    padding: 0.2em;
+    display: block;
+    color: #121212;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    background-color: #DEE2E6;
+    border-radius: 0 0 8px 8px;
+    line-height: 1.5em;
   }
   .lower-section .header-my-works p {
     font-size: 14px;
