@@ -1,21 +1,14 @@
+.footer-bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#353535));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #353535);
+}
+
 .footer {
-  background-color: #282828;
   color: #F8F9FA;
 }
 
 .footer img {
   width: 100px;
-}
-
-.footer .contacts,
-.footer .contact-me,
-.footer .name-email,
-.footer .navs,
-.footer .navs-list,
-.footer .my-email,
-.footer .socials,
-.footer .email-type {
-  background-color: #282828;
 }
 
 .footer h1 .last {
@@ -30,7 +23,7 @@
   list-style-type: none;
 }
 
-.footer button {
+.footer .send, .footer button {
   border-radius: 10px;
   padding: 0.5em 2em;
   background-color: #9E00FF;
@@ -208,7 +201,8 @@
 
 @media screen and (min-width: 1200px) {
   .footer-bg {
-    background-color: #282828;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#353535));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), #353535);
   }
   .footer {
     width: 1200px;

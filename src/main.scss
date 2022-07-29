@@ -33,6 +33,7 @@ img {
         background-size: cover;
 
     }
+ 
     
 
 }
@@ -41,15 +42,21 @@ img {
     .new-bg-hero {
         position: absolute;
         z-index: -1;
-        width: 50%;
+        width: 100%;
         height: 100%;
         top: 0;
         left: 0;
         // object-fit: 75%;
         // overflow: hidden;
         background-image: url("../public/new-bg-hero.svg");
-        background-size: cover;
+        background-size:contain;
         
+
+    }
+    .hero-bg{
+        // object-fit: 75%;
+        // overflow: hidden;
+        background: linear-gradient(90deg, #ffffff00 50%, rgb(252, 252, 252)50%);
 
     }
 

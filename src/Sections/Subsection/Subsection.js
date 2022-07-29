@@ -18,9 +18,7 @@ const Item = (props) => {
         setOffsetY(window.pageYOffset);
         if (window.pageYOffset >= 500 && window.pageYOffset <= 1500) {
             setIsShown(true)
-        } else {
-            setIsShown(false)
-        }
+        }  
     }
 
     const { scrollYProgress } = useViewportScroll()
@@ -49,7 +47,7 @@ const Item = (props) => {
         <AnimatePresence>
             {isShown &&
                 <motion.div type="button" layout onClick={actionToOpen} whileHover={toggleOpen} onHoverEnd={toggleClose} initial={{ borderRadius: 10 }}  >
-                    <motion.div className="card" style={{ width: "100%", borderRadius: '10px', border: '0' }} initial={ { y:200}} transition={{ duration: 1.5 }} animate={{  translateY: -200 }}   exit={{ opacity: 0 }}>
+                    <motion.div className="card" style={{ width: "100%", borderRadius: '10px', border: '0' }} initial={ { opacity:0}} transition={{ duration: 1 }} animate={{  opacity: 1 }}   exit={{ opacity: 0 }}>
                         <motion.img className="image-project" src={(props.type).concat("/" + (parseInt(props.ctr) + 1) + ".svg")} alt={props.data.title} />
                     </motion.div>
 

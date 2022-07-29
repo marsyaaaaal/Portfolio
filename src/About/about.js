@@ -12,7 +12,7 @@ class About extends React.Component {
                 <div className="about-content">
                     <img className="about-bg" src="about-bg.svg" alt="about-bg" />
                     <h1>About me</h1>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non egestas sed fermentum nunc sit nibh eget. Donec justo, eu phasellus libero, donec porta tellus in.</span>
+                    <span>A person who loves challenges, got into coding during high school, and thought of it as an interesting skill to hone.</span>
                 </div>
             </div>
 

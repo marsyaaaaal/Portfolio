@@ -9,24 +9,25 @@ import About from './About/about.js';
 import Footer from './Footer/footer.js';
 import SmoothScroll from './smoothScroll.jsx';
 import { useState, useEffect } from 'react';
-import './style.css';
+import './style.css'; 
 
 const Main = () => {
-    const [offsetY, setOffsetY] = useState(0);
-    const handleScroll = () => { setOffsetY(window.pageYOffset) }
+    // const [offsetY, setOffsetY] = useState(0);
+    // const handleScroll = () => { setOffsetY(window.pageYOffset) }
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
+    // useEffect(() => {
+    //     window.addEventListener("scroll", handleScroll);
 
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    //     return () => window.removeEventListener("scroll", handleScroll);
+    // }, []);
 
+ 
     return (
-        <div className="main">
+        <div className="main" >
 
             <Navbar />
             {/* <SmoothScroll> */}
-            <div className="new-bg-hero" style={{ transform: `translateY(${offsetY * 0.2}px)` }}></div>
+            <div className="new-bg-hero"  style={{position:"fixed"}}></div>
             <Home />
             <Section />
             <About />

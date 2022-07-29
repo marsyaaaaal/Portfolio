@@ -70,16 +70,6 @@
     background: linear-gradient(180deg, #ffffff 50%, rgba(0, 0, 0, 0) 50%);
     position: relative;
   }
-  .whole-section-container .new-bg-hero {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: url("../../public/new-bg-hero.svg");
-    background-size: fill;
-  }
   .upper-section {
     margin-bottom: 10em;
   }
@@ -199,14 +189,27 @@
   }
   .team-projects .content-portfolio {
     margin-bottom: 6em;
-    position: -webkit-sticky;
-    position: sticky;
     background-color: rgba(0, 0, 0, 0);
   }
   .team-projects .content-portfolio .right,
-  .team-projects .content-portfolio .text,
   .team-projects .content-portfolio .left {
+    position: relative;
     background-color: rgba(0, 0, 0, 0);
+  }
+  .team-projects .content-portfolio .right .text .upper,
+  .team-projects .content-portfolio .left .text .upper {
+    margin-bottom: 4em;
+  }
+  .team-projects .content-portfolio .right .text .lower,
+  .team-projects .content-portfolio .left .text .lower {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -5em;
+  }
+  .team-projects .content-portfolio .right .text .lower a,
+  .team-projects .content-portfolio .left .text .lower a {
+    text-decoration: none;
+    color: #9E00FF;
   }
   .team-projects .content-portfolio h1 {
     font-weight: 600;
@@ -230,7 +233,7 @@
     margin-top: 1em;
   }
   .team-projects .content-portfolio .portfolio-image {
-    margin-top: 1em;
+    margin-top: 2em;
     width: 100%;
     max-width: 600px;
     -webkit-filter: drop-shadow(2px 2px 2px #121212);
@@ -398,8 +401,6 @@
     width: 100%;
     margin-bottom: 4em;
     overflow: hidden;
-    position: -webkit-sticky;
-    position: sticky;
     background-color: rgba(248, 249, 250, 0.5);
   }
   .team-projects .content-portfolio .right {
@@ -413,13 +414,13 @@
     padding-top: 1em;
     line-height: 1.5em;
     padding-right: 1em;
-    margin-top: 3em;
+    margin-top: 0.5em;
   }
   .team-projects .content-portfolio .right .text h1 {
     line-height: 1.5em;
   }
   .team-projects .content-portfolio .right .text p {
-    margin-top: 2em;
+    margin-top: 1em;
   }
   .team-projects .content-portfolio .left {
     background-color: rgba(0, 0, 0, 0);
@@ -431,13 +432,13 @@
     padding-top: 0em;
     padding-right: 5em;
     line-height: 1.5em;
-    margin-top: 3em;
+    margin-top: 1em;
   }
   .team-projects .content-portfolio .left .text h1 {
     line-height: 1.5em;
   }
   .team-projects .content-portfolio .left .text p {
-    margin-top: 2em;
+    margin-top: 1em;
   }
   .team-projects .content-portfolio h1 {
     font-weight: 600;
@@ -473,16 +474,6 @@
     background: linear-gradient(180deg, #ffffff 50%, rgba(0, 0, 0, 0) 50%);
     position: relative;
   }
-  .whole-section-container .new-bg-hero {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: url("../../public/new-bg-hero.svg");
-    background-size: fill;
-  }
   .whole-section-container .section-container {
     width: 1200px;
     margin: 0 auto;
@@ -494,5 +485,26 @@
     width: 1200px;
     margin: 0 auto;
   }
+}
+
+.content-portfolio {
+  position: relative;
+}
+
+.content-portfolio .lower {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+}
+
+.content-portfolio .lower a {
+  text-decoration: none;
+  color: #9E00FF;
+}
+
+.content-portfolio .lower a .github-logo, .content-portfolio .lower a svg {
+  width: 20px;
+  margin: 0.5em;
+  margin-right: 0.2em;
 }
 /*# sourceMappingURL=section.css.map */

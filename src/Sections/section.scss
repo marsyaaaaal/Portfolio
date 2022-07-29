@@ -27,7 +27,7 @@
                     padding: 0.5em;
                     margin-top: 0.5em;
                     background-color: #DEE2E6;
-                    border-radius:  0 0 8px 8px;
+                    border-radius: 0 0 8px 8px;
                     line-height: 1.5em;
                 }
             }
@@ -43,9 +43,11 @@
             .header-my-works {
                 background-color: #121212;
                 position: relative;
+
                 h1 {
                     background-color: #121212;
                     font-weight: 600;
+
                     &:hover:after {
                         content: "View Certificate";
                         font-weight: 700;
@@ -56,7 +58,7 @@
                         padding: 0.5em;
                         margin-top: 0.5em;
                         background-color: #DEE2E6;
-                        border-radius:  0 0 8px 8px;
+                        border-radius: 0 0 8px 8px;
                         line-height: 1.5em;
                     }
                 }
@@ -73,6 +75,7 @@
 
 
 
+
 @media only screen and (max-width: 992px) {
 
     //mobile
@@ -81,19 +84,19 @@
         background: linear-gradient(180deg, #ffffff 50%, rgba(0, 0, 0, 0)50%);
         position: relative;
 
-        .new-bg-hero {
-            position: absolute;
-            z-index: -1;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            // object-fit: 75%;
-            // overflow: hidden;
-            background-image: url("../../public/new-bg-hero.svg");
-            background-size: fill;
+        // .new-bg-hero {
+        //     position: absolute;
+        //     z-index: -1;
+        //     width: 100%;
+        //     height: 100%;
+        //     top: 0;
+        //     left: 0;
+        //     // object-fit: 75%;
+        //     // overflow: hidden;
+        //     background-image: url("../../public/new-bg-hero.svg");
+        //     background-size: fill;
 
-        }
+        // }
 
 
     }
@@ -273,15 +276,40 @@
 
         .content-portfolio {
             margin-bottom: 6em;
-            position: sticky;
+            // position: sticky;
             background-color: rgba(0, 0, 0, 0);
 
+
+
             .right,
-            .text,
             .left {
+                position: relative;
                 background-color: rgba(0, 0, 0, 0);
 
+                .text {
+
+                    // background-color: red;
+                    .upper {
+                        margin-bottom: 4em;
+                    }
+
+                    .lower {
+                        position: absolute;
+                        bottom: 0;
+
+                        a {
+                            text-decoration: none;
+                            color: #9E00FF;
+                        }
+
+                        margin-bottom: -5em;
+
+
+                    }
+                }
+
             }
+
 
             h1 {
                 font-weight: 600;
@@ -312,7 +340,7 @@
             }
 
             .portfolio-image {
-                margin-top: 1em;
+                margin-top: 2em;
                 width: 100%;
                 max-width: 600px;
                 filter: drop-shadow(2px 2px 2px #121212);
@@ -358,7 +386,7 @@
                     width: 20%;
                     padding: 1em;
 
-                    
+
 
                     .project-title {
                         margin-bottom: 0.4em;
@@ -370,7 +398,7 @@
                         width: 100%;
                         height: auto;
                         background-color: #ffffff;
-                        border-radius: 10px 10px 0 0 ;
+                        border-radius: 10px 10px 0 0;
                     }
 
                     .card-body {
@@ -412,6 +440,7 @@
 
                 font-size: 32px;
                 line-height: 1em;
+
                 &:hover:after {
                     content: "View Certificate";
                     font-weight: 700;
@@ -422,9 +451,9 @@
                     padding: 0.5em;
                     margin-top: 0.5em;
                     background-color: #DEE2E6;
-                    border-radius:  0 0 8px 8px;
+                    border-radius: 0 0 8px 8px;
                     line-height: 1.5em;
-                    
+
                 }
             }
 
@@ -532,7 +561,7 @@
             width: 100%;
             margin-bottom: 4em;
             overflow: hidden;
-            position: sticky;
+            // position: sticky;
             background-color: rgba(248, 249, 250, 0.5);
 
 
@@ -555,10 +584,10 @@
                     }
 
                     p {
-                        margin-top: 2em;
+                        margin-top: 1em;
                     }
 
-                    margin-top: 3em;
+                    margin-top: 0.5em;
 
                 }
 
@@ -580,13 +609,13 @@
                     }
 
                     p {
-                        margin-top: 2em;
+                        margin-top: 1em;
                     }
 
                     padding-top: 0em;
                     padding-right: 5em;
                     line-height: 1.5em;
-                    margin-top: 3em;
+                    margin-top: 1em;
 
 
                 }
@@ -640,19 +669,19 @@
         background: linear-gradient(180deg, #ffffff 50%, rgba(0, 0, 0, 0)50%);
         position: relative;
 
-        .new-bg-hero {
-            position: absolute;
-            z-index: -1;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            // object-fit: 75%;
-            // overflow: hidden;
-            background-image: url("../../public/new-bg-hero.svg");
-            background-size: fill;
+        // .new-bg-hero {
+        //     position: absolute;
+        //     z-index: -1;
+        //     width: 100%;
+        //     height: 100%;
+        //     top: 0;
+        //     left: 0;
+        //     // object-fit: 75%;
+        //     // overflow: hidden;
+        //     background-image: url("../../public/new-bg-hero.svg");
+        //     background-size: fill;
 
-        }
+        // }
 
         .section-container {
             width: 1200px;
@@ -670,6 +699,33 @@
 
     }
 
+
+
+
+}
+
+.content-portfolio {
+    position: relative;
+
+    .lower {
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        // background-color: red;
+
+
+        a { 
+            text-decoration: none;
+            color: #9E00FF;
+
+            .github-logo, svg {
+                width: 20px;
+                margin: 0.5em;
+                margin-right: 0.2em;
+            }
+        }
+
+    }
 
 
 
