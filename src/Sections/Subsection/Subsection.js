@@ -13,6 +13,28 @@ const Item = (props) => {
     const toggleClose = () => setIsOpen(false);
     const [isShown, setIsShown] = useState(false);
 
+    const [offsetY, setOffsetY] = useState(0);
+    const handleScroll = () => {
+        setOffsetY(window.pageYOffset);
+        if (window.pageYOffset >= 500 && window.pageYOffset <= 1500) {
+            setIsShown(true)
+        }
+    }
+
+    const { scrollYProgress } = useViewportScroll()
+    const scale = useTransform(scrollYProgress, [0, 1], [0.5, 2.5]);
+
+    const offsetHeight = 50;
+    const yRange = useTransform(scrollYProgress, [offsetHeight, 0], [0, 1]);
+    const opacity_effect = useSpring(yRange, { stiffness: 400, damping: 40 });
+
+    useEffect(() => {
+        // Update the document title using the browser API
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
 
     const actionToOpen = () => {
@@ -124,7 +146,7 @@ class SubSection extends React.Component {
                             </div>
                         </AnimateSharedLayout>
 
-                    ) : (<Carousel className="content-projects-mobile" autoplay={true} interval={5000}  slides={project_images} arrows={false}
+                    ) : (<Carousel className="content-projects-mobile" autoplay={true} interval={5000} slides={project_images} arrows={false}
                     />)}
 
                 </div>
