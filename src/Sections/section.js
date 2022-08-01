@@ -94,12 +94,12 @@ function Left(props) {
                     </div>
                     <div className='lower'>
                         <div className='row'>
-                            <div className='col-md-6' type="button" onClick={()=>{openLink(props.item.sourceCode)}}>
+                            <div className='col-md-8' type="button" onClick={()=>{openLink(props.item.sourceCode)}}>
 
-                                <a   >  <img className='github-logo' src="github.png" alt="github" /> View source code </a>
+                                <a   >  <img className='github-logo' src="github.png" alt="github" /> Source code </a>
 
                             </div>
-                            <div className='col-md-6' type="button" onClick={()=>{openLink(props.item.demo)}}>
+                            <div className='col-md-4' type="button" onClick={()=>{openLink(props.item.demo)}}>
                                 <a ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
                                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
@@ -154,11 +154,11 @@ function Right(props) {
                     </div>
                     <div className='lower'>
                         <div className='row'>
-                            <div className='col-md-6' type="button" onClick={()=>{openLink(props.item.sourceCode)}}>
+                            <div className='col-md-8' type="button" onClick={()=>{openLink(props.item.sourceCode)}}>
 
-                                <a  >  <img className='github-logo' src="github.png" alt="github" /> View source code </a>
+                                <a  >  <img className='github-logo' src="github.png" alt="github" /> Source code </a>
                             </div>
-                            <div className='col-md-6' type="button" onClick={()=>{openLink(props.item.sourceCode)}}>
+                            <div className='col-md-4' type="button" onClick={()=>{openLink(props.item.sourceCode)}}>
                                 <a  >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
@@ -292,19 +292,19 @@ const Section = (props) => {
         demo: ''
     }]
 
-    const [offsetY, setOffsetY] = useState(0);
-    const handleScroll = () => {
-        setOffsetY(window.pageYOffset);
-    }
-    const [selectedId, setSelectedId] = useState(null)
+    // const [offsetY, setOffsetY] = useState(0);
+    // const handleScroll = () => {
+    //     setOffsetY(window.pageYOffset);
+    // }
+    // const [selectedId, setSelectedId] = useState(null)
     let team_projects = [];
 
-    useEffect(() => {
-        // Update the document title using the browser API
+    // useEffect(() => {
+    //     // Update the document title using the browser API
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    //     window.addEventListener("scroll", handleScroll);
+    //     return () => window.removeEventListener("scroll", handleScroll);
+    // }, []);
 
     team_works.map((item, i) => {
         if (i % 2 === 0) {

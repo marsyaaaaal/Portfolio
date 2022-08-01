@@ -7,14 +7,14 @@ import "./App.css";
 const App = () => {
 
   // const height = $(window).innerHeight();
-  const [nowLoading, setLoading] = useState(false);
+  // const [nowLoading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 3200);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 3200);
+  // }, []);
 
   return (
 

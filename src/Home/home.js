@@ -36,13 +36,13 @@ const Home = () => {
   let counter = 0;
   var elem = document.getElementById("name");
 
-  const change = function () {
-    $(elem).delay(timeoutDelay).fadeTo(1000, 0, function () {
-      this.innerHTML = titles[counter];
-      counter = ++counter % titles.length;
-      $(this).fadeTo(1000, 1, change)
-    });
-  }
+  // const change = function () {
+  //   $(elem).delay(timeoutDelay).fadeTo(1000, 0, function () {
+  //     this.innerHTML = titles[counter];
+  //     counter = ++counter % titles.length;
+  //     $(this).fadeTo(1000, 1, change)
+  //   });
+  // }
 
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => { setOffsetY(window.pageYOffset) }
