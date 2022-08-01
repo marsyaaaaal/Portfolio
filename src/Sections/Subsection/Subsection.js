@@ -146,7 +146,7 @@ class SubSection extends React.Component {
                             </div>
                         </AnimateSharedLayout>
 
-                    ) : (<Carousel className="content-projects-mobile" slides={project_images} autoplay={true} interval={5000} arrows={false}
+                    ) : (<Carousel className="content-projects-mobile" slides={project_images} arrows={false}
                     />)}
 
                 </div>

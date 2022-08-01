@@ -55,9 +55,9 @@ const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    change();
-  })
+  // useEffect(() => {
+  //   change();
+  // })
 
 
 
@@ -68,7 +68,7 @@ const Home = () => {
           <motion.div className='content-text'>
             <h1> Hello <br />World!</h1>
             <div className="meet">
-              <span>I am <span className="name"> Marcial </span>, an aspiring <br /><span id="name">Back End Developer </span></span>
+              <span>I am <span className="name"> Marcial </span>, an aspiring <br /><span id="name">Software Engineer </span></span>
             </div>
             <motion.div className='go-to' animate={{ scale: 1.1 }} transition={{ yoyo: Infinity, duration: 0.5 }}>
               <Link

@@ -67,6 +67,7 @@ const Navbar = () => {
                                         smooth={true}
                                         offset={-70}
                                         duration={500}
+                                        
                                     >
                                         <li class="nav-item">
                                             <a class="nav-link" href="#whole-section">Portfolio</a>
