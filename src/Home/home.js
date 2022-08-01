@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import './home.css';
 import { motion } from 'framer-motion';
 // import WebFont from 'webfontloader';
-
+import { Link, animateScroll as scroll } from "react-scroll";
 
 
 const Icons = (props) => {
@@ -71,11 +71,19 @@ const Home = () => {
               <span>I am <span className="name"> Marcial </span>, an aspiring <br /><span id="name">Back End Developer </span></span>
             </div>
             <motion.div className='go-to' animate={{ scale: 1.1 }} transition={{ yoyo: Infinity, duration: 0.5 }}>
-              <a href="#whole-section" style={{ textDecoration: "none" }} >
-                <motion.button whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.8 }}
-                >Go to Portfolio</motion.button>
-              </a>
+              <Link
+                to="whole-section"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <a href="#whole-section" style={{ textDecoration: "none" }} >
+                  <motion.button whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.8 }}
+                  >Go to Portfolio</motion.button>
+                </a>
+              </Link>
             </motion.div>
           </motion.div>
 

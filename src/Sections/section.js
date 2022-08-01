@@ -116,11 +116,11 @@ function Left(props) {
                 {
                     // console.log("right")
 
-                    // props.item.images.map((im) => <img className='portfolio-image' src={im} alt={props.item.title} />)
+                    props.item.images.map((im) => <img className='portfolio-image' src={im} alt={props.item.title} />)
                     
 
                 }
-                <Item className='portfolio-image' image={props.item.images[0]} />
+                {/* <Item className='portfolio-image' image={props.item.images[0]} /> */}
 
             </div>
         </motion.div>

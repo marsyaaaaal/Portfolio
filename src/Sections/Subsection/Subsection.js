@@ -18,7 +18,7 @@ const Item = (props) => {
         setOffsetY(window.pageYOffset);
         if (window.pageYOffset >= 500 && window.pageYOffset <= 1500) {
             setIsShown(true)
-        }  
+        }
     }
 
     const { scrollYProgress } = useViewportScroll()
@@ -47,7 +47,7 @@ const Item = (props) => {
         <AnimatePresence>
             {isShown &&
                 <motion.div type="button" layout onClick={actionToOpen} whileHover={toggleOpen} onHoverEnd={toggleClose} initial={{ borderRadius: 10 }}  >
-                    <motion.div className="card" style={{ width: "100%", borderRadius: '10px', border: '0' }} initial={ { opacity:0}} transition={{ duration: 1 }} animate={{  opacity: 1 }}   exit={{ opacity: 0 }}>
+                    <motion.div className="card" style={{ width: "100%", borderRadius: '10px', border: '0' }} initial={{ opacity: 0 }} transition={{ duration: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                         <motion.img className="image-project" src={(props.type).concat("/" + (parseInt(props.ctr) + 1) + ".svg")} alt={props.data.title} />
                     </motion.div>
 
@@ -102,8 +102,13 @@ class SubSection extends React.Component {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
+
+
     render() {
         let project_images = [];
+
+
+
         this.state.data.map((item, i) => {
             if (this.state.width >= 991) {
                 project_images.push(
@@ -116,7 +121,7 @@ class SubSection extends React.Component {
             else {
                 project_images.push(
                     <div className="each-projects-mobile">
-                        <div class="card" style={{ width: "18rem", borderRadius: '20px', border: '0', boxShadow: '4px -2px 4px 0px #DCDCDC' }}>
+                        <div class="card" onClick={()=>{window.open(item.link, '_blank').focus();}} style={{ width: "18rem", borderRadius: '20px', border: '0', boxShadow: '4px -2px 4px 0px #DCDCDC' }}>
                             <img className="image-project" src={(this.props.type).concat("/" + (parseInt(i) + 1) + ".svg")} alt={item.title} />
                             <div class="card-body">
                                 <h5 className="card-title"><span className="project-title">{item.title}</span> </h5>
