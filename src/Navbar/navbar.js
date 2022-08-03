@@ -3,7 +3,7 @@ import './Navbar.css';
 import { motion } from 'framer-motion';
 import React from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
-
+import { Burger } from './Burger';
 
 const Navbar = () => {
 
@@ -39,9 +39,10 @@ const Navbar = () => {
     }, [lastYpos])
 
 
+    const animateThis = { y: (shouldShowActions || window.scrollY == 0) ? "0%" : "-100%" };
 
     return (
-        <motion.div className='nav-container-bg fixed-top' style={{ background: window.screen.width <= 979 ? "#171717" : window.scrollY == 0 ? "unset" : "linear-gradient(90deg, #171717 50%, #ffffff 50%)" }} initial={{ y: "-100%" }} animate={{ y: (shouldShowActions || window.scrollY == 0) ? "0%" : "-100%" }} transition={{ duration: 0.5 }} >
+        <motion.div className='nav-container-bg fixed-top' style={{ background: window.screen.width <= 979 ? "#171717" : window.scrollY == 0 ? "unset" : "linear-gradient(90deg, #171717 50%, #ffffff 50%)" }} initial={{ y: "-100%" }} animate={ window.screen.width <= 979 ? {y:"0%"} : animateThis} transition={{ duration: 0.5 }} >
             <div className="nav-container ">
                 <div className='left-side'>
                     <nav class="navbar navbar-expand-md " style={{ background: "unset" }} >
@@ -52,12 +53,12 @@ const Navbar = () => {
                                     <img className='burger' src="white-burger.svg" alt="burger" />
                                 </div>
                             </button>
+                            <div className="burger-toggler" >
+                                <Burger />
+                            </div>
                             <div className="collapse navbar-collapse" id="navbarSupportedContent" >
-                                <div className="settings-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
-                                    <img className='burger' src="menu-icon.svg" alt="burger" />
-                                </div>
-                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" >
 
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" >
                                     <li class="nav-item">
                                         <a onClick={() => { scroll.scrollToTop(); }} class="nav-link" aria-current="page" href="#home">Home</a>
                                     </li>
@@ -67,7 +68,7 @@ const Navbar = () => {
                                         smooth={true}
                                         offset={-70}
                                         duration={500}
-                                        
+
                                     >
                                         <li class="nav-item">
                                             <a class="nav-link" href="#whole-section">Portfolio</a>
@@ -81,9 +82,9 @@ const Navbar = () => {
                                         offset={-70}
                                         duration={500}
                                     >
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#about">About</a>
-                                    </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#about">About</a>
+                                        </li>
                                     </Link>
                                     <Link
                                         to="footer-bg"
@@ -92,9 +93,9 @@ const Navbar = () => {
                                         offset={-70}
                                         duration={500}
                                     >
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#footer">Contact</a>
-                                    </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#footer">Contact</a>
+                                        </li>
                                     </Link>
                                 </ul>
                             </div>
