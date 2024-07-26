@@ -1,5 +1,5 @@
 export default {
-    SERVICE_ID: 'service_upx4qvc', //userID
-    TEMPLATE_ID: 'template_22xm82r',         //templateID
-    PUBLIC_KEY: 'H_Cy_Lzp3tdadh9e3'
+    SERVICE_ID: 'service_bmydpbw', //userID
+    TEMPLATE_ID: 'template_5k9brzg',         //templateID
+    PUBLIC_KEY: 'R8p4t-LFMW3b_-5t2'
 }
