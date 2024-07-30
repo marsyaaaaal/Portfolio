@@ -11,7 +11,7 @@ const Navbar = () => {
     const [lastYpos, setLastYpos] = React.useState(0);
     const actionToOpen = (data) => {
         if (data === 0) {
-            window.open('https://www.linkedin.com/in/marcial-abasola-a9498b210/', '_blank').focus()
+            window.open('www.linkedin.com/in/marcial-abasola-a9498b210', '_blank').focus()
         }
         else if (data === 1) {
             window.open('https://www.facebook.com/profile.php?id=100002844207547', '_blank').focus()
