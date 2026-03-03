@@ -4,9 +4,7 @@ import StatCard from './StatCard'
 
 const stats = [
   { value: '3+', label: 'Years Professional Experience', delay: 0 },
-  { value: '4', label: 'Companies', delay: 100 },
-  { value: '16+', label: 'Projects Built', delay: 200 },
-  { value: '90%', label: 'GWA — BS Computer Science', delay: 300 },
+  { value: '16+', label: 'Projects Built', delay: 100 },
 ]
 
 export default function About() {
