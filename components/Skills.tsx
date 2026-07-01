@@ -1,73 +1,43 @@
 import AnimatedSection from './AnimatedSection'
 
 const skillGroups = [
-  {
-    category: 'Languages',
-    icon: '◈',
-    skills: ['JavaScript', 'TypeScript', 'Python', 'C'],
-  },
-  {
-    category: 'Frontend',
-    icon: '◉',
-    skills: ['React.js', 'Vue.js', 'TailwindCSS', 'HTML / CSS', 'Flutter'],
-  },
-  {
-    category: 'Backend',
-    icon: '◎',
-    skills: ['Node.js', 'Express', 'Laravel', 'REST API'],
-  },
-  {
-    category: 'Databases & Cloud',
-    icon: '◌',
-    skills: ['MySQL', 'MongoDB', 'Supabase', 'AWS', 'Azure'],
-  },
-  {
-    category: 'Testing & Tools',
-    icon: '◍',
-    skills: ['Selenium', 'Playwright', 'Git', 'OpenCV', 'Pandas'],
-  },
+  { category: 'Languages', primary: 'JavaScript, TypeScript, Python, C', secondary: '' },
+  { category: 'Frontend', primary: 'React.js, Vue.js, TailwindCSS, Flutter', secondary: '· HTML / CSS' },
+  { category: 'Backend', primary: 'Node.js, Express, Laravel, REST API', secondary: '' },
+  { category: 'Databases & Cloud', primary: 'MySQL, MongoDB, Supabase, PostgreSQL', secondary: '· AWS, Azure' },
+  { category: 'Testing & Tools', primary: 'Playwright, Selenium, Git, OpenCV, Pandas', secondary: '' },
 ]
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-28 px-6 bg-zinc-50/70">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="py-[60px] px-6 md:px-[52px] bg-[#f4f1eb]">
+      <div className="max-w-content mx-auto">
         <AnimatedSection>
-          <p className="text-xs text-violet-600 font-semibold tracking-[0.2em] uppercase mb-4">
-            Skills
-          </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-zinc-900 mb-16 leading-tight">
-            Technologies I work with
+          <div className="flex items-center gap-4 mb-12">
+            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc]">04</span>
+            <div className="flex-1 h-px bg-[#e0ddd7]" />
+            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc]">Skills</span>
+          </div>
+          <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111]">
+            Technologies
+            <br />
+            <em>I work with.</em>
           </h2>
         </AnimatedSection>
 
-        <div className="space-y-10">
+        <div className="mt-9">
           {skillGroups.map((group, i) => (
-            <AnimatedSection key={group.category} delay={i * 100}>
-              <div className="flex flex-col sm:flex-row sm:items-start gap-5">
-                {/* Category label */}
-                <div className="flex-shrink-0 sm:w-44">
-                  <div className="flex items-center gap-2">
-                    <span className="text-violet-400 text-base" aria-hidden="true">
-                      {group.icon}
-                    </span>
-                    <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider">
-                      {group.category}
-                    </h3>
-                  </div>
-                </div>
-
-                {/* Skill pills */}
-                <div className="flex flex-wrap gap-2">
-                  {group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-4 py-2 text-sm font-medium bg-white text-zinc-600 border border-zinc-200 rounded-full hover:bg-violet-50 hover:text-violet-700 hover:border-violet-200 transition-all duration-200 cursor-default select-none"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+            <AnimatedSection key={group.category} delay={i * 60}>
+              <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-3 md:gap-8 py-4 border-t border-[#e0ddd7] items-baseline">
+                <span className="text-[9px] tracking-[3px] uppercase text-[#bbb]">
+                  {group.category}
+                </span>
+                <span className="text-[13px] text-[#555]">
+                  {group.primary}
+                  {group.secondary && (
+                    <span className="text-[#aaa] italic"> {group.secondary}</span>
+                  )}
+                </span>
               </div>
             </AnimatedSection>
           ))}
