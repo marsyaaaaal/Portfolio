@@ -1,125 +1,83 @@
 import Image from 'next/image'
 import AnimatedSection from './AnimatedSection'
-import StatCard from './StatCard'
 
-const stats = [
-  { value: '3+', label: 'Years Professional Experience', delay: 0 },
-  { value: '16+', label: 'Projects Built', delay: 100 },
-]
+const tags = ['Full Stack', 'Cloud (AWS)', 'Automation', 'AI / ML', 'Embedded']
 
 export default function About() {
   return (
-    <section id="about" className="py-28 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="py-[60px] px-6 md:px-[52px]">
+      <div className="max-w-content mx-auto">
+        {/* Section header */}
         <AnimatedSection>
-          <p className="text-xs text-violet-600 font-semibold tracking-[0.2em] uppercase mb-4">
-            About
-          </p>
+          <div className="flex items-center gap-4 mb-12">
+            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc]">01</span>
+            <div className="flex-1 h-px bg-[#e0ddd7]" />
+            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc]">About</span>
+          </div>
+          <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111]">
+            A developer who
+            <br />
+            <em>loves the craft.</em>
+          </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[52px] mt-9 items-start">
           {/* Left: Bio */}
           <AnimatedSection delay={80}>
-            <h2 className="text-4xl sm:text-5xl font-bold text-zinc-900 leading-tight mb-8">
-              A developer who
-              <br />
-              <span className="text-zinc-400">loves challenges</span>
-            </h2>
-            <div className="space-y-5 text-zinc-500 leading-relaxed text-[15px]">
-              <p>
-                I&apos;m Marcial, a Software Engineer currently at{' '}
-                <span className="text-zinc-700 font-medium">Cambridge University Press & Assessment</span>,
-                where I work as a Full Stack Developer on the Identity Team — contributing to
-                core service design, AWS Lambda scalability, and end-to-end development initiatives.
-              </p>
-              <p>
-                My background spans embedded systems engineering at Denso Techno Philippines
-                and real estate automation with Python & AWS at Net Real Estate LLC. I got
-                hooked on coding in high school and never stopped — I ranked{' '}
-                <span className="text-zinc-700 font-medium">Top 1 out of 50</span> in
-                Technical C training and placed second at a University Computer Programming Competition.
-              </p>
-              <p>
-                From PyTorch-based AI systems to full-stack web platforms and cloud automation
-                pipelines — I enjoy the full spectrum of the stack and the challenge of building
-                things that genuinely work well.
-              </p>
-            </div>
-
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 mt-8">
-              {['Full Stack', 'Automation', 'Cloud (AWS)', 'AI / ML', 'Embedded Systems'].map(
-                (tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 text-xs font-medium bg-zinc-100 text-zinc-600 rounded-full"
-                  >
-                    {tag}
-                  </span>
-                )
-              )}
+            <p className="text-[13px] text-[#666] leading-[1.85]">
+              I&apos;m Marcial, a Software Engineer currently at{' '}
+              <strong className="text-[#111] font-semibold">
+                Cambridge University Press &amp; Assessment
+              </strong>
+              , where I work as a Full Stack Developer on the Identity Team — contributing to
+              core service design, AWS Lambda scalability, and end-to-end development initiatives.
+            </p>
+            <p className="text-[13px] text-[#666] leading-[1.85] mt-5">
+              My background spans embedded systems at Denso Techno Philippines and real estate
+              automation with Python &amp; AWS. I got hooked on coding in high school and ranked{' '}
+              <strong className="text-[#111] font-semibold">Top 1 of 50</strong> in Technical C
+              training.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-6">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[9px] tracking-[2px] uppercase text-[#999] border border-[#ddd] px-[10px] py-[5px]"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </AnimatedSection>
 
           {/* Right: Photo + Stats */}
-          <AnimatedSection delay={180}>
-            <div className="flex flex-col gap-5">
-              {/* Profile photo — asymmetric frame + grayscale hover */}
-              <div className="relative w-fit mx-auto lg:mx-0">
-                {/* Offset violet backing frame */}
-                <div className="absolute inset-0 rounded-2xl bg-violet-100 border border-violet-200 rotate-3 translate-x-4 translate-y-4" />
-                {/* Dot pattern accent — bottom-right corner */}
-                <div
-                  className="absolute -bottom-5 -right-5 w-20 h-20 opacity-40 pointer-events-none z-20"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle, #7C3AED 1.5px, transparent 1.5px)',
-                    backgroundSize: '10px 10px',
-                  }}
+          <AnimatedSection delay={160}>
+            <div className="flex flex-col items-start">
+              {/* Photo — permanent grayscale, no hover */}
+              <div className="relative w-[220px] aspect-[3/4] grayscale overflow-hidden">
+                <Image
+                  src="/photo.png"
+                  alt="Marcial Abasola"
+                  fill
+                  className="object-cover object-top"
+                  priority
                 />
-                {/* Photo */}
-                <div className="relative w-[240px] sm:w-[280px] aspect-[3/4] rounded-2xl overflow-hidden group shadow-md z-10">
-                  <Image
-                    src="/photo.png"
-                    alt="Marcial Abasola"
-                    fill
-                    className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
-                    priority
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
-                </div>
               </div>
-
-              {/* Stats grid */}
-              <div className="grid grid-cols-2 gap-3">
-                {stats.map((stat) => (
-                  <StatCard
-                    key={stat.label}
-                    value={stat.value}
-                    label={stat.label}
-                    delay={stat.delay}
-                  />
+              {/* 2px rule spanning full column width */}
+              <div className="w-full h-[2px] bg-[#111]" />
+              {/* Stats */}
+              <div className="flex gap-6 mt-5">
+                {[
+                  { value: '3+', label: 'Years\nProfessional' },
+                  { value: '16+', label: 'Projects\nBuilt' },
+                ].map(({ value, label }) => (
+                  <div key={label} className="border-t-2 border-[#111] pt-[10px]">
+                    <div className="font-serif text-[34px] text-[#111] leading-none">{value}</div>
+                    <div className="text-[9px] tracking-[2px] uppercase text-[#bbb] mt-[5px] whitespace-pre-line leading-[1.5]">
+                      {label}
+                    </div>
+                  </div>
                 ))}
-              </div>
-
-              {/* Current status */}
-              <div className="p-5 rounded-2xl border border-zinc-100 bg-white">
-                <p className="text-xs text-zinc-400 font-medium mb-3 uppercase tracking-wider">
-                  Currently
-                </p>
-                <div className="space-y-2.5">
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0" />
-                    <span className="text-sm text-zinc-600">
-                      Full Stack Developer @ Cambridge University Press & Assessment
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-violet-400 flex-shrink-0" />
-                    <span className="text-sm text-zinc-600">
-                      Open to exciting side projects and opportunities
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </AnimatedSection>
