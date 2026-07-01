@@ -1,201 +1,89 @@
 import AnimatedSection from './AnimatedSection'
 
-const certifications = [
+const degrees = [
   {
-    name: 'PhilNits ITPEC-IP Passer',
-    category: 'General IT Knowledge',
-    id: 'IP2500068',
-    link: null,
-    highlight: true,
-  },
-  {
-    name: 'Frontend Development Libraries',
-    category: 'FreeCodeCamp',
-    id: null,
-    link: 'https://www.freecodecamp.org/certification/fcc36581fa7-10ee-4a6e-b693-1787fd043aa9/front-end-development-libraries',
-    highlight: false,
-  },
-  {
-    name: 'Back End Development & APIs',
-    category: 'FreeCodeCamp',
-    id: null,
-    link: 'https://www.freecodecamp.org/certification/fcc36581fa7-10ee-4a6e-b693-1787fd043aa9/back-end-development-and-apis',
-    highlight: false,
-  },
-  {
-    name: 'Philippine Android Weekend 2020',
-    category: 'Android Development',
-    id: '47F74D86',
-    link: null,
-    highlight: false,
-  },
-  {
-    name: 'Python for Data Science',
-    category: 'Python',
-    id: null,
-    link: 'https://www.sololearn.com/en/certificates/CT-7VDAGT22',
-    highlight: false,
-  },
-  {
-    name: 'Intermediate Python',
-    category: 'Python',
-    id: null,
-    link: 'https://www.sololearn.com/Certificate/CT-F6LKIAYO/png',
-    highlight: false,
+    year: '2018 – 2022',
+    location: 'Legazpi City, Albay',
+    institution: 'Bicol University',
+    degree: 'Bachelor of Science in Computer Science',
   },
 ]
 
-const courses = [
-  'Algorithms', 'Data Structures', 'OOP',
-  'Artificial Intelligence', 'Software Engineering',
-  'Computer Vision', 'Application Development',
+const certifications = [
+  { year: '2025', category: 'General IT Knowledge', name: 'PhilNits ITPEC-IP Passer', link: null },
+  { year: '2023', category: 'FreeCodeCamp', name: 'Frontend Development Libraries', link: 'https://www.freecodecamp.org/certification/fcc36581fa7-10ee-4a6e-b693-1787fd043aa9/front-end-development-libraries' },
+  { year: '2023', category: 'FreeCodeCamp', name: 'Back End Development & APIs', link: 'https://www.freecodecamp.org/certification/fcc36581fa7-10ee-4a6e-b693-1787fd043aa9/back-end-development-and-apis' },
+  { year: '2020', category: 'Android', name: 'Philippine Android Weekend 2020', link: null },
+  { year: '2022', category: 'Python', name: 'Python for Data Science', link: 'https://www.sololearn.com/en/certificates/CT-7VDAGT22' },
 ]
 
 export default function Education() {
   return (
-    <section id="education" className="py-28 px-6 bg-zinc-50/70">
-      <div className="max-w-6xl mx-auto">
+    <section id="education" className="py-[60px] px-6 md:px-[52px]">
+      <div className="max-w-content mx-auto">
         <AnimatedSection>
-          <p className="text-xs text-violet-600 font-semibold tracking-[0.2em] uppercase mb-4">
-            Education & Certifications
-          </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-zinc-900 mb-16 leading-tight">
-            Academic background
+          <div className="flex items-center gap-4 mb-12">
+            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc]">05</span>
+            <div className="flex-1 h-px bg-[#e0ddd7]" />
+            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc]">Education</span>
+          </div>
+          <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111]">
+            Where I
+            <br />
+            <em>studied.</em>
           </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* ── Education card ── */}
-          <AnimatedSection delay={80}>
-            <div className="h-full p-8 rounded-2xl border border-zinc-200 bg-white flex flex-col gap-6">
-              {/* Header */}
-              <div className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-xl bg-violet-50 border border-violet-100 flex items-center justify-center flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
-                  </svg>
+        {/* Degrees */}
+        <div className="mt-9">
+          {degrees.map((deg, i) => (
+            <AnimatedSection key={deg.institution} delay={i * 80}>
+              <div className="grid grid-cols-1 md:grid-cols-[170px_1fr] gap-6 md:gap-9 py-[22px] border-t border-[#e0ddd7]">
+                <div>
+                  <p className="text-[11px] font-semibold text-[#111] leading-[1.5]">{deg.year}</p>
+                  <p className="text-[10px] text-[#bbb] tracking-[1px] mt-[3px]">{deg.location}</p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-zinc-900 text-base">Bicol University</h3>
-                  <p className="text-sm text-zinc-500 mt-0.5">Bachelor of Science in Computer Science</p>
-                  <p className="text-xs text-zinc-400 mt-1">August 2018 – July 2022 · Legazpi City, Albay</p>
+                  <p className="text-[13px] font-bold text-[#111] tracking-[-0.2px]">{deg.institution}</p>
+                  <p className="text-[11px] text-[#888] mt-[3px]">{deg.degree}</p>
                 </div>
               </div>
+            </AnimatedSection>
+          ))}
+        </div>
 
-              {/* Achievements */}
-              <div>
-                <p className="text-xs text-zinc-400 font-medium uppercase tracking-wider mb-3">
-                  Achievements
-                </p>
-                <ul className="space-y-2">
-                  {[
-                    { icon: '🏆', text: "Dean's Lister" },
-                    { icon: '🥈', text: 'Second placer — Computer Programming Competition (Team)' },
-                    { icon: '📊', text: 'GWA: 1.9 / 90%' },
-                  ].map((item) => (
-                    <li key={item.text} className="flex items-start gap-2.5 text-sm text-zinc-600">
-                      <span className="text-base leading-tight flex-shrink-0">{item.icon}</span>
-                      {item.text}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        {/* Certifications sub-label */}
+        <AnimatedSection delay={120}>
+          <div className="flex items-center gap-4 mt-14 mb-2">
+            <div className="flex-1 h-px bg-[#e0ddd7]" />
+            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc]">Certifications</span>
+          </div>
+        </AnimatedSection>
 
-              {/* Relevant courses */}
-              <div>
-                <p className="text-xs text-zinc-400 font-medium uppercase tracking-wider mb-3">
-                  Relevant Courses
-                </p>
-                <div className="flex flex-wrap gap-1.5">
-                  {courses.map((c) => (
-                    <span
-                      key={c}
-                      className="px-2.5 py-1 text-xs font-medium bg-zinc-50 text-zinc-500 border border-zinc-200 rounded-full"
+        <div>
+          {certifications.map((cert, i) => (
+            <AnimatedSection key={cert.name} delay={i * 60}>
+              <div className="grid grid-cols-1 md:grid-cols-[170px_1fr] gap-6 md:gap-9 py-[18px] border-t border-[#e0ddd7] items-baseline">
+                <div>
+                  <p className="text-[11px] font-semibold text-[#111]">{cert.year}</p>
+                  <p className="text-[10px] text-[#bbb] tracking-[1px] mt-[2px]">{cert.category}</p>
+                </div>
+                <div className="flex items-baseline justify-between gap-4">
+                  <p className="text-[13px] font-bold text-[#111] tracking-[-0.2px]">{cert.name}</p>
+                  {cert.link && (
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] tracking-[1px] text-[#bbb] hover:text-[#555] transition-colors flex-shrink-0"
                     >
-                      {c}
-                    </span>
-                  ))}
+                      View ↗
+                    </a>
+                  )}
                 </div>
               </div>
-            </div>
-          </AnimatedSection>
-
-          {/* ── Certifications ── */}
-          <AnimatedSection delay={160}>
-            <div className="h-full p-8 rounded-2xl border border-zinc-200 bg-white flex flex-col gap-4">
-              <p className="text-xs text-zinc-400 font-medium uppercase tracking-wider mb-1">
-                Certifications
-              </p>
-
-              <div className="space-y-3">
-                {certifications.map((cert) => (
-                  <div
-                    key={cert.name}
-                    className={`flex items-start gap-3 p-4 rounded-xl border transition-colors ${
-                      cert.highlight
-                        ? 'border-violet-100 bg-violet-50/60'
-                        : 'border-zinc-100 bg-zinc-50/40 hover:border-zinc-200'
-                    }`}
-                  >
-                    {/* Icon */}
-                    <div
-                      className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                        cert.highlight ? 'bg-violet-100' : 'bg-white border border-zinc-200'
-                      }`}
-                    >
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke={cert.highlight ? '#7C3AED' : '#71717A'}
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <circle cx="12" cy="8" r="6" />
-                        <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
-                      </svg>
-                    </div>
-
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-start justify-between gap-2">
-                        <p
-                          className={`text-sm font-medium leading-snug ${
-                            cert.highlight ? 'text-violet-700' : 'text-zinc-700'
-                          }`}
-                        >
-                          {cert.name}
-                        </p>
-                        {cert.link && (
-                          <a
-                            href={cert.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-shrink-0 text-[10px] font-medium text-zinc-400 hover:text-violet-600 transition-colors border border-zinc-200 hover:border-violet-200 rounded px-1.5 py-0.5"
-                          >
-                            View ↗
-                          </a>
-                        )}
-                      </div>
-                      <p className="text-xs text-zinc-400 mt-0.5 flex items-center gap-1.5">
-                        {cert.category}
-                        {cert.id && (
-                          <>
-                            <span className="text-zinc-300">·</span>
-                            <span className="font-mono text-[10px] text-zinc-400">
-                              ID: {cert.id}
-                            </span>
-                          </>
-                        )}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
+            </AnimatedSection>
+          ))}
         </div>
       </div>
     </section>
