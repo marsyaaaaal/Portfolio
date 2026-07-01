@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
+  --background: #fafaf8;
+  --foreground: #111111;
+  --border: #e0ddd7;
+  --muted: #999999;
+  --accent: #dc2626;
 }
 
 * {
@@ -25,112 +28,44 @@ body {
 }
 
 /* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 5px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #d4d4d8;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #a1a1aa;
-}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #e0ddd7; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #bbb; }
 
 /* Text selection */
-::selection {
-  background: #7c3aed;
-  color: #ffffff;
-}
+::selection { background: #dc2626; color: #ffffff; }
 
-/* ─── Hero animations ─────────────────────────────────── */
-
+/* ── Hero entrance animations ──────────────── */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(22px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .anim-fade-up {
   opacity: 0;
-  animation: fadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .anim-fade-in {
   opacity: 0;
-  animation: fadeIn 0.7s ease forwards;
+  animation: fadeIn 0.6s ease forwards;
 }
 
-/* ─── Scroll-reveal for sections ─────────────────────── */
-
+/* ── Scroll-reveal (AnimatedSection) ─────── */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(16px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* ─── Dot grid background ─────────────────────────────── */
-
-.dot-grid {
-  background-image: radial-gradient(circle, #d4d4d8 1px, transparent 1px);
-  background-size: 28px 28px;
-}
-
-/* ─── Draw-on SVG underline ───────────────────────────── */
-
-@keyframes drawLine {
-  from {
-    stroke-dashoffset: 700;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.draw-line {
-  stroke-dasharray: 700;
-  stroke-dashoffset: 700;
-  animation: drawLine 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.85s;
-}
-
-/* ─── Marquee ticker ──────────────────────────────────── */
-
-@keyframes marqueeScroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.marquee-track {
-  animation: marqueeScroll 30s linear infinite;
-  will-change: transform;
-}
-
-.marquee-track:hover {
-  animation-play-state: paused;
 }
