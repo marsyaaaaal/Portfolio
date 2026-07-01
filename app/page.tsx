@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero'
+import TechStrip from '@/components/TechStrip'
 import About from '@/components/About'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
+      <TechStrip />
       <About />
       <Experience />
       <Projects />
