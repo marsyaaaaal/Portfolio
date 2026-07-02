@@ -1,9 +1,9 @@
 export default function Hero() {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 min-h-[100svh] max-h-[800px] border-b-2 border-[#111]">
-      {/* Left column */}
-      <div className="flex flex-col justify-between px-6 py-16 md:px-[52px] md:py-[60px] border-b md:border-b-0 md:border-r border-[#e0ddd7]">
-        <div>
+      {/* Left column — padded to align with content below */}
+      <div className="flex flex-col px-6 md:px-[52px] py-16 md:py-[60px] border-b md:border-b-0 md:border-r border-[#e0ddd7]">
+        <div className="max-w-[470px] ml-auto w-full flex-1 flex flex-col justify-center">
           {/* Eyebrow — delay 0ms */}
           <div
             className="flex items-center gap-2 mb-5 anim-fade-up"
@@ -60,17 +60,19 @@ export default function Hero() {
         </div>
 
         {/* Footer row — delay 600ms */}
-        <p
-          className="text-[9px] tracking-[3px] uppercase text-[#ccc] leading-loose anim-fade-in"
-          style={{ animationDelay: '600ms' }}
-        >
-          Full Stack Developer
-          <br />
-          React · TypeScript · Node.js · AWS
-        </p>
+        <div className="max-w-[470px] ml-auto w-full">
+          <p
+            className="text-[9px] tracking-[3px] uppercase text-[#ccc] leading-loose anim-fade-in"
+            style={{ animationDelay: '600ms' }}
+          >
+            Full Stack Developer
+            <br />
+            React · TypeScript · Node.js · AWS
+          </p>
+        </div>
       </div>
 
-      {/* Right column — "M" initial, hidden on mobile */}
+      {/* Right column — "M" initial, hidden on mobile, bleeds full width */}
       <div className="hidden md:flex items-center justify-center bg-[#f0ece4] relative overflow-hidden">
         <span
           className="font-serif font-normal text-[#dedad3] select-none absolute anim-fade-in"
