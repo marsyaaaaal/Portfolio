@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 min-h-[100svh] max-h-[800px] border-b-2 border-[#111]">
+    <section className="grid grid-cols-1 md:grid-cols-[3fr_2fr] min-h-[100svh] max-h-[800px] border-b-2 border-[#111]">
       {/* Left column — padded to align with content below */}
       <div className="flex flex-col px-6 md:px-[52px] py-16 md:py-[60px] border-b md:border-b-0 md:border-r border-[#e0ddd7]">
         <div className="max-w-[470px] ml-auto w-full flex-1 flex flex-col justify-center">
@@ -72,11 +72,36 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right column — "M" initial, hidden on mobile, bleeds full width */}
-      <div className="hidden md:flex items-center justify-center bg-[#f0ece4] relative overflow-hidden">
+      {/* Right column — editorial sidebar */}
+      <div className="hidden md:flex flex-col justify-between bg-[#f0ece4] relative overflow-hidden px-10 py-[60px]">
+        {/* Section nav */}
+        <nav
+          className="flex flex-col gap-[14px] anim-fade-in"
+          style={{ animationDelay: '400ms' }}
+        >
+          {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="text-[9px] tracking-[3px] uppercase text-[#bbb] hover:text-[#666] transition-colors duration-150"
+            >
+              {item}
+            </a>
+          ))}
+        </nav>
+        {/* Bottom meta */}
+        <p
+          className="text-[9px] tracking-[2px] uppercase text-[#ccc] anim-fade-in"
+          style={{ animationDelay: '600ms' }}
+        >
+          Portfolio
+          <br />
+          2025
+        </p>
+        {/* M watermark */}
         <span
           className="font-serif font-normal text-[#dedad3] select-none absolute anim-fade-in"
-          style={{ fontSize: '340px', lineHeight: 1, bottom: '-20px', right: '-24px', animationDelay: '300ms' }}
+          style={{ fontSize: '260px', lineHeight: 1, bottom: '-16px', right: '-18px', animationDelay: '300ms' }}
         >
           M
         </span>

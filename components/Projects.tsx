@@ -3,7 +3,7 @@ import AnimatedSection from './AnimatedSection'
 const featured = {
   title: 'EyeSee',
   description:
-    'PWA built for and actively used by optometry clinicians at a university clinic — handles patient scheduling, progress tracking, and appointment management for student practitioners in a real clinical setting.',
+    'PWA built for and actively used by optometry clinicians at a university clinic — handles patient scheduling, progress tracking, and appointment management for student practitioners in a real clinical setting. Built solo using an AI-augmented development workflow (Claude Code, configured with MCP integrations and custom skill routing) to accelerate iteration speed.',
   tags: ['React', 'PWA', 'Supabase'],
   link: 'https://eyesee-fawn.vercel.app/',
   github: null,
@@ -18,7 +18,7 @@ const projects = [
   {
     index: '01',
     title: 'GalaGuide',
-    description: 'Travel itinerary platform with AI-powered trip generation. Built and shipped independently — live on Vercel.',
+    description: 'Travel itinerary platform with AI-powered trip generation. Built and shipped independently — live on Vercel. Built solo using an AI-augmented development workflow (Claude Code, configured with MCP integrations and custom skill routing) to accelerate iteration speed.',
     tags: ['React', 'Node.js', 'Supabase', 'AI'],
     github: 'https://github.com/marsyaaaaal',
     link: 'https://gala-guide.vercel.app/',

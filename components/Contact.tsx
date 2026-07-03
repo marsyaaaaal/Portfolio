@@ -26,7 +26,7 @@ export default function Contact() {
                 <em className="text-[#555]">something great.</em>
               </h2>
               <p className="text-[12px] text-[#555] leading-[1.8] mt-5 max-w-[280px]">
-                Open to freelance projects, collaborations, and new opportunities.
+                Open to full-time roles, contract work, and collaborations.
                 I typically respond within 24 hours.
               </p>
             </div>

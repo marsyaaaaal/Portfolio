@@ -8,10 +8,10 @@ const experiences = [
     period: 'Apr 2025 – Present',
     current: true,
     bullets: [
-      'Drove end-to-end development as part of the Identity Team, contributing to core service design and implementation.',
-      'Optimized dev workflow by integrating AWS SAM CLI — enabling local development across all services.',
+      'Built and maintained authentication/SSO systems (SAP CDC/Gigya, SAML, OAuth/OIDC), including resolving complex federation issues with Okta such as provider ID mismatches and session handling bugs.',
+      'Designed an end-to-end bulk user role management dataflow — S3 ingestion, org lookup, automated role updates, and audit logging — to support account administration at scale.',
       'Resolved a major scalability issue by migrating AWS Lambda environment variable storage.',
-      'Dependency modernization across microservices — Upgraded Node.js (v14→22) and npm vulnerability remediation across multiple production repos, reducing technical debt and security risk across a shared package ecosystem.',
+      'Modernized dependencies across microservices — upgraded Node.js (v14→22) and remediated npm vulnerabilities across multiple production repos, reducing technical debt and security risk.',
     ],
   },
   {
@@ -21,9 +21,9 @@ const experiences = [
     period: 'Oct 2024 – Dec 2025',
     current: false,
     bullets: [
-      'Improved web data extraction systems for efficiency and reliability; maintained a customer ticketing system.',
-      'Developed a Python script to automate credit card statement categorization.',
-      'Contributed front-end and back-end feature implementations from specification documents.',
+      'Led migration of the customer ticketing system from Jinja templates + React to a unified React front-end, and migrated course lesson pages (quizzes, lessons, activities) from PHP to React.',
+      'Built and maintained an input validation tool used externally by TAP\'s subscriber base as part of their product offering.',
+      'Automated credit card statement categorization with a Python script, reducing manual processing time.',
       'Automated email classification pipeline (n8n + AWS EC2) — built an AI-powered workflow using Claude API to classify incoming emails via IMAP, with real-time Slack alerts and automated Excel reporting for a client stakeholder.',
     ],
   },

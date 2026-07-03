@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import AnimatedSection from './AnimatedSection'
 
-const tags = ['Full Stack', 'Cloud (AWS)', 'Automation', 'AI / ML', 'Embedded']
+const tags = ['Full Stack', 'Cloud (AWS)', 'Automation']
 
 export default function About() {
   return (
@@ -25,12 +25,14 @@ export default function About() {
           {/* Left: Bio */}
           <AnimatedSection delay={80}>
             <p className="text-[13px] text-[#666] leading-[1.85]">
-              I&apos;m Marcial, a Software Engineer currently at{' '}
+              I&apos;m Marcial, a Full Stack Developer currently at{' '}
               <strong className="text-[#111] font-semibold">
                 Cambridge University Press &amp; Assessment
               </strong>
-              , where I work as a Full Stack Developer on the Identity Team — contributing to
-              core service design, AWS Lambda scalability, and end-to-end development initiatives.
+              , working on the Identity Team. I build and maintain authentication systems — SAML
+              federation, OAuth/OIDC, SSO integration with Okta — alongside serverless
+              microservices on AWS Lambda, handling everything from debugging tricky auth edge
+              cases to scaling infrastructure for production.
             </p>
             <p className="text-[13px] text-[#666] leading-[1.85] mt-5">
               My background spans embedded systems at Denso Techno Philippines and real estate

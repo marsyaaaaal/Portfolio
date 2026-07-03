@@ -1,11 +1,11 @@
 import AnimatedSection from './AnimatedSection'
 
 const skillGroups = [
-  { category: 'Languages', primary: 'JavaScript, TypeScript, Python, C', secondary: '' },
-  { category: 'Frontend', primary: 'React.js, Vue.js, TailwindCSS, Flutter', secondary: '· HTML / CSS' },
-  { category: 'Backend', primary: 'Node.js, Express, Laravel, REST API', secondary: '' },
-  { category: 'Databases & Cloud', primary: 'MySQL, MongoDB, Supabase, PostgreSQL', secondary: '· AWS, Azure' },
-  { category: 'Testing & Tools', primary: 'Playwright, Selenium, Git, OpenCV, Pandas, n8n, ETL', secondary: '' },
+  { category: 'Languages', skills: ['JavaScript', 'TypeScript', 'Python', 'C'] },
+  { category: 'Frontend', skills: ['React.js', 'Vue.js', 'TailwindCSS', 'Flutter', 'HTML / CSS'] },
+  { category: 'Backend', skills: ['Node.js', 'Express', 'Laravel', 'REST API'] },
+  { category: 'Databases & Cloud', skills: ['MySQL', 'MongoDB', 'Supabase', 'PostgreSQL', 'AWS', 'Azure'] },
+  { category: 'Testing & Tools', skills: ['Playwright', 'Selenium', 'Git', 'OpenCV', 'Pandas', 'n8n', 'ETL'] },
 ]
 
 export default function Skills() {
@@ -28,16 +28,20 @@ export default function Skills() {
         <div className="mt-9">
           {skillGroups.map((group, i) => (
             <AnimatedSection key={group.category} delay={i * 60}>
-              <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-3 md:gap-8 py-4 border-t border-[#e0ddd7] items-baseline">
-                <span className="text-[9px] tracking-[3px] uppercase text-[#bbb]">
+              <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-3 md:gap-8 py-5 border-t border-[#e0ddd7] items-start">
+                <span className="text-[9px] tracking-[3px] uppercase text-[#bbb] pt-[5px]">
                   {group.category}
                 </span>
-                <span className="text-[13px] text-[#555]">
-                  {group.primary}
-                  {group.secondary && (
-                    <span className="text-[#aaa] italic"> {group.secondary}</span>
-                  )}
-                </span>
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="text-[9px] tracking-[2px] uppercase text-[#999] border border-[#ddd] px-[10px] py-[5px]"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </AnimatedSection>
           ))}
