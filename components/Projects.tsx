@@ -1,46 +1,30 @@
 import AnimatedSection from './AnimatedSection'
 
 const featured = {
-  title: 'GalaGuide',
+  title: 'EyeSee',
   description:
-    'A travel itinerary sharing platform where users can discover, create, and share trip plans. Includes AI-powered itinerary generation to help travelers plan their next adventure — live on Vercel.',
-  tags: ['React', 'Node.js', 'Supabase', 'AI'],
-  link: 'https://gala-guide.vercel.app/',
-  github: 'https://github.com/marsyaaaaal',
+    'PWA built for and actively used by optometry clinicians at a university clinic — handles patient scheduling, progress tracking, and appointment management for student practitioners in a real clinical setting.',
+  tags: ['React', 'PWA', 'Supabase'],
+  link: 'https://eyesee-fawn.vercel.app/',
+  github: null,
   aside: {
-    status: 'Live · Vercel',
-    year: '2024',
-    note: 'Designed and shipped independently.',
+    status: 'Live · In Use',
+    year: '2025',
+    note: 'Real users. University optometry clinic.',
   },
 }
 
 const projects = [
   {
     index: '01',
-    title: 'DetectCore',
-    description: 'Real-time illegal parking detection — YOLOv5, centroid tracking, image hashing. Thesis project.',
-    tags: ['Python', 'PyTorch', 'YOLOv5'],
-    github: 'https://github.com/lordsiinbal/Thesis101',
-    link: null,
+    title: 'GalaGuide',
+    description: 'Travel itinerary platform with AI-powered trip generation. Built and shipped independently — live on Vercel.',
+    tags: ['React', 'Node.js', 'Supabase', 'AI'],
+    github: 'https://github.com/marsyaaaaal',
+    link: 'https://gala-guide.vercel.app/',
   },
   {
     index: '02',
-    title: 'pasaBUY',
-    description: 'Marketplace with real-time messaging, push notifications, and full transaction lifecycle.',
-    tags: ['Laravel', 'Vue.js', 'MySQL'],
-    github: 'https://github.com/topetope024/pasabuy_SE',
-    link: 'https://pasabuy-client.herokuapp.com/',
-  },
-  {
-    index: '03',
-    title: 'e-Tiquet',
-    description: 'Automated traffic violation ticketing system built for local government use.',
-    tags: ['PHP', 'Bootstrap', 'MySQL'],
-    github: 'https://github.com/topetope024/etiquet',
-    link: null,
-  },
-  {
-    index: '04',
     title: 'Real Estate Automation',
     description: 'Reduced manual data collection from hours to minutes — 90% improvement. Full AWS pipeline.',
     tags: ['Python', 'Selenium', 'AWS'],
@@ -48,12 +32,36 @@ const projects = [
     link: null,
   },
   {
-    index: '05',
+    index: '03',
     title: 'iAssist',
     description: "Educational Android app covering Newton's Laws — lessons, quizzes, and score tracking. Built solo.",
     tags: ['Flutter', 'Dart'],
     github: 'https://github.com/marsyaaaaal/iAssist',
-    link: 'https://drive.google.com/file/d/1t0yiVO84pzkKp5SYtjhoXbwiEAx4in8x/view',
+    link: null,
+  },
+  {
+    index: '04',
+    title: 'pasaBUY',
+    description: 'Marketplace with real-time messaging, push notifications, and full transaction lifecycle.',
+    tags: ['Laravel', 'Vue.js', 'MySQL'],
+    github: 'https://github.com/topetope024/pasabuy_SE',
+    link: null,
+  },
+  {
+    index: '05',
+    title: 'DetectCore',
+    description: 'Real-time illegal parking detection — YOLOv5, centroid tracking, image hashing. Thesis project.',
+    tags: ['Python', 'PyTorch', 'YOLOv5'],
+    github: 'https://github.com/lordsiinbal/Thesis101',
+    link: null,
+  },
+  {
+    index: '06',
+    title: 'e-Tiquet',
+    description: 'Automated traffic violation ticketing system built for local government use.',
+    tags: ['PHP', 'Bootstrap', 'MySQL'],
+    github: 'https://github.com/topetope024/etiquet',
+    link: null,
   },
 ]
 
@@ -106,22 +114,26 @@ export default function Projects() {
                 ))}
               </div>
               <div className="flex items-center gap-6">
-                <a
-                  href={featured.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[10px] font-bold tracking-[2px] uppercase text-[#111] border-b border-[#111] pb-[2px] hover:text-[#555] hover:border-[#555] transition-colors"
-                >
-                  Live Demo ↗
-                </a>
-                <a
-                  href={featured.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[10px] tracking-[2px] uppercase text-[#bbb] border-b border-[#ccc] pb-[2px] hover:text-[#777] transition-colors"
-                >
-                  GitHub ↗
-                </a>
+                {featured.link && (
+                  <a
+                    href={featured.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10px] font-bold tracking-[2px] uppercase text-[#111] border-b border-[#111] pb-[2px] hover:text-[#555] hover:border-[#555] transition-colors"
+                  >
+                    Live ↗
+                  </a>
+                )}
+                {featured.github && (
+                  <a
+                    href={featured.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10px] tracking-[2px] uppercase text-[#bbb] border-b border-[#ccc] pb-[2px] hover:text-[#777] transition-colors"
+                  >
+                    GitHub ↗
+                  </a>
+                )}
               </div>
             </div>
             {/* Aside */}

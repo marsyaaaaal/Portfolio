@@ -5,7 +5,7 @@ const skillGroups = [
   { category: 'Frontend', primary: 'React.js, Vue.js, TailwindCSS, Flutter', secondary: '· HTML / CSS' },
   { category: 'Backend', primary: 'Node.js, Express, Laravel, REST API', secondary: '' },
   { category: 'Databases & Cloud', primary: 'MySQL, MongoDB, Supabase, PostgreSQL', secondary: '· AWS, Azure' },
-  { category: 'Testing & Tools', primary: 'Playwright, Selenium, Git, OpenCV, Pandas', secondary: '' },
+  { category: 'Testing & Tools', primary: 'Playwright, Selenium, Git, OpenCV, Pandas, n8n, ETL', secondary: '' },
 ]
 
 export default function Skills() {

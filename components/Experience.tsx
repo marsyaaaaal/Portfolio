@@ -11,6 +11,7 @@ const experiences = [
       'Drove end-to-end development as part of the Identity Team, contributing to core service design and implementation.',
       'Optimized dev workflow by integrating AWS SAM CLI — enabling local development across all services.',
       'Resolved a major scalability issue by migrating AWS Lambda environment variable storage.',
+      'Dependency modernization across microservices — Upgraded Node.js (v14→22) and npm vulnerability remediation across multiple production repos, reducing technical debt and security risk across a shared package ecosystem.',
     ],
   },
   {
@@ -23,6 +24,7 @@ const experiences = [
       'Improved web data extraction systems for efficiency and reliability; maintained a customer ticketing system.',
       'Developed a Python script to automate credit card statement categorization.',
       'Contributed front-end and back-end feature implementations from specification documents.',
+      'Automated email classification pipeline (n8n + AWS EC2) — built an AI-powered workflow using Claude API to classify incoming emails via IMAP, with real-time Slack alerts and automated Excel reporting for a client stakeholder.',
     ],
   },
   {
