@@ -12,14 +12,20 @@ const navLinks = [
 const sectionIds = ['projects', 'about', 'experience', 'skills', 'education', 'contact']
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
+  const [pastHero, setPastHero] = useState(false)
   const [activeSection, setActiveSection] = useState('')
   const [menuOpen, setMenuOpen] = useState(false)
 
+  // Hide navbar while hero section is visible; show once scrolled past it
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    const hero = document.getElementById('hero-section')
+    if (!hero) return
+    const obs = new IntersectionObserver(
+      ([entry]) => setPastHero(!entry.isIntersecting),
+      { threshold: 0 }
+    )
+    obs.observe(hero)
+    return () => obs.disconnect()
   }, [])
 
   useEffect(() => {
@@ -52,11 +58,12 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-[rgba(250,250,248,0.9)] backdrop-blur-[8px] border-b border-[#e0ddd7]'
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        bg-[rgba(250,250,248,0.9)] backdrop-blur-[8px] border-b border-[#e0ddd7]
+        ${pastHero
+          ? 'opacity-100 translate-y-0 pointer-events-auto'
+          : 'md:opacity-0 md:-translate-y-2 md:pointer-events-none opacity-100 translate-y-0 pointer-events-auto'
+        }`}
     >
       <div className="max-w-content mx-auto px-6 md:px-[52px] flex items-center justify-between h-14">
         <span className="font-serif text-[18px] text-[#111] tracking-[-0.5px]">

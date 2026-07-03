@@ -1,6 +1,28 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const [heroVisible, setHeroVisible] = useState(true)
+
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      ([entry]) => setHeroVisible(entry.isIntersecting),
+      { threshold: 0 }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [])
+
   return (
-    <section className="grid grid-cols-1 md:grid-cols-[3fr_2fr] min-h-[100svh] max-h-[800px] border-b-2 border-[#111]">
+    <section
+      ref={sectionRef}
+      id="hero-section"
+      className="grid grid-cols-1 md:grid-cols-[3fr_2fr] min-h-[100svh] max-h-[800px] border-b-2 border-[#111]"
+    >
       {/* Left column — padded to align with content below */}
       <div className="flex flex-col px-6 md:px-[52px] py-16 md:py-[60px] border-b md:border-b-0 md:border-r border-[#e0ddd7]">
         <div className="max-w-[470px] ml-auto w-full flex-1 flex flex-col justify-center">
@@ -72,8 +94,12 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right column — editorial sidebar */}
-      <div className="hidden md:flex flex-col justify-between bg-[#f0ece4] relative overflow-hidden px-10 py-[60px]">
+      {/* Right column — editorial sidebar, fades out as hero scrolls away */}
+      <div
+        className={`hidden md:flex flex-col justify-between bg-[#f0ece4] relative overflow-hidden px-10 py-[60px] transition-opacity duration-300 ${
+          heroVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+      >
         {/* Section nav */}
         <nav
           className="flex flex-col gap-[14px] anim-fade-in"
