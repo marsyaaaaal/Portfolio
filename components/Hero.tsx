@@ -122,7 +122,7 @@ export default function Hero() {
         >
           Portfolio
           <br />
-          2025
+          2026
         </p>
         {/* M watermark */}
         <span
