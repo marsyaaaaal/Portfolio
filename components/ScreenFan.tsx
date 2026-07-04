@@ -5,9 +5,9 @@ import ScreenFrame from './ScreenFrame'
 
 // left → center → right: schedule, patients, dashboard
 const frames = [
-  { src: '/eyesee-schedule.webp',  alt: 'EyeSee schedule view',  baseRotate: -10, baseX: -22 },
+  { src: '/eyesee-schedule.webp',  alt: 'EyeSee schedule view',  baseRotate: -10, baseX: -44 },
   { src: '/eyesee-patients.webp',  alt: 'EyeSee patients list',  baseRotate:   0, baseX:   0 },
-  { src: '/eyesee-dashboard.webp', alt: 'EyeSee dashboard',      baseRotate:  10, baseX:  22 },
+  { src: '/eyesee-dashboard.webp', alt: 'EyeSee dashboard',      baseRotate:  10, baseX:  44 },
 ]
 
 // how much extra rotation each frame gets when it recedes
@@ -23,7 +23,7 @@ export default function ScreenFan() {
     // outer wrapper: reserves space and centers the fan on mobile
     <div className="flex justify-center md:justify-end flex-shrink-0">
       {/* fixed-size stage — tall enough for the phone frames + rotation spread */}
-      <div className="relative w-[260px] h-[280px]">
+      <div className="relative w-[320px] h-[300px]">
         {frames.map((frame, i) => {
           const isHovered  = hovered === i
           const isReceding = hovered !== null && !isHovered
