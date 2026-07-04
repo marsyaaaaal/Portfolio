@@ -57,18 +57,22 @@ const projects = [
   },
 ]
 
-export default function Projects() {
+interface ProjectsProps {
+  onCaseStudy?: () => void
+}
+
+export default function Projects({ onCaseStudy }: ProjectsProps = {}) {
   return (
     <section id="projects" className="py-[60px] px-6 md:px-[52px]">
       <div className="max-w-content mx-auto">
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-12">
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc]">03</span>
-            <div className="flex-1 h-px bg-[#e0ddd7]" />
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc]">Work</span>
+            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">03</span>
+            <div className="flex-1 h-px bg-[#e0ddd7] dark:bg-[#2c2a27]" />
+            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">Work</span>
           </div>
           <div className="flex items-end justify-between mb-8 gap-4 flex-wrap">
-            <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111]">
+            <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111] dark:text-[#e5e2db]">
               Selected
               <br />
               <em>projects.</em>
@@ -77,7 +81,7 @@ export default function Projects() {
               href="https://github.com/marsyaaaaal"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] tracking-[2px] uppercase text-[#bbb] hover:text-[#555] transition-colors"
+              className="text-[10px] tracking-[2px] uppercase text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors"
             >
               All on GitHub →
             </a>
@@ -86,20 +90,18 @@ export default function Projects() {
 
         {/* Featured project */}
         <AnimatedSection delay={0}>
-          <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] border border-[#e0ddd7] mb-px">
-            {/* Main */}
-            <div className="p-9 md:border-r border-[#e0ddd7]">
-              {/* SECOND AND FINAL RED USE SITE-WIDE */}
+          <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] border border-[#e0ddd7] dark:border-[#2c2a27] mb-px">
+            <div className="p-9 md:border-r border-[#e0ddd7] dark:border-[#2c2a27]">
               <p className="text-[9px] tracking-[3px] uppercase text-[#dc2626] mb-4">Featured</p>
-              <h3 className="font-serif font-normal text-[32px] text-[#111] mb-4 leading-[1.05]">
+              <h3 className="font-serif font-normal text-[32px] text-[#111] dark:text-[#e5e2db] mb-4 leading-[1.05]">
                 {featured.title}
               </h3>
-              <p className="text-[12px] text-[#777] leading-[1.8] mb-5">{featured.description}</p>
+              <p className="text-[12px] text-[#777] dark:text-[#777370] leading-[1.8] mb-5">{featured.description}</p>
               <div className="flex flex-wrap gap-4 mb-6">
                 {featured.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[9px] tracking-[2px] uppercase text-[#aaa] border-b border-[#e0ddd7] pb-[3px]"
+                    className="text-[9px] tracking-[2px] uppercase text-[#aaa] dark:text-[#484542] border-b border-[#e0ddd7] dark:border-[#2c2a27] pb-[3px]"
                   >
                     {tag}
                   </span>
@@ -111,81 +113,78 @@ export default function Projects() {
                     href={featured.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[10px] font-bold tracking-[2px] uppercase text-[#111] border-b border-[#111] pb-[2px] hover:text-[#555] hover:border-[#555] transition-colors"
+                    className="text-[10px] font-bold tracking-[2px] uppercase text-[#111] dark:text-[#e5e2db] border-b border-[#111] dark:border-[#e5e2db] pb-[2px] hover:text-[#555] dark:hover:text-[#888580] hover:border-[#555] dark:hover:border-[#888580] transition-colors"
                   >
                     Live ↗
                   </a>
                 )}
-                {featured.github && (
-                  <a
-                    href={featured.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[10px] tracking-[2px] uppercase text-[#bbb] border-b border-[#ccc] pb-[2px] hover:text-[#777] transition-colors"
+                {onCaseStudy && (
+                  <button
+                    onClick={onCaseStudy}
+                    className="text-[10px] tracking-[2px] uppercase text-[#bbb] dark:text-[#3c3a37] border-b border-[#ccc] dark:border-[#2c2a27] pb-[2px] hover:text-[#555] dark:hover:text-[#888580] transition-colors"
                   >
-                    GitHub ↗
-                  </a>
+                    Case Study →
+                  </button>
                 )}
               </div>
             </div>
             {/* Aside */}
-            <div className="bg-[#f4f1eb] p-7 flex flex-col gap-0">
+            <div className="bg-[#f4f1eb] dark:bg-[#191917] p-7 flex flex-col gap-0">
               <div className="pb-4">
-                <p className="text-[9px] tracking-[2px] uppercase text-[#bbb] mb-1">Status</p>
-                <p className="text-[12px] font-semibold text-[#555]">{featured.aside.status}</p>
+                <p className="text-[9px] tracking-[2px] uppercase text-[#bbb] dark:text-[#3c3a37] mb-1">Status</p>
+                <p className="text-[12px] font-semibold text-[#555] dark:text-[#888580]">{featured.aside.status}</p>
               </div>
-              <div className="border-t border-[#e0ddd7] py-4">
-                <div className="font-serif text-[28px] text-[#111] leading-none">{featured.aside.year}</div>
-                <div className="text-[9px] tracking-[2px] uppercase text-[#bbb] mt-[3px]">Launched</div>
+              <div className="border-t border-[#e0ddd7] dark:border-[#2c2a27] py-4">
+                <div className="font-serif text-[28px] text-[#111] dark:text-[#e5e2db] leading-none">{featured.aside.year}</div>
+                <div className="text-[9px] tracking-[2px] uppercase text-[#bbb] dark:text-[#3c3a37] mt-[3px]">Launched</div>
               </div>
-              <div className="border-t border-[#e0ddd7] py-4">
-                <div className="font-serif text-[28px] text-[#111] leading-none">Solo</div>
-                <div className="text-[9px] tracking-[2px] uppercase text-[#bbb] mt-[3px]">Builder</div>
+              <div className="border-t border-[#e0ddd7] dark:border-[#2c2a27] py-4">
+                <div className="font-serif text-[28px] text-[#111] dark:text-[#e5e2db] leading-none">Solo</div>
+                <div className="text-[9px] tracking-[2px] uppercase text-[#bbb] dark:text-[#3c3a37] mt-[3px]">Builder</div>
               </div>
-              <div className="border-t border-[#e0ddd7] pt-4">
-                <p className="text-[10px] text-[#aaa] leading-[1.6]">{featured.aside.note}</p>
+              <div className="border-t border-[#e0ddd7] dark:border-[#2c2a27] pt-4">
+                <p className="text-[10px] text-[#aaa] dark:text-[#484542] leading-[1.6]">{featured.aside.note}</p>
               </div>
             </div>
           </div>
         </AnimatedSection>
 
-        {/* Project grid — border-top and border-right per cell.
-            Last cell in each row AND the last item overall get no right border. */}
+        {/* Project grid */}
         <div className="grid grid-cols-1 md:grid-cols-3">
           {projects.map((project, i) => {
             const isLastInRow = (i % 3) === 2
             const isLastItem = i === projects.length - 1
             return (
-            <AnimatedSection key={project.title} delay={(i + 1) * 60}>
-              <div
-                className={`p-[26px] border-t border-[#e0ddd7] h-full ${
-                  !isLastInRow && !isLastItem ? 'md:border-r md:border-[#e0ddd7]' : ''
-                }`}
-              >
-                <p className="text-[9px] tracking-[3px] uppercase text-[#ccc] mb-4">{project.index}</p>
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <h3 className="text-[14px] font-bold text-[#111] tracking-[-0.2px] leading-snug">
-                    {project.title}
-                  </h3>
-                  <div className="flex gap-3 flex-shrink-0 text-[#bbb]">
-                    {project.link && (
-                      <a href={project.link} target="_blank" rel="noopener noreferrer"
-                        className="text-[11px] hover:text-[#555] transition-colors" aria-label="Live demo">
-                        ↗
-                      </a>
-                    )}
-                    {project.github && (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer"
-                        className="text-[9px] tracking-[1px] uppercase hover:text-[#555] transition-colors">
-                        GH
-                      </a>
-                    )}
+              <AnimatedSection key={project.title} delay={(i + 1) * 60}>
+                <div
+                  className={`p-[26px] border-t border-[#e0ddd7] dark:border-[#2c2a27] h-full ${
+                    !isLastInRow && !isLastItem ? 'md:border-r md:border-[#e0ddd7] dark:md:border-[#2c2a27]' : ''
+                  }`}
+                >
+                  <p className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b] mb-4">{project.index}</p>
+                  <div className="flex items-start justify-between gap-2 mb-2">
+                    <h3 className="text-[14px] font-bold text-[#111] dark:text-[#e5e2db] tracking-[-0.2px] leading-snug">
+                      {project.title}
+                    </h3>
+                    <div className="flex gap-3 flex-shrink-0 text-[#bbb] dark:text-[#3c3a37]">
+                      {project.link && (
+                        <a href={project.link} target="_blank" rel="noopener noreferrer"
+                          className="text-[11px] hover:text-[#555] dark:hover:text-[#888580] transition-colors" aria-label="Live demo">
+                          ↗
+                        </a>
+                      )}
+                      {project.github && (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer"
+                          className="text-[9px] tracking-[1px] uppercase hover:text-[#555] dark:hover:text-[#888580] transition-colors">
+                          GH
+                        </a>
+                      )}
+                    </div>
                   </div>
+                  <p className="text-[11px] text-[#888] dark:text-[#666360] leading-[1.7] mb-4">{project.description}</p>
+                  <p className="text-[9px] text-[#bbb] dark:text-[#3c3a37] tracking-[1px]">{project.tags.join(' · ')}</p>
                 </div>
-                <p className="text-[11px] text-[#888] leading-[1.7] mb-4">{project.description}</p>
-                <p className="text-[9px] text-[#bbb] tracking-[1px]">{project.tags.join(' · ')}</p>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
             )
           })}
         </div>

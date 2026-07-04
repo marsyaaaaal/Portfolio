@@ -10,6 +10,14 @@
   --accent: #dc2626;
 }
 
+[data-theme="dark"] {
+  --background: #111110;
+  --foreground: #e5e2db;
+  --border: #2c2a27;
+  --muted: #555250;
+  --accent: #dc2626;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

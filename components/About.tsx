@@ -7,14 +7,13 @@ export default function About() {
   return (
     <section id="about" className="py-[60px] px-6 md:px-[52px]">
       <div className="max-w-content mx-auto">
-        {/* Section header */}
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-12">
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc]">01</span>
-            <div className="flex-1 h-px bg-[#e0ddd7]" />
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc]">About</span>
+            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">01</span>
+            <div className="flex-1 h-px bg-[#e0ddd7] dark:bg-[#2c2a27]" />
+            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">About</span>
           </div>
-          <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111]">
+          <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111] dark:text-[#e5e2db]">
             A developer who
             <br />
             <em>loves the craft.</em>
@@ -24,9 +23,9 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[52px] mt-9 items-start">
           {/* Left: Bio */}
           <AnimatedSection delay={80}>
-            <p className="text-[13px] text-[#666] leading-[1.85]">
+            <p className="text-[13px] text-[#666] dark:text-[#888580] leading-[1.85]">
               I&apos;m Marcial, a Full Stack Developer currently at{' '}
-              <strong className="text-[#111] font-semibold">
+              <strong className="text-[#111] dark:text-[#e5e2db] font-semibold">
                 Cambridge University Press &amp; Assessment
               </strong>
               , working on the Identity Team. I build and maintain authentication systems — SAML
@@ -34,17 +33,17 @@ export default function About() {
               microservices on AWS Lambda, handling everything from debugging tricky auth edge
               cases to scaling infrastructure for production.
             </p>
-            <p className="text-[13px] text-[#666] leading-[1.85] mt-5">
+            <p className="text-[13px] text-[#666] dark:text-[#888580] leading-[1.85] mt-5">
               My background spans embedded systems at Denso Techno Philippines and real estate
               automation with Python &amp; AWS. I got hooked on coding in high school and ranked{' '}
-              <strong className="text-[#111] font-semibold">Top 1 of 50</strong> in Technical C
+              <strong className="text-[#111] dark:text-[#e5e2db] font-semibold">Top 1 of 50</strong> in Technical C
               training.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-[9px] tracking-[2px] uppercase text-[#999] border border-[#ddd] px-[10px] py-[5px]"
+                  className="text-[9px] tracking-[2px] uppercase text-[#999] dark:text-[#555250] border border-[#ddd] dark:border-[#2c2a27] px-[10px] py-[5px]"
                 >
                   {tag}
                 </span>
@@ -52,10 +51,9 @@ export default function About() {
             </div>
           </AnimatedSection>
 
-          {/* Right: Photo + Stats */}
+          {/* Right: Photo */}
           <AnimatedSection delay={160}>
             <div className="flex flex-col items-start">
-              {/* Photo — permanent grayscale, no hover */}
               <div className="relative w-[220px] aspect-[3/4] grayscale overflow-hidden">
                 <Image
                   src="/photo.png"
@@ -65,8 +63,7 @@ export default function About() {
                   priority
                 />
               </div>
-              {/* 2px rule spanning full column width */}
-              <div className="w-full h-[2px] bg-[#111]" />
+              <div className="w-full h-[2px] bg-[#111] dark:bg-[#e5e2db]" />
             </div>
           </AnimatedSection>
         </div>

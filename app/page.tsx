@@ -6,27 +6,34 @@ import PanelLayout from '@/components/PanelLayout'
 
 const PANEL_SECTIONS = ['about', 'experience', 'work', 'skills', 'contact']
 
+function parseHash(hash: string): { section: string; subview?: string } {
+  if (hash === 'work/eyesee') return { section: 'work', subview: 'eyesee' }
+  if (PANEL_SECTIONS.includes(hash)) return { section: hash }
+  return { section: '' }
+}
+
 export default function Page() {
   const [view, setView] = useState<'hero' | 'panel'>('hero')
   const [activeSection, setActiveSection] = useState('about')
+  const [activeSubview, setActiveSubview] = useState<string | undefined>(undefined)
   const [mounted, setMounted] = useState(false)
 
-  // On mount, check hash — if it matches a panel section, go straight to panel
   useEffect(() => {
     setMounted(true)
-    const hash = window.location.hash.slice(1)
-    if (PANEL_SECTIONS.includes(hash)) {
-      setActiveSection(hash)
+    const { section, subview } = parseHash(window.location.hash.slice(1))
+    if (section) {
+      setActiveSection(section)
+      setActiveSubview(subview)
       setView('panel')
     }
   }, [])
 
-  // Handle browser back/forward
   useEffect(() => {
     const onPopState = () => {
-      const hash = window.location.hash.slice(1)
-      if (PANEL_SECTIONS.includes(hash)) {
-        setActiveSection(hash)
+      const { section, subview } = parseHash(window.location.hash.slice(1))
+      if (section) {
+        setActiveSection(section)
+        setActiveSubview(subview)
         setView('panel')
       } else {
         setView('hero')
@@ -40,6 +47,7 @@ export default function Page() {
     const s = PANEL_SECTIONS.includes(section) ? section : 'about'
     window.history.pushState(null, '', `#${s}`)
     setActiveSection(s)
+    setActiveSubview(undefined)
     setView('panel')
   }
 
@@ -48,7 +56,6 @@ export default function Page() {
     setView('hero')
   }
 
-  // SSR / pre-mount: render hero so server HTML matches initial client render
   if (!mounted) {
     return (
       <main className="min-h-screen">
@@ -65,7 +72,11 @@ export default function Page() {
         </main>
       )}
       {view === 'panel' && (
-        <PanelLayout initialSection={activeSection} onBackToHero={backToHero} />
+        <PanelLayout
+          initialSection={activeSection}
+          initialSubview={activeSubview}
+          onBackToHero={backToHero}
+        />
       )}
     </>
   )
