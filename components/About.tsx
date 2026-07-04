@@ -67,20 +67,6 @@ export default function About() {
               </div>
               {/* 2px rule spanning full column width */}
               <div className="w-full h-[2px] bg-[#111]" />
-              {/* Stats */}
-              <div className="flex gap-6 mt-5">
-                {[
-                  { value: '4+', label: 'Years\nProfessional' },
-                  { value: '16+', label: 'Projects\nBuilt' },
-                ].map(({ value, label }) => (
-                  <div key={label} className="border-t-2 border-[#111] pt-[10px]">
-                    <div className="font-serif text-[34px] text-[#111] leading-none">{value}</div>
-                    <div className="text-[9px] tracking-[2px] uppercase text-[#bbb] mt-[5px] whitespace-pre-line leading-[1.5]">
-                      {label}
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
           </AnimatedSection>
         </div>
