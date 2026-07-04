@@ -161,8 +161,8 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
       case 'work':       return <Projects onCaseStudy={openCaseStudy} />
       case 'skills':     return <><Skills /><Education /></>
       case 'contact':    return (
-        <div className="min-h-full flex flex-col">
-          <div className="flex-1 flex items-center"><Contact /></div>
+        <div className="min-h-full flex flex-col justify-between">
+          <Contact />
           <Footer />
         </div>
       )
@@ -201,7 +201,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
             </div>
 
             {/* Nav items */}
-            <nav className="flex flex-col gap-[2px]">
+            <nav className="flex flex-col gap-[2px] flex-1">
               {SECTIONS.map((section) => (
                 <button
                   key={section}
@@ -217,46 +217,47 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
               ))}
             </nav>
 
-            {/* Social icons + theme toggle — sits between nav and bottom status */}
-            <div className="flex items-center justify-between mt-7 mb-1">
-              <div className="flex items-center gap-4">
-                <a
-                  href="mailto:marcial.abasolajr18@gmail.com"
-                  aria-label="Email"
-                  className="text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
-                >
-                  <EmailIcon />
-                </a>
-                <a
-                  href="https://github.com/marsyaaaaal"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                  className="text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
-                >
-                  <GitHubIcon />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/marcial-abasola-a9498b210/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
-                >
-                  <LinkedInIcon />
-                </a>
-              </div>
-              <button
-                onClick={toggleTheme}
-                aria-label="Toggle dark mode"
-                className="text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
-              >
-                {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-              </button>
-            </div>
+            {/* Bottom cluster */}
+            <div className="border-t border-[#e0ddd7] dark:border-[#2c2a27] pt-5 flex flex-col gap-4">
 
-            {/* Bottom status — availability + uptime */}
-            <div className="border-t border-[#e0ddd7] dark:border-[#2c2a27] mt-auto pt-6 flex flex-col gap-4">
+              {/* Social icons + dark toggle */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <a
+                    href="mailto:marcial.abasolajr18@gmail.com"
+                    aria-label="Email"
+                    className="text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
+                  >
+                    <EmailIcon />
+                  </a>
+                  <a
+                    href="https://github.com/marsyaaaaal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    className="text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
+                  >
+                    <GitHubIcon />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/marcial-abasola-a9498b210/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className="text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
+                  >
+                    <LinkedInIcon />
+                  </a>
+                </div>
+                <button
+                  onClick={toggleTheme}
+                  aria-label="Toggle dark mode"
+                  className="text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
+                >
+                  {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+                </button>
+              </div>
+
               {/* Availability */}
               <div className="flex items-center gap-[7px]">
                 <span className="w-[6px] h-[6px] rounded-full bg-[#dc2626] flex-shrink-0" />
