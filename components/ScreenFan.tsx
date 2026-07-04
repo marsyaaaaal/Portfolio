@@ -23,7 +23,7 @@ export default function ScreenFan() {
     // outer wrapper: reserves space and centers the fan on mobile
     <div className="flex justify-center md:justify-end flex-shrink-0">
       {/* fixed-size stage — tall enough for the phone frames + rotation spread */}
-      <div className="relative w-[320px] h-[300px]">
+      <div className="relative w-[320px] h-[300px]" onMouseLeave={() => setHovered(null)}>
         {frames.map((frame, i) => {
           const isHovered  = hovered === i
           const isReceding = hovered !== null && !isHovered
@@ -48,7 +48,6 @@ export default function ScreenFan() {
                 transition: 'transform 280ms cubic-bezier(0.16, 1, 0.3, 1)',
               }}
               onMouseEnter={() => setHovered(i)}
-              onMouseLeave={() => setHovered(null)}
             >
               <ScreenFrame
                 src={frame.src}
