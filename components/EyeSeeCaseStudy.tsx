@@ -1,4 +1,5 @@
 import AnimatedSection from './AnimatedSection'
+import ScreenFrame from './ScreenFrame'
 
 interface EyeSeeCaseStudyProps {
   onBack: () => void
@@ -14,6 +15,7 @@ const sections = [
     index: '02',
     title: "Who it's for",
     body: `Student optometry practitioners at a university clinic, working across two clinic sessions with distinct patient categories. It started with one user — my partner, an optometry student — and spread organically to her classmates once they saw it in use.`,
+    screenshot: '/eyesee-patients.webp',
   },
   {
     index: '03',
@@ -33,6 +35,7 @@ const sections = [
     index: '04',
     title: 'Challenges',
     body: `The hardest technical problem was sync — EyeSee stores data locally on-device, and reconciling that with the cloud reliably (without conflicts or data loss when connectivity dropped) was the trickiest part of the build.\n\nThe more interesting challenge wasn't technical — it was a wrong assumption about how the app would actually be used. I initially assumed practitioners would use EyeSee during clinic sessions, so I built features like a live "current patient" indicator, similar to an order-tracking screen from a food delivery app. After the first round of real feedback, my partner told me that wasn't just unnecessary — it was actively unhelpful. During clinic hours, practitioners are focused entirely on the patient in front of them; what they actually needed was a simple way to log progress, not a real-time tracker competing for their attention. I cut the feature. It was a useful early lesson in not building for an imagined workflow when I could just ask the person who'd actually be using it.`,
+    screenshot: '/eyesee-schedule.webp',
   },
   {
     index: '05',
@@ -48,6 +51,7 @@ const sections = [
     index: '07',
     title: 'Current state',
     body: `Live and in active use at the clinic — real practitioners, real patients, ongoing usage-driven iteration.`,
+    screenshot: '/eyesee-dashboard.webp',
   },
 ]
 
@@ -138,6 +142,15 @@ export default function EyeSeeCaseStudy({ onBack }: EyeSeeCaseStudyProps) {
                           <p className="text-[13px] text-[#666] dark:text-[#888580] leading-[1.85]">{detail}</p>
                         </div>
                       ))}
+                    </div>
+                  )}
+                  {'screenshot' in s && s.screenshot && (
+                    <div className="mt-6">
+                      <ScreenFrame
+                        src={s.screenshot as string}
+                        alt={`${s.title} — EyeSee screenshot`}
+                        className="w-[200px]"
+                      />
                     </div>
                   )}
                 </div>

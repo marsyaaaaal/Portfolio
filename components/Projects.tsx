@@ -1,4 +1,5 @@
 import AnimatedSection from './AnimatedSection'
+import ScreenFrame from './ScreenFrame'
 
 const featured = {
   title: 'EyeSee',
@@ -22,6 +23,7 @@ const projects = [
     tags: ['React', 'Node.js', 'Supabase', 'AI'],
     github: 'https://github.com/marsyaaaaal',
     link: 'https://gala-guide.vercel.app/',
+    screenshot: '/galaguide-map.webp',
   },
   {
     index: '02',
@@ -90,7 +92,7 @@ export default function Projects({ onCaseStudy }: ProjectsProps = {}) {
 
         {/* Featured project */}
         <AnimatedSection delay={0}>
-          <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] border border-[#e0ddd7] dark:border-[#2c2a27] mb-px">
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_auto_1fr] border border-[#e0ddd7] dark:border-[#2c2a27] mb-px">
             <div className="p-9 md:border-r border-[#e0ddd7] dark:border-[#2c2a27]">
               <p className="text-[9px] tracking-[3px] uppercase text-[#dc2626] mb-4">Featured</p>
               <h3 className="font-serif font-normal text-[32px] text-[#111] dark:text-[#e5e2db] mb-4 leading-[1.05]">
@@ -128,6 +130,13 @@ export default function Projects({ onCaseStudy }: ProjectsProps = {}) {
                 )}
               </div>
             </div>
+
+            {/* Screenshots — desktop only */}
+            <div className="hidden md:flex items-start gap-2 px-5 py-9 border-r border-[#e0ddd7] dark:border-[#2c2a27]">
+              <ScreenFrame src="/eyesee-patients.webp" alt="EyeSee patients list" className="w-[108px]" />
+              <ScreenFrame src="/eyesee-schedule.webp" alt="EyeSee schedule view" className="w-[108px] mt-6" />
+            </div>
+
             {/* Aside */}
             <div className="bg-[#f4f1eb] dark:bg-[#191917] p-7 flex flex-col gap-0">
               <div className="pb-4">
@@ -181,7 +190,20 @@ export default function Projects({ onCaseStudy }: ProjectsProps = {}) {
                       )}
                     </div>
                   </div>
-                  <p className="text-[11px] text-[#888] dark:text-[#666360] leading-[1.7] mb-4">{project.description}</p>
+                  {'screenshot' in project && project.screenshot ? (
+                    <div className="flex gap-3 items-start mb-4">
+                      <div className="flex-1 min-w-0">
+                        <p className="text-[11px] text-[#888] dark:text-[#666360] leading-[1.7]">{project.description}</p>
+                      </div>
+                      <ScreenFrame
+                        src={project.screenshot as string}
+                        alt={`${project.title} screenshot`}
+                        className="w-[68px]"
+                      />
+                    </div>
+                  ) : (
+                    <p className="text-[11px] text-[#888] dark:text-[#666360] leading-[1.7] mb-4">{project.description}</p>
+                  )}
                   <p className="text-[9px] text-[#888] dark:text-[#767270] tracking-[1px]">{project.tags.join(' · ')}</p>
                 </div>
               </AnimatedSection>
