@@ -34,7 +34,16 @@ const sections = [
   {
     index: '04',
     title: 'Challenges',
-    body: `The hardest technical problem was sync — EyeSee stores data locally on-device, and reconciling that with the cloud reliably (without conflicts or data loss when connectivity dropped) was the trickiest part of the build.\n\nThe more interesting challenge wasn't technical — it was a wrong assumption about how the app would actually be used. I initially assumed practitioners would use EyeSee during clinic sessions, so I built features like a live "current patient" indicator, similar to an order-tracking screen from a food delivery app. After the first round of real feedback, my partner told me that wasn't just unnecessary — it was actively unhelpful. During clinic hours, practitioners are focused entirely on the patient in front of them; what they actually needed was a simple way to log progress, not a real-time tracker competing for their attention. I cut the feature. It was a useful early lesson in not building for an imagined workflow when I could just ask the person who'd actually be using it.`,
+    body: [
+      {
+        label: 'Sync reliability',
+        detail: 'The hardest technical problem was sync — EyeSee stores data locally on-device, and reconciling that with the cloud reliably (without conflicts or data loss when connectivity dropped) was the trickiest part of the build.',
+      },
+      {
+        label: 'Building for an imagined workflow',
+        detail: "The more interesting challenge wasn't technical — it was a wrong assumption about how the app would actually be used. I initially assumed practitioners would use EyeSee during clinic sessions, so I built features like a live \"current patient\" indicator, similar to an order-tracking screen from a food delivery app. After the first round of real feedback, my partner told me that wasn't just unnecessary — it was actively unhelpful. During clinic hours, practitioners are focused entirely on the patient in front of them; what they actually needed was a simple way to log progress, not a real-time tracker competing for their attention. I cut the feature. It was a useful early lesson in not building for an imagined workflow when I could just ask the person who'd actually be using it.",
+      },
+    ],
     screenshot: '/eyesee-schedule.webp',
   },
   {
@@ -123,35 +132,38 @@ export default function EyeSeeCaseStudy({ onBack }: EyeSeeCaseStudyProps) {
                 </div>
 
                 {/* Right body */}
-                <div>
-                  {typeof s.body === 'string' ? (
-                    <div className="flex flex-col gap-4">
-                      {s.body.split('\n\n').map((para, pi) => (
-                        <p key={pi} className="text-[13px] leading-[1.85] text-[#666] dark:text-[#888580]">
-                          {para}
-                        </p>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="flex flex-col gap-5">
-                      {(s.body as { label: string; detail: string }[]).map(({ label, detail }) => (
-                        <div key={label}>
-                          <p className="text-[11px] font-bold text-[#111] dark:text-[#e5e2db] mb-[6px] tracking-[0.3px]">
-                            {label}
+                <div className={`flex gap-6 md:gap-8 ${'screenshot' in s && s.screenshot ? 'flex-col md:flex-row items-start' : ''}`}>
+                  {/* Text content */}
+                  <div className="flex-1 min-w-0">
+                    {typeof s.body === 'string' ? (
+                      <div className="flex flex-col gap-4">
+                        {s.body.split('\n\n').map((para, pi) => (
+                          <p key={pi} className="text-[13px] leading-[1.85] text-[#666] dark:text-[#888580]">
+                            {para}
                           </p>
-                          <p className="text-[13px] text-[#666] dark:text-[#888580] leading-[1.85]">{detail}</p>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="flex flex-col gap-5">
+                        {(s.body as { label: string; detail: string }[]).map(({ label, detail }) => (
+                          <div key={label}>
+                            <p className="text-[11px] font-bold text-[#111] dark:text-[#e5e2db] mb-[6px] tracking-[0.3px]">
+                              {label}
+                            </p>
+                            <p className="text-[13px] text-[#666] dark:text-[#888580] leading-[1.85]">{detail}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Screenshot — right of text on desktop, below on mobile */}
                   {'screenshot' in s && s.screenshot && (
-                    <div className="mt-6">
-                      <ScreenFrame
-                        src={s.screenshot as string}
-                        alt={`${s.title} — EyeSee screenshot`}
-                        className="w-[200px]"
-                      />
-                    </div>
+                    <ScreenFrame
+                      src={s.screenshot as string}
+                      alt={`${s.title} — EyeSee screenshot`}
+                      className="w-[130px] md:flex-shrink-0 mx-auto md:mx-0"
+                    />
                   )}
                 </div>
               </div>
