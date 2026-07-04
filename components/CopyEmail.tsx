@@ -23,7 +23,7 @@ export default function CopyEmail() {
       className="text-left w-full group"
       aria-label="Copy email address"
     >
-      <span className="block text-[14px] font-semibold text-white tracking-[0.5px] border-b border-[#333] pb-3 group-hover:border-[#555] transition-colors duration-150">
+      <span className="block text-[14px] font-semibold text-[#111] dark:text-[#e5e2db] tracking-[0.5px] border-b border-[#e0ddd7] dark:border-[#2c2a27] pb-3 group-hover:border-[#bbb] dark:group-hover:border-[#484542] transition-colors duration-150">
         {copied ? '✓ Copied!' : `${EMAIL} ↗`}
       </span>
     </button>
