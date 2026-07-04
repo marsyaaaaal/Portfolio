@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import PanelLayout from '@/components/PanelLayout'
 
@@ -52,24 +51,18 @@ export default function Page() {
   // SSR / pre-mount: render hero so server HTML matches initial client render
   if (!mounted) {
     return (
-      <>
-        <Navbar />
-        <main className="min-h-screen">
-          <Hero />
-        </main>
-      </>
+      <main className="min-h-screen">
+        <Hero />
+      </main>
     )
   }
 
   return (
     <>
       {view === 'hero' && (
-        <>
-          <Navbar />
-          <main className="min-h-screen">
-            <Hero onEnterApp={enterPanel} />
-          </main>
-        </>
+        <main className="min-h-screen">
+          <Hero onEnterApp={enterPanel} />
+        </main>
       )}
       {view === 'panel' && (
         <PanelLayout initialSection={activeSection} onBackToHero={backToHero} />
