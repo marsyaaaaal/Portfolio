@@ -54,7 +54,7 @@ export default function About() {
           {/* Right: Photo + stats */}
           <AnimatedSection delay={160}>
             <div className="flex flex-col">
-              <div className="relative w-full aspect-[3/4] grayscale overflow-hidden">
+              <div className="relative w-[85%] aspect-[3/4] grayscale overflow-hidden">
                 <Image
                   src="/photo.png"
                   alt="Marcial Abasola"
@@ -63,8 +63,8 @@ export default function About() {
                   priority
                 />
               </div>
-              <div className="w-full h-[2px] bg-[#111] dark:bg-[#e5e2db]" />
-              <div className="grid grid-cols-2 pt-5">
+              <div className="w-[85%] h-[2px] bg-[#111] dark:bg-[#e5e2db]" />
+              <div className="grid grid-cols-2 pt-5 w-[85%]">
                 <div className="pr-5 border-r border-[#e0ddd7] dark:border-[#2c2a27]">
                   <p className="font-serif text-[34px] text-[#111] dark:text-[#e5e2db] leading-none">3+</p>
                   <p className="text-[9px] tracking-[2px] uppercase text-[#888] dark:text-[#767270] mt-[6px]">Years Professional</p>
