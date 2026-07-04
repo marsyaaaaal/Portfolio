@@ -66,7 +66,7 @@ export default function About() {
               <div className="w-full h-[2px] bg-[#111] dark:bg-[#e5e2db]" />
               <div className="grid grid-cols-2 pt-5 w-full">
                 <div className="pr-5 border-r border-[#e0ddd7] dark:border-[#2c2a27]">
-                  <p className="font-serif text-[34px] text-[#111] dark:text-[#e5e2db] leading-none">3+</p>
+                  <p className="font-serif text-[34px] text-[#111] dark:text-[#e5e2db] leading-none">4+</p>
                   <p className="text-[9px] tracking-[2px] uppercase text-[#888] dark:text-[#767270] mt-[6px]">Years Professional</p>
                 </div>
                 <div className="pl-5">
