@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   title: 'Marcial Abasola — Portfolio',
@@ -21,10 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <Navbar />
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   )
 }
