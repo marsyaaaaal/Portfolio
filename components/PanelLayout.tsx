@@ -160,7 +160,12 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
       case 'experience': return <Experience />
       case 'work':       return <Projects onCaseStudy={openCaseStudy} />
       case 'skills':     return <><Skills /><Education /></>
-      case 'contact':    return <><Contact /><Footer /></>
+      case 'contact':    return (
+        <div className="min-h-full flex flex-col bg-[#0d0d0d]">
+          <div className="flex-1"><Contact /></div>
+          <Footer />
+        </div>
+      )
     }
   }
 
@@ -272,7 +277,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
         {/* ── Content panel ────────────────────────────── */}
         <div
           ref={contentRef}
-          className="flex-1 overflow-y-auto pb-[64px] md:pb-0 h-screen"
+          className={`flex-1 overflow-y-auto pb-[64px] md:pb-0 h-screen ${active === 'contact' ? 'bg-[#0d0d0d]' : ''}`}
         >
           <div
             className={`transition-opacity duration-150 min-h-full ${
