@@ -8,10 +8,10 @@ const experiences = [
     period: 'Apr 2025 – Present',
     current: true,
     bullets: [
-      'Built and maintained authentication/SSO systems (SAP CDC/Gigya, SAML, OAuth/OIDC), including resolving complex federation issues with Okta such as provider ID mismatches and session handling bugs.',
+      'Built and maintained authentication/SSO systems (SAP CDC/Gigya, SAML, OAuth/OIDC) supporting myCambridge, a platform serving hundreds of thousands of global users, including resolving complex federation issues with Okta such as provider ID mismatches and session handling bugs.',
       'Designed an end-to-end bulk user role management dataflow — S3 ingestion, org lookup, automated role updates, and audit logging — to support account administration at scale.',
       'Resolved a major scalability issue by migrating AWS Lambda environment variable storage.',
-      'Modernized dependencies across microservices — upgraded Node.js (v14→22) and remediated npm vulnerabilities across multiple production repos, reducing technical debt and security risk.',
+      'Modernized dependencies across microservices — upgraded Node.js (v14→22) and remediated npm vulnerabilities across multiple production repos, operating across a SAP CDC dataset of 10+ million records, reducing technical debt and security risk.',
     ],
   },
   {
