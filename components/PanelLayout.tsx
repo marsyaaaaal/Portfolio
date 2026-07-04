@@ -161,7 +161,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
       case 'work':       return <Projects onCaseStudy={openCaseStudy} />
       case 'skills':     return <><Skills /><Education /></>
       case 'contact':    return (
-        <div className="min-h-full flex flex-col justify-between">
+        <div className="min-h-screen flex flex-col justify-between">
           <Contact />
           <Footer />
         </div>
