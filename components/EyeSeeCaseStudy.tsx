@@ -1,5 +1,5 @@
 import AnimatedSection from './AnimatedSection'
-import ScreenFrame from './ScreenFrame'
+import ScreenFan from './ScreenFan'
 
 interface EyeSeeCaseStudyProps {
   onBack: () => void
@@ -15,7 +15,6 @@ const sections = [
     index: '02',
     title: "Who it's for",
     body: `Student optometry practitioners at a university clinic, working across two clinic sessions with distinct patient categories. It started with one user — my partner, an optometry student — and spread organically to her classmates once they saw it in use.`,
-    screenshot: '/eyesee-patients.webp',
   },
   {
     index: '03',
@@ -27,7 +26,7 @@ const sections = [
       },
       {
         label: 'Supabase for the backend',
-        detail: 'Chosen for setup speed — good documentation, straightforward auth integration, and fast to get running without spending time on backend plumbing I didn\'t need to build from scratch.',
+        detail: "Chosen for setup speed — good documentation, straightforward auth integration, and fast to get running without spending time on backend plumbing I didn't need to build from scratch.",
       },
     ],
   },
@@ -44,7 +43,6 @@ const sections = [
         detail: "The more interesting challenge wasn't technical — it was a wrong assumption about how the app would actually be used. I initially assumed practitioners would use EyeSee during clinic sessions, so I built features like a live \"current patient\" indicator, similar to an order-tracking screen from a food delivery app. After the first round of real feedback, my partner told me that wasn't just unnecessary — it was actively unhelpful. During clinic hours, practitioners are focused entirely on the patient in front of them; what they actually needed was a simple way to log progress, not a real-time tracker competing for their attention. I cut the feature. It was a useful early lesson in not building for an imagined workflow when I could just ask the person who'd actually be using it.",
       },
     ],
-    screenshot: '/eyesee-schedule.webp',
   },
   {
     index: '05',
@@ -60,7 +58,6 @@ const sections = [
     index: '07',
     title: 'Current state',
     body: `Live and in active use at the clinic — real practitioners, real patients, ongoing usage-driven iteration.`,
-    screenshot: '/eyesee-dashboard.webp',
   },
 ]
 
@@ -80,25 +77,34 @@ export default function EyeSeeCaseStudy({ onBack }: EyeSeeCaseStudyProps) {
             Back to Work
           </button>
 
-          {/* Header */}
+          {/* Header rule */}
           <div className="flex items-center gap-4 mb-10">
             <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">Case Study</span>
             <div className="flex-1 h-px bg-[#e0ddd7] dark:bg-[#2c2a27]" />
             <span className="text-[9px] tracking-[3px] uppercase text-[#dc2626]">EyeSee</span>
           </div>
 
-          <h1 className="font-serif font-normal text-[42px] leading-[1.0] tracking-[-0.5px] text-[#111] dark:text-[#e5e2db] mb-3">
-            Patient management
-            <br />
-            <em>for the clinic floor.</em>
-          </h1>
+          {/* Title + ScreenFan side by side */}
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+            <div>
+              <h1 className="font-serif font-normal text-[42px] leading-[1.0] tracking-[-0.5px] text-[#111] dark:text-[#e5e2db] mb-3">
+                Patient management
+                <br />
+                <em>for the clinic floor.</em>
+              </h1>
+              <div className="flex flex-wrap gap-4 mt-6">
+                {['React', 'PWA', 'Supabase'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[9px] tracking-[2px] uppercase text-[#717171] dark:text-[#7e7b78] border-b border-[#e0ddd7] dark:border-[#2c2a27] pb-[3px]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
 
-          <div className="flex flex-wrap gap-4 mt-6 mb-1">
-            {['React', 'PWA', 'Supabase'].map((tag) => (
-              <span key={tag} className="text-[9px] tracking-[2px] uppercase text-[#717171] dark:text-[#7e7b78] border-b border-[#e0ddd7] dark:border-[#2c2a27] pb-[3px]">
-                {tag}
-              </span>
-            ))}
+            <ScreenFan />
           </div>
         </AnimatedSection>
 
@@ -106,9 +112,9 @@ export default function EyeSeeCaseStudy({ onBack }: EyeSeeCaseStudyProps) {
         <AnimatedSection delay={80}>
           <div className="grid grid-cols-3 border-t border-b border-[#e0ddd7] dark:border-[#2c2a27] mt-10 mb-12">
             {[
-              { label: 'Status', value: 'Live · In Use' },
+              { label: 'Status',   value: 'Live · In Use' },
               { label: 'Launched', value: '2025' },
-              { label: 'Builder', value: 'Solo' },
+              { label: 'Builder',  value: 'Solo' },
             ].map(({ label, value }) => (
               <div key={label} className="py-4 pr-6">
                 <p className="text-[9px] tracking-[2px] uppercase text-[#888] dark:text-[#767270] mb-1">{label}</p>
@@ -132,38 +138,26 @@ export default function EyeSeeCaseStudy({ onBack }: EyeSeeCaseStudyProps) {
                 </div>
 
                 {/* Right body */}
-                <div className={`flex gap-6 md:gap-8 ${'screenshot' in s && s.screenshot ? 'flex-col md:flex-row items-start' : ''}`}>
-                  {/* Text content */}
-                  <div className="flex-1 min-w-0">
-                    {typeof s.body === 'string' ? (
-                      <div className="flex flex-col gap-4">
-                        {s.body.split('\n\n').map((para, pi) => (
-                          <p key={pi} className="text-[13px] leading-[1.85] text-[#666] dark:text-[#888580]">
-                            {para}
+                <div>
+                  {typeof s.body === 'string' ? (
+                    <div className="flex flex-col gap-4">
+                      {s.body.split('\n\n').map((para, pi) => (
+                        <p key={pi} className="text-[13px] leading-[1.85] text-[#666] dark:text-[#888580]">
+                          {para}
+                        </p>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex flex-col gap-5">
+                      {(s.body as { label: string; detail: string }[]).map(({ label, detail }) => (
+                        <div key={label}>
+                          <p className="text-[11px] font-bold text-[#111] dark:text-[#e5e2db] mb-[6px] tracking-[0.3px]">
+                            {label}
                           </p>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="flex flex-col gap-5">
-                        {(s.body as { label: string; detail: string }[]).map(({ label, detail }) => (
-                          <div key={label}>
-                            <p className="text-[11px] font-bold text-[#111] dark:text-[#e5e2db] mb-[6px] tracking-[0.3px]">
-                              {label}
-                            </p>
-                            <p className="text-[13px] text-[#666] dark:text-[#888580] leading-[1.85]">{detail}</p>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Screenshot — right of text on desktop, below on mobile */}
-                  {'screenshot' in s && s.screenshot && (
-                    <ScreenFrame
-                      src={s.screenshot as string}
-                      alt={`${s.title} — EyeSee screenshot`}
-                      className="w-[130px] md:flex-shrink-0 mx-auto md:mx-0"
-                    />
+                          <p className="text-[13px] text-[#666] dark:text-[#888580] leading-[1.85]">{detail}</p>
+                        </div>
+                      ))}
+                    </div>
                   )}
                 </div>
               </div>
