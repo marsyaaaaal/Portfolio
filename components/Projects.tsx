@@ -67,9 +67,9 @@ export default function Projects({ onCaseStudy }: ProjectsProps = {}) {
       <div className="max-w-content mx-auto">
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-12">
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">03</span>
+            <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">03</span>
             <div className="flex-1 h-px bg-[#e0ddd7] dark:bg-[#2c2a27]" />
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">Work</span>
+            <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">Work</span>
           </div>
           <div className="flex items-end justify-between mb-8 gap-4 flex-wrap">
             <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111] dark:text-[#e5e2db]">
@@ -81,7 +81,7 @@ export default function Projects({ onCaseStudy }: ProjectsProps = {}) {
               href="https://github.com/marsyaaaaal"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] tracking-[2px] uppercase text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors"
+              className="text-[10px] tracking-[2px] uppercase text-[#888] dark:text-[#767270] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:text-[#555] dark:focus-visible:text-[#888580]"
             >
               All on GitHub →
             </a>
@@ -113,7 +113,7 @@ export default function Projects({ onCaseStudy }: ProjectsProps = {}) {
                     href={featured.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[10px] font-bold tracking-[2px] uppercase text-[#111] dark:text-[#e5e2db] border-b border-[#111] dark:border-[#e5e2db] pb-[2px] hover:text-[#555] dark:hover:text-[#888580] hover:border-[#555] dark:hover:border-[#888580] transition-colors"
+                    className="text-[10px] font-bold tracking-[2px] uppercase text-[#111] dark:text-[#e5e2db] border-b border-[#111] dark:border-[#e5e2db] pb-[2px] hover:text-[#555] dark:hover:text-[#888580] hover:border-[#555] dark:hover:border-[#888580] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:opacity-70"
                   >
                     Live ↗
                   </a>
@@ -121,7 +121,7 @@ export default function Projects({ onCaseStudy }: ProjectsProps = {}) {
                 {onCaseStudy && (
                   <button
                     onClick={onCaseStudy}
-                    className="text-[10px] tracking-[2px] uppercase text-[#bbb] dark:text-[#3c3a37] border-b border-[#ccc] dark:border-[#2c2a27] pb-[2px] hover:text-[#555] dark:hover:text-[#888580] transition-colors"
+                    className="cursor-pointer text-[10px] tracking-[2px] uppercase text-[#888] dark:text-[#767270] border-b border-[#ccc] dark:border-[#2c2a27] pb-[2px] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:text-[#555] dark:focus-visible:text-[#888580]"
                   >
                     Case Study →
                   </button>
@@ -131,16 +131,16 @@ export default function Projects({ onCaseStudy }: ProjectsProps = {}) {
             {/* Aside */}
             <div className="bg-[#f4f1eb] dark:bg-[#191917] p-7 flex flex-col gap-0">
               <div className="pb-4">
-                <p className="text-[9px] tracking-[2px] uppercase text-[#bbb] dark:text-[#3c3a37] mb-1">Status</p>
+                <p className="text-[9px] tracking-[2px] uppercase text-[#888] dark:text-[#767270] mb-1">Status</p>
                 <p className="text-[12px] font-semibold text-[#555] dark:text-[#888580]">{featured.aside.status}</p>
               </div>
               <div className="border-t border-[#e0ddd7] dark:border-[#2c2a27] py-4">
                 <div className="font-serif text-[28px] text-[#111] dark:text-[#e5e2db] leading-none">{featured.aside.year}</div>
-                <div className="text-[9px] tracking-[2px] uppercase text-[#bbb] dark:text-[#3c3a37] mt-[3px]">Launched</div>
+                <div className="text-[9px] tracking-[2px] uppercase text-[#888] dark:text-[#767270] mt-[3px]">Launched</div>
               </div>
               <div className="border-t border-[#e0ddd7] dark:border-[#2c2a27] py-4">
                 <div className="font-serif text-[28px] text-[#111] dark:text-[#e5e2db] leading-none">Solo</div>
-                <div className="text-[9px] tracking-[2px] uppercase text-[#bbb] dark:text-[#3c3a37] mt-[3px]">Builder</div>
+                <div className="text-[9px] tracking-[2px] uppercase text-[#888] dark:text-[#767270] mt-[3px]">Builder</div>
               </div>
               <div className="border-t border-[#e0ddd7] dark:border-[#2c2a27] pt-4">
                 <p className="text-[10px] text-[#aaa] dark:text-[#484542] leading-[1.6]">{featured.aside.note}</p>
@@ -161,28 +161,28 @@ export default function Projects({ onCaseStudy }: ProjectsProps = {}) {
                     !isLastInRow && !isLastItem ? 'md:border-r md:border-[#e0ddd7] dark:md:border-[#2c2a27]' : ''
                   }`}
                 >
-                  <p className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b] mb-4">{project.index}</p>
+                  <p className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57] mb-4">{project.index}</p>
                   <div className="flex items-start justify-between gap-2 mb-2">
                     <h3 className="text-[14px] font-bold text-[#111] dark:text-[#e5e2db] tracking-[-0.2px] leading-snug">
                       {project.title}
                     </h3>
-                    <div className="flex gap-3 flex-shrink-0 text-[#bbb] dark:text-[#3c3a37]">
+                    <div className="flex gap-3 flex-shrink-0 text-[#888] dark:text-[#767270]">
                       {project.link && (
                         <a href={project.link} target="_blank" rel="noopener noreferrer"
-                          className="text-[11px] hover:text-[#555] dark:hover:text-[#888580] transition-colors" aria-label="Live demo">
+                          className="text-[11px] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:text-[#555] dark:focus-visible:text-[#888580]" aria-label="Live demo">
                           ↗
                         </a>
                       )}
                       {project.github && (
                         <a href={project.github} target="_blank" rel="noopener noreferrer"
-                          className="text-[9px] tracking-[1px] uppercase hover:text-[#555] dark:hover:text-[#888580] transition-colors">
+                          className="text-[9px] tracking-[1px] uppercase hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:text-[#555] dark:focus-visible:text-[#888580]">
                           GH
                         </a>
                       )}
                     </div>
                   </div>
                   <p className="text-[11px] text-[#888] dark:text-[#666360] leading-[1.7] mb-4">{project.description}</p>
-                  <p className="text-[9px] text-[#bbb] dark:text-[#3c3a37] tracking-[1px]">{project.tags.join(' · ')}</p>
+                  <p className="text-[9px] text-[#888] dark:text-[#767270] tracking-[1px]">{project.tags.join(' · ')}</p>
                 </div>
               </AnimatedSection>
             )

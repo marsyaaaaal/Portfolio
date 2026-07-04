@@ -83,8 +83,8 @@ export default function BottomTabBar({ active, onSelect }: BottomTabBarProps) {
           <button
             key={section}
             onClick={() => onSelect(section)}
-            className={`flex-1 flex flex-col items-center justify-center gap-[4px] py-[10px] transition-colors duration-150 ${
-              isActive ? 'text-[#111] dark:text-[#e5e2db]' : 'text-[#ccc] dark:text-[#302e2b]'
+            className={`cursor-pointer flex-1 flex flex-col items-center justify-center gap-[4px] py-[10px] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:bg-[#f0ece4] dark:focus-visible:bg-[#1e1c18] ${
+              isActive ? 'text-[#111] dark:text-[#e5e2db]' : 'text-[#717171] dark:text-[#7e7b78]'
             }`}
           >
             <TabIcon section={section} />

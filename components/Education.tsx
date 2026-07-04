@@ -23,9 +23,9 @@ export default function Education() {
       <div className="max-w-content mx-auto">
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-12">
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">05</span>
+            <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">05</span>
             <div className="flex-1 h-px bg-[#e0ddd7] dark:bg-[#2c2a27]" />
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">Education</span>
+            <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">Education</span>
           </div>
           <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111] dark:text-[#e5e2db]">
             Where I
@@ -40,7 +40,7 @@ export default function Education() {
               <div className="grid grid-cols-1 md:grid-cols-[170px_1fr] gap-6 md:gap-9 py-[22px] border-t border-[#e0ddd7] dark:border-[#2c2a27]">
                 <div>
                   <p className="text-[11px] font-semibold text-[#111] dark:text-[#e5e2db] leading-[1.5]">{deg.year}</p>
-                  <p className="text-[10px] text-[#bbb] dark:text-[#3c3a37] tracking-[1px] mt-[3px]">{deg.location}</p>
+                  <p className="text-[10px] text-[#888] dark:text-[#767270] tracking-[1px] mt-[3px]">{deg.location}</p>
                 </div>
                 <div>
                   <p className="text-[13px] font-bold text-[#111] dark:text-[#e5e2db] tracking-[-0.2px]">{deg.institution}</p>
@@ -54,7 +54,7 @@ export default function Education() {
         <AnimatedSection delay={120}>
           <div className="flex items-center gap-4 mt-14 mb-2">
             <div className="flex-1 h-px bg-[#e0ddd7] dark:bg-[#2c2a27]" />
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">Certifications</span>
+            <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">Certifications</span>
           </div>
         </AnimatedSection>
 
@@ -64,7 +64,7 @@ export default function Education() {
               <div className="grid grid-cols-1 md:grid-cols-[170px_1fr] gap-6 md:gap-9 py-[18px] border-t border-[#e0ddd7] dark:border-[#2c2a27] items-baseline">
                 <div>
                   <p className="text-[11px] font-semibold text-[#111] dark:text-[#e5e2db]">{cert.year}</p>
-                  <p className="text-[10px] text-[#bbb] dark:text-[#3c3a37] tracking-[1px] mt-[2px]">{cert.category}</p>
+                  <p className="text-[10px] text-[#888] dark:text-[#767270] tracking-[1px] mt-[2px]">{cert.category}</p>
                 </div>
                 <div className="flex items-baseline justify-between gap-4">
                   <p className="text-[13px] font-bold text-[#111] dark:text-[#e5e2db] tracking-[-0.2px]">{cert.name}</p>
@@ -73,7 +73,7 @@ export default function Education() {
                       href={cert.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[10px] tracking-[1px] text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors flex-shrink-0"
+                      className="text-[10px] tracking-[1px] text-[#888] dark:text-[#767270] hover:text-[#555] dark:hover:text-[#888580] transition-colors flex-shrink-0"
                     >
                       View ↗
                     </a>

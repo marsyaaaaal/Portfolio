@@ -38,7 +38,7 @@ export default function Hero({ onEnterApp }: HeroProps) {
         <div className="max-w-[470px] ml-auto w-full flex-1 flex flex-col justify-center">
           <div className="flex items-center gap-2 mb-5 anim-fade-up" style={{ animationDelay: '0ms' }}>
             <span className="w-[6px] h-[6px] rounded-full bg-[#dc2626] flex-shrink-0" />
-            <span className="text-[9px] tracking-[4px] uppercase text-[#bbb] dark:text-[#3c3a37]">
+            <span className="text-[9px] tracking-[4px] uppercase text-[#888] dark:text-[#767270]">
               Available · Cambridge, PH
             </span>
           </div>
@@ -70,7 +70,7 @@ export default function Hero({ onEnterApp }: HeroProps) {
             </button>
             <button
               onClick={() => onEnterApp?.('contact')}
-              className="text-[10px] tracking-[2.5px] uppercase text-[#999] dark:text-[#555250] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
+              className="text-[10px] tracking-[2.5px] uppercase text-[#717171] dark:text-[#7e7b78] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
             >
               Get in Touch →
             </button>
@@ -79,7 +79,7 @@ export default function Hero({ onEnterApp }: HeroProps) {
 
         <div className="max-w-[470px] ml-auto w-full">
           <p
-            className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b] leading-loose anim-fade-in"
+            className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57] leading-loose anim-fade-in"
             style={{ animationDelay: '600ms' }}
           >
             Full Stack Developer
@@ -96,13 +96,13 @@ export default function Hero({ onEnterApp }: HeroProps) {
             <button
               key={item}
               onClick={() => onEnterApp?.(item.toLowerCase())}
-              className="text-left text-[9px] tracking-[3px] uppercase text-[#bbb] dark:text-[#3c3a37] hover:text-[#666] dark:hover:text-[#888580] transition-colors duration-150"
+              className="text-left text-[9px] tracking-[3px] uppercase text-[#888] dark:text-[#767270] hover:text-[#666] dark:hover:text-[#888580] transition-colors duration-150"
             >
               {item}
             </button>
           ))}
         </nav>
-        <p className="text-[9px] tracking-[2px] uppercase text-[#ccc] dark:text-[#302e2b] anim-fade-in" style={{ animationDelay: '600ms' }}>
+        <p className="text-[9px] tracking-[2px] uppercase text-[#909090] dark:text-[#5c5a57] anim-fade-in" style={{ animationDelay: '600ms' }}>
           Portfolio
           <br />
           2026

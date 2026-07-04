@@ -14,7 +14,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[52px] items-end">
             {/* Left */}
             <div>
-              <p className="text-[9px] tracking-[3px] uppercase text-[#aaa] dark:text-[#484542] mb-6">
+              <p className="text-[9px] tracking-[3px] uppercase text-[#717171] dark:text-[#7e7b78] mb-6">
                 06 ── Contact
               </p>
               <h2
@@ -34,14 +34,14 @@ export default function Contact() {
             {/* Right */}
             <div className="flex flex-col gap-6">
               <div>
-                <p className="text-[9px] tracking-[3px] uppercase text-[#aaa] dark:text-[#484542] mb-3">
+                <p className="text-[9px] tracking-[3px] uppercase text-[#717171] dark:text-[#7e7b78] mb-3">
                   Send a message
                 </p>
                 <CopyEmail />
               </div>
               <div className="border-t border-[#e0ddd7] dark:border-[#2c2a27]" />
               <div>
-                <p className="text-[9px] tracking-[3px] uppercase text-[#aaa] dark:text-[#484542] mb-3">
+                <p className="text-[9px] tracking-[3px] uppercase text-[#717171] dark:text-[#7e7b78] mb-3">
                   Find me on
                 </p>
                 <div className="flex gap-3">
@@ -51,7 +51,7 @@ export default function Contact() {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border border-[#e0ddd7] dark:border-[#2c2a27] px-4 py-[9px] text-[10px] tracking-[2px] uppercase text-[#999] dark:text-[#555250] hover:text-[#555] dark:hover:text-[#888580] hover:border-[#bbb] dark:hover:border-[#484542] transition-colors duration-150"
+                      className="border border-[#e0ddd7] dark:border-[#2c2a27] px-4 py-[9px] text-[10px] tracking-[2px] uppercase text-[#717171] dark:text-[#7e7b78] hover:text-[#555] dark:hover:text-[#888580] hover:border-[#bbb] dark:hover:border-[#484542] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:text-[#555] focus-visible:border-[#bbb] dark:focus-visible:text-[#888580] dark:focus-visible:border-[#484542]"
                     >
                       {name}
                     </a>

@@ -130,7 +130,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
       contentRef.current?.scrollTo({ top: 0 })
       window.history.replaceState(null, '', `#${s}`)
       setFading(false)
-    }, 150)
+    }, 200)
   }
 
   const openCaseStudy = () => {
@@ -140,7 +140,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
       contentRef.current?.scrollTo({ top: 0 })
       window.history.replaceState(null, '', '#work/eyesee')
       setFading(false)
-    }, 150)
+    }, 200)
   }
 
   const closeCaseStudy = () => {
@@ -150,7 +150,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
       contentRef.current?.scrollTo({ top: 0 })
       window.history.replaceState(null, '', '#work')
       setFading(false)
-    }, 150)
+    }, 200)
   }
 
   const renderContent = () => {
@@ -184,7 +184,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
             <div className="mb-8">
               <button
                 onClick={onBackToHero}
-                className="font-serif text-[17px] text-[#111] dark:text-[#e5e2db] tracking-[-0.5px] text-left hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150 leading-[1.2] block"
+                className="cursor-pointer font-serif text-[17px] text-[#111] dark:text-[#e5e2db] tracking-[-0.5px] text-left hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-[200ms] leading-[1.2] block focus-visible:outline-none focus-visible:opacity-70"
               >
                 Marcial
                 <br />
@@ -192,7 +192,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
               </button>
               <button
                 onClick={() => setPaletteOpen(true)}
-                className="mt-[6px] flex items-center gap-[5px] text-[8px] tracking-[1.5px] uppercase text-[#ccc] dark:text-[#302e2b] hover:text-[#999] dark:hover:text-[#555250] transition-colors duration-150"
+                className="cursor-pointer mt-[6px] flex items-center gap-[5px] text-[8px] tracking-[1.5px] uppercase text-[#909090] dark:text-[#5c5a57] hover:text-[#999] dark:hover:text-[#555250] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:opacity-70"
                 aria-label="Open command palette"
               >
                 <kbd className="border border-[#e0ddd7] dark:border-[#2c2a27] px-[5px] py-[1px] font-sans text-[8px]">⌘K</kbd>
@@ -206,10 +206,10 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
                 <button
                   key={section}
                   onClick={() => handleSelect(section)}
-                  className={`text-left text-[10px] tracking-[2.5px] uppercase py-[9px] px-3 rounded-[2px] transition-all duration-150 ${
+                  className={`cursor-pointer text-left text-[10px] tracking-[2.5px] uppercase py-[9px] px-3 rounded-[2px] transition-all duration-[200ms] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#888] dark:focus-visible:ring-[#7e7b78] ${
                     active === section
                       ? 'text-[#111] dark:text-[#e5e2db] font-bold bg-[#f0ece4] dark:bg-[#1e1c18]'
-                      : 'text-[#aaa] dark:text-[#484542] hover:text-[#555] dark:hover:text-[#888580] hover:bg-[#f7f5f0] dark:hover:bg-[#191917]'
+                      : 'text-[#717171] dark:text-[#7e7b78] hover:text-[#555] dark:hover:text-[#888580] hover:bg-[#f7f5f0] dark:hover:bg-[#191917]'
                   }`}
                 >
                   {NAV_LABELS[section]}
@@ -226,7 +226,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
                   <a
                     href="mailto:marcial.abasolajr18@gmail.com"
                     aria-label="Email"
-                    className="text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
+                    className="text-[#888] dark:text-[#767270] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:text-[#555] dark:focus-visible:text-[#888580]"
                   >
                     <EmailIcon />
                   </a>
@@ -235,7 +235,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
-                    className="text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
+                    className="text-[#888] dark:text-[#767270] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:text-[#555] dark:focus-visible:text-[#888580]"
                   >
                     <GitHubIcon />
                   </a>
@@ -244,7 +244,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
-                    className="text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
+                    className="text-[#888] dark:text-[#767270] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:text-[#555] dark:focus-visible:text-[#888580]"
                   >
                     <LinkedInIcon />
                   </a>
@@ -252,7 +252,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
                 <button
                   onClick={toggleTheme}
                   aria-label="Toggle dark mode"
-                  className="text-[#bbb] dark:text-[#3c3a37] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150"
+                  className="cursor-pointer text-[#888] dark:text-[#767270] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:text-[#555] dark:focus-visible:text-[#888580]"
                 >
                   {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
                 </button>
@@ -261,11 +261,11 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
               {/* Availability */}
               <div className="flex items-center gap-[7px]">
                 <span className="w-[6px] h-[6px] rounded-full bg-[#dc2626] flex-shrink-0" />
-                <span className="text-[9px] tracking-[2.5px] uppercase text-[#aaa] dark:text-[#484542]">Available</span>
+                <span className="text-[9px] tracking-[2.5px] uppercase text-[#717171] dark:text-[#7e7b78]">Available</span>
               </div>
 
               {/* Uptime */}
-              <p className="text-[8px] text-[#ccc] dark:text-[#302e2b] leading-[1.6] font-mono">
+              <p className="text-[8px] text-[#909090] dark:text-[#5c5a57] leading-[1.6] font-mono">
                 Shipping since Aug 2022
                 <br />
                 {days.toLocaleString()} days
@@ -280,7 +280,7 @@ export default function PanelLayout({ initialSection = 'about', initialSubview, 
           className="flex-1 overflow-y-auto pb-[64px] md:pb-0 h-screen"
         >
           <div
-            className={`transition-opacity duration-150 min-h-full ${
+            className={`transition-opacity duration-[200ms] min-h-full ${
               fading ? 'opacity-0' : 'opacity-100'
             }`}
           >

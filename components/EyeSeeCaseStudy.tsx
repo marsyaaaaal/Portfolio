@@ -59,7 +59,7 @@ export default function EyeSeeCaseStudy({ onBack }: EyeSeeCaseStudyProps) {
           {/* Back button */}
           <button
             onClick={onBack}
-            className="flex items-center gap-2 text-[9px] tracking-[2.5px] uppercase text-[#aaa] dark:text-[#484542] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-150 mb-10"
+            className="cursor-pointer flex items-center gap-2 text-[9px] tracking-[2.5px] uppercase text-[#717171] dark:text-[#7e7b78] hover:text-[#555] dark:hover:text-[#888580] transition-colors duration-[200ms] focus-visible:outline-none focus-visible:text-[#555] dark:focus-visible:text-[#888580] mb-10"
           >
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.3">
               <path d="M7.5 2L3.5 6l4 4" strokeLinecap="round" strokeLinejoin="round" />
@@ -69,7 +69,7 @@ export default function EyeSeeCaseStudy({ onBack }: EyeSeeCaseStudyProps) {
 
           {/* Header */}
           <div className="flex items-center gap-4 mb-10">
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">Case Study</span>
+            <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">Case Study</span>
             <div className="flex-1 h-px bg-[#e0ddd7] dark:bg-[#2c2a27]" />
             <span className="text-[9px] tracking-[3px] uppercase text-[#dc2626]">EyeSee</span>
           </div>
@@ -82,7 +82,7 @@ export default function EyeSeeCaseStudy({ onBack }: EyeSeeCaseStudyProps) {
 
           <div className="flex flex-wrap gap-4 mt-6 mb-1">
             {['React', 'PWA', 'Supabase'].map((tag) => (
-              <span key={tag} className="text-[9px] tracking-[2px] uppercase text-[#aaa] dark:text-[#484542] border-b border-[#e0ddd7] dark:border-[#2c2a27] pb-[3px]">
+              <span key={tag} className="text-[9px] tracking-[2px] uppercase text-[#717171] dark:text-[#7e7b78] border-b border-[#e0ddd7] dark:border-[#2c2a27] pb-[3px]">
                 {tag}
               </span>
             ))}
@@ -98,7 +98,7 @@ export default function EyeSeeCaseStudy({ onBack }: EyeSeeCaseStudyProps) {
               { label: 'Builder', value: 'Solo' },
             ].map(({ label, value }) => (
               <div key={label} className="py-4 pr-6">
-                <p className="text-[9px] tracking-[2px] uppercase text-[#bbb] dark:text-[#3c3a37] mb-1">{label}</p>
+                <p className="text-[9px] tracking-[2px] uppercase text-[#888] dark:text-[#767270] mb-1">{label}</p>
                 <p className="text-[12px] font-semibold text-[#555] dark:text-[#888580]">{value}</p>
               </div>
             ))}
@@ -112,7 +112,7 @@ export default function EyeSeeCaseStudy({ onBack }: EyeSeeCaseStudyProps) {
               <div className="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-6 md:gap-10 py-9 border-t border-[#e0ddd7] dark:border-[#2c2a27]">
                 {/* Left index */}
                 <div className="flex md:flex-col gap-3 md:gap-1">
-                  <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">{s.index}</span>
+                  <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">{s.index}</span>
                   <h2 className="text-[11px] font-bold tracking-[0.5px] text-[#111] dark:text-[#e5e2db] uppercase leading-[1.4]">
                     {s.title}
                   </h2>

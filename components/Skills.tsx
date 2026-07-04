@@ -14,9 +14,9 @@ export default function Skills() {
       <div className="max-w-content mx-auto">
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-12">
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">04</span>
+            <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">04</span>
             <div className="flex-1 h-px bg-[#e0ddd7] dark:bg-[#2c2a27]" />
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">Skills</span>
+            <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">Skills</span>
           </div>
           <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111] dark:text-[#e5e2db]">
             Technologies
@@ -29,14 +29,14 @@ export default function Skills() {
           {skillGroups.map((group, i) => (
             <AnimatedSection key={group.category} delay={i * 60}>
               <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-3 md:gap-8 py-5 border-t border-[#e0ddd7] dark:border-[#2c2a27] items-start">
-                <span className="text-[9px] tracking-[3px] uppercase text-[#bbb] dark:text-[#3c3a37] pt-[5px]">
+                <span className="text-[9px] tracking-[3px] uppercase text-[#888] dark:text-[#767270] pt-[5px]">
                   {group.category}
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="text-[9px] tracking-[2px] uppercase text-[#999] dark:text-[#555250] border border-[#ddd] dark:border-[#2c2a27] px-[10px] py-[5px]"
+                      className="text-[9px] tracking-[2px] uppercase text-[#717171] dark:text-[#7e7b78] border border-[#c9c4bc] dark:border-[#3a3835] px-[10px] py-[5px]"
                     >
                       {skill}
                     </span>

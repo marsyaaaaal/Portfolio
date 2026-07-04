@@ -9,9 +9,9 @@ export default function About() {
       <div className="max-w-content mx-auto">
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-12">
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">01</span>
+            <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">01</span>
             <div className="flex-1 h-px bg-[#e0ddd7] dark:bg-[#2c2a27]" />
-            <span className="text-[9px] tracking-[3px] uppercase text-[#ccc] dark:text-[#302e2b]">About</span>
+            <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">About</span>
           </div>
           <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111] dark:text-[#e5e2db]">
             A developer who
@@ -43,7 +43,7 @@ export default function About() {
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-[9px] tracking-[2px] uppercase text-[#999] dark:text-[#555250] border border-[#ddd] dark:border-[#2c2a27] px-[10px] py-[5px]"
+                  className="text-[9px] tracking-[2px] uppercase text-[#717171] dark:text-[#7e7b78] border border-[#c9c4bc] dark:border-[#3a3835] px-[10px] py-[5px]"
                 >
                   {tag}
                 </span>
