@@ -13,16 +13,16 @@ export default function About() {
             <div className="flex-1 h-px bg-[#e0ddd7] dark:bg-[#2c2a27]" />
             <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">About</span>
           </div>
-          <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111] dark:text-[#e5e2db]">
-            A developer who
-            <br />
-            <em>loves the craft.</em>
-          </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[52px] mt-5 items-start">
-          {/* Left: Bio */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[52px] items-start">
+          {/* Left: Heading + Bio */}
           <AnimatedSection delay={80}>
+            <h2 className="font-serif font-normal text-[46px] leading-[1.0] tracking-[-0.5px] text-[#111] dark:text-[#e5e2db] mb-5">
+              A developer who
+              <br />
+              <em>loves the craft.</em>
+            </h2>
             <p className="text-[13px] text-[#666] dark:text-[#888580] leading-[1.85]">
               I&apos;m Marcial, a Full Stack Developer currently at{' '}
               <strong className="text-[#111] dark:text-[#e5e2db] font-semibold">
