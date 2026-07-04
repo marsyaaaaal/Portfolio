@@ -70,7 +70,7 @@ export default function About() {
               {/* Stats */}
               <div className="flex gap-6 mt-5">
                 {[
-                  { value: '3+', label: 'Years\nProfessional' },
+                  { value: '4+', label: 'Years\nProfessional' },
                   { value: '16+', label: 'Projects\nBuilt' },
                 ].map(({ value, label }) => (
                   <div key={label} className="border-t-2 border-[#111] pt-[10px]">
