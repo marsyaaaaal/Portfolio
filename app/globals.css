@@ -84,6 +84,14 @@ body {
   animation: overlayIn 0.18s ease forwards;
 }
 
+/* ── Screenshot hover-zoom — disable on touch ──── */
+@media (hover: none) {
+  .screen-frame {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 /* ── Scroll-reveal (AnimatedSection) ─────── */
 .reveal {
   opacity: 0;
