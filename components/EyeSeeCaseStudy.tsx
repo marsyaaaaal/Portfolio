@@ -78,7 +78,7 @@ export default function EyeSeeCaseStudy({ onBack }: EyeSeeCaseStudyProps) {
           </button>
 
           {/* Header rule */}
-          <div className="flex items-center gap-4 mb-10">
+          <div className="flex items-center gap-4 mb-6">
             <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">Case Study</span>
             <div className="flex-1 h-px bg-[#e0ddd7] dark:bg-[#2c2a27]" />
             <span className="text-[9px] tracking-[3px] uppercase text-[#dc2626]">EyeSee</span>
