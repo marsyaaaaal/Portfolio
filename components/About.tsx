@@ -53,7 +53,7 @@ export default function About() {
 
           {/* Right: Photo + stats */}
           <AnimatedSection delay={160}>
-            <div className="flex flex-col">
+            <div className="flex flex-col -mt-6">
               <div className="relative w-full aspect-[3/4] grayscale overflow-hidden">
                 <Image
                   src="/photo.png"
