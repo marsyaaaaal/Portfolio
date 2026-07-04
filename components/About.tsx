@@ -5,10 +5,10 @@ const tags = ['Full Stack', 'Cloud (AWS)', 'Automation']
 
 export default function About() {
   return (
-    <section id="about" className="py-[60px] px-6 md:px-[52px]">
+    <section id="about" className="pt-[36px] pb-[60px] px-6 md:px-[52px]">
       <div className="max-w-content mx-auto">
         <AnimatedSection>
-          <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-center gap-4 mb-6">
             <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">01</span>
             <div className="flex-1 h-px bg-[#e0ddd7] dark:bg-[#2c2a27]" />
             <span className="text-[9px] tracking-[3px] uppercase text-[#909090] dark:text-[#5c5a57]">About</span>
@@ -20,7 +20,7 @@ export default function About() {
           </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[52px] mt-9 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[52px] mt-5 items-start">
           {/* Left: Bio */}
           <AnimatedSection delay={80}>
             <p className="text-[13px] text-[#666] dark:text-[#888580] leading-[1.85]">
@@ -53,7 +53,7 @@ export default function About() {
 
           {/* Right: Photo + stats */}
           <AnimatedSection delay={160}>
-            <div className="flex flex-col -mt-6">
+            <div className="flex flex-col">
               <div className="relative w-full aspect-[3/4] grayscale overflow-hidden">
                 <Image
                   src="/photo.png"
