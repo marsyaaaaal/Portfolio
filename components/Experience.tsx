@@ -19,7 +19,7 @@ const experiences = [
     role: 'Software Engineer',
     type: 'Part time · Remote',
     period: 'Oct 2024 – Present',
-    current: true,
+    current: false,
     bullets: [
       'Led migration of the customer ticketing system from Jinja templates + React to a unified React front-end, and migrated course lesson pages (quizzes, lessons, activities) from PHP to React.',
       "Built and maintained an input validation tool used externally by TAP's subscriber base as part of their product offering.",
